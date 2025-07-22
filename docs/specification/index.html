@@ -298,9 +298,9 @@ Frequently Asked Questions">FAQ</a>
     <header id="title-block-header" class="cover-only">
       <h1 class="title auto-hoverlink" id="title">TR-369 – The User
 Services Platform</h1>
-      <p class="subtitle">Issue: 1 Amendment 4 Corrigendum 1 <span
+      <p class="subtitle">Issue: 1 Amendment 4 Corrigendum 2 <span
 class="release"></span></p>
-      <p class="date">Issue Date: June 2025</p>
+      <p class="date">Issue Date: July 2025</p>
     </header>
     <nav id="NAVTOP" role="doc-toc">
 <p><a href="#sec:cover-page">Cover Page</a> | <a
@@ -1173,6 +1173,20 @@ endpoints.</li>
 <li>Fixed typo in Bulk Data.</li>
 </ul></td>
 </tr>
+<tr>
+<td style="text-align: left;"><p><a
+href="https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-2.pdf">Release
+1.4.2</a></p></td>
+<td style="text-align: left;"><p>July 2025</p></td>
+<td style="text-align: left;"><p>Release contains the specification for
+the User Services Platform 1.4.2</p>
+<ul>
+<li>Fixes the examples of GetSupportedDM which incorrectly included
+unique_key_set when first_level_only was true</li>
+<li>Explicitly mentions Unique Keys in the list of elements not returned
+when first_level_only is true</li>
+</ul></td>
+</tr>
 </tbody>
 </table>
 <p>Comments or questions about this Broadband Forum Technical Report
@@ -1182,16 +1196,14 @@ class="email">info@broadband-forum.org</a>.</p>
 id="sec:editors">Editors</h3>
 <table class="editors">
 <colgroup>
-<col style="width: 20%" />
-<col style="width: 17%" />
-<col style="width: 25%" />
-<col style="width: 36%" />
+<col style="width: 27%" />
+<col style="width: 23%" />
+<col style="width: 48%" />
 </colgroup>
 <thead>
 <tr>
 <th style="text-align: left;">Name</th>
 <th style="text-align: left;">Company</th>
-<th style="text-align: left;">Email</th>
 <th style="text-align: left;">Role</th>
 </tr>
 </thead>
@@ -1199,20 +1211,17 @@ id="sec:editors">Editors</h3>
 <tr>
 <td style="text-align: left;">Tim Spets</td>
 <td style="text-align: left;">Nokia</td>
-<td style="text-align: left;">timothy.spets@nokia.com</td>
 <td style="text-align: left;">Editor/USP Project Lead</td>
 </tr>
 <tr>
 <td style="text-align: left;">Jason Walls</td>
 <td style="text-align: left;">QA Cafe, LLC</td>
-<td style="text-align: left;">jason@qacafe.com</td>
 <td style="text-align: left;">Editor/Broadband User Services Work Area
 Director</td>
 </tr>
 <tr>
 <td style="text-align: left;">John Blackford</td>
 <td style="text-align: left;">Vantiva</td>
-<td style="text-align: left;">john.blackford@vantiva.com</td>
 <td style="text-align: left;">Editor/Broadband User Services Work Area
 Director</td>
 </tr>
@@ -1222,67 +1231,55 @@ Director</td>
 id="sec:acknowledgments">Acknowledgments</h3>
 <table class="acknowledgments">
 <colgroup>
-<col style="width: 32%" />
-<col style="width: 27%" />
-<col style="width: 40%" />
+<col style="width: 54%" />
+<col style="width: 45%" />
 </colgroup>
 <thead>
 <tr>
 <th style="text-align: left;">Name</th>
 <th style="text-align: left;">Company</th>
-<th style="text-align: left;">Email</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align: left;">Jean-Didier Ott</td>
 <td style="text-align: left;">Orange</td>
-<td style="text-align: left;">jeandidier.ott@orange.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">Timothy Carey</td>
 <td style="text-align: left;">Nokia</td>
-<td style="text-align: left;">timothy.carey@nokia.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">Steven Nicolai</td>
 <td style="text-align: left;">Arris</td>
-<td style="text-align: left;">Steven.Nicolai@arris.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">Apostolos Papageorgiou</td>
 <td style="text-align: left;">NEC</td>
-<td style="text-align: left;">apostolos.Papageorgiou@neclab.eu</td>
 </tr>
 <tr>
 <td style="text-align: left;">Mark Tabry</td>
 <td style="text-align: left;">Google</td>
-<td style="text-align: left;">mtab@google.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">Klaus Wich</td>
 <td style="text-align: left;">Huawei</td>
-<td style="text-align: left;">klaus.wich@huawei.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">Daniel Egger</td>
 <td style="text-align: left;">Axiros</td>
-<td style="text-align: left;">daniel.egger@axiros.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">Bahadir Danisik</td>
 <td style="text-align: left;">Nokia</td>
-<td style="text-align: left;">bahadir.danisik@nokia.com</td>
 </tr>
 <tr>
 <td style="text-align: left;">William Lupton</td>
 <td style="text-align: left;">Broadband Forum</td>
-<td style="text-align: left;">wlupton@broadband-forum.org</td>
 </tr>
 <tr>
 <td style="text-align: left;">Barbara Stark</td>
 <td style="text-align: left;">AT&amp;T</td>
-<td style="text-align: left;">barbara.stark@att.com</td>
 </tr>
 </tbody>
 </table>
@@ -9494,48 +9491,21 @@ the Agent represents. It could issue a GetSupportedDM Request as:</p>
           supported_obj_path: &quot;Device.WiFi.Radio.{i}.&quot;
           access: OBJ_READ_ONLY
           is_multi_instance: true
-          unique_key_sets {
-            key_names: &quot;Alias&quot;
-          }
-          unique_key_sets {
-            key_names: &quot;Name&quot;
-          }
         }
         supported_objs {
           supported_obj_path: &quot;Device.WiFi.SSID.{i}.&quot;
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: &quot;Alias&quot;
-          }
-          unique_key_sets {
-            key_names: &quot;Name&quot;
-          }
-          unique_key_sets {
-            key_names: &quot;BSSID&quot;
-          }
         }
         supported_objs {
           supported_obj_path: &quot;Device.WiFi.AccessPoint.{i}.&quot;
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: &quot;Alias&quot;
-          }
-          unique_key_sets {
-            key_names: &quot;SSIDReference&quot;
-          }
         }
         supported_objs {
           supported_obj_path: &quot;Device.WiFi.EndPoint.{i}.&quot;
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: &quot;Alias&quot;
-          }
-          unique_key_sets {
-            key_names: &quot;SSIDReference&quot;
-          }
         }
       }
     }</code></pre>
@@ -9560,9 +9530,9 @@ request fields are ignored.</em></p>
 <p>This field, if <code>true</code>, indicates that the Agent returns
 only those objects matched by the Path Name or Search Path in
 <code>obj_path</code> and its immediate (i.e., next level) child
-objects. The list of child objects does not include commands, events, or
-Parameters of the child objects regardless of the values of the
-following elements:</p>
+objects. The list of child objects does not include Commands, Events
+Parameters, or Unique Keys of the child objects regardless of the values
+of the following elements:</p>
 <p><code>bool return_commands</code></p>
 <p>This field, if <code>true</code>, indicates that, in the
 <code>supported_objs</code>, the Agent should include a

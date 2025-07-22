@@ -4,6 +4,17 @@
 
 See <https://usp.technology> for the current USP specification.
 
+## 2025-07-14: [Release 1.4.2][TR-369 Amendment 4 Corrigendum 2]
+
+*Tags: [v1.4.2] (USP specification), 
+       [v1.4.0][usp-data-models-v1.4.0] (data models didn't change)*
+
+### TR-369 Document
+Release contains the specification for the User Services Platform 1.4.2
+
+* Fixes the examples of GetSupportedDM which incorrectly included unique_key_set when first_level_only was true
+* Explicitly mentions Unique Keys in the list of elements not returned when first_level_only is true   
+
 ## 2025-06-09: [Release 1.4.1][TR-369 Amendment 4 Corrigendum 1]
 
 *Tags: [v1.4.1] (USP specification), 
@@ -298,6 +309,7 @@ USP v1.0 Message Schema
 [TR-369 Amendment 3 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Amendment-3_Corrigendum-2.pdf
 [TR-369 Amendment 4]: https://www.broadband-forum.org/download/TR-369_Amendment-4.pdf
 [TR-369 Amendment 4 Corrigendum 1]: https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-1.pdf
+[TR-369 Amendment 4 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-2.pdf
 [TR-369 Corrigendum 1]: https://www.broadband-forum.org/download/TR-369_Corrigendum-1.pdf
 [TR-369 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Corrigendum-2.pdf
 [TR-369 Issue 1]: https://www.broadband-forum.org/download/TR-369_Issue-1.pdf
@@ -323,3 +335,4 @@ USP v1.0 Message Schema
 [v1.3.2]: https://github.com/BroadbandForum/usp/releases/tag/v1.3.2
 [v1.4.0]: https://github.com/BroadbandForum/usp/releases/tag/v1.4.0
 [v1.4.1]: https://github.com/BroadbandForum/usp/releases/tag/v1.4.1
+[v1.4.2]: https://github.com/BroadbandForum/usp/releases/tag/v1.4.2

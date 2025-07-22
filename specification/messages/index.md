@@ -1578,48 +1578,21 @@ The Agent's response would be:
           supported_obj_path: "Device.WiFi.Radio.{i}."
           access: OBJ_READ_ONLY
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "Name"
-          }
         }
         supported_objs {
           supported_obj_path: "Device.WiFi.SSID.{i}."
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "Name"
-          }
-          unique_key_sets {
-            key_names: "BSSID"
-          }
         }
         supported_objs {
           supported_obj_path: "Device.WiFi.AccessPoint.{i}."
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "SSIDReference"
-          }
         }
         supported_objs {
           supported_obj_path: "Device.WiFi.EndPoint.{i}."
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "SSIDReference"
-          }
         }
       }
     }
@@ -1635,7 +1608,9 @@ This field contains a repeated set of Path Names to Objects, Commands, Events, o
 
 `bool first_level_only`
 
-This field, if `true`, indicates that the Agent returns only those objects matched by the Path Name or Search Path in `obj_path` and its immediate (i.e., next level) child objects. The list of child objects does not include commands, events, or Parameters of the child objects regardless of the values of the following elements:
+This field, if `true`, indicates that the Agent returns only those objects matched by the Path Name or Search Path in 
+`obj_path` and its immediate (i.e., next level) child objects. The list of child objects does not include Commands, Events 
+Parameters, or Unique Keys of the child objects regardless of the values of the following elements:
 
 `bool return_commands`
 

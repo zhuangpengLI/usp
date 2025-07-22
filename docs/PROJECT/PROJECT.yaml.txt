@@ -60,6 +60,17 @@ resources:
     restype: schema
 
 versions:
+  v1.4.2:
+    date: 2025-07-14
+    title: |
+      [Release 1.4.2][TR-369 Amendment 4 Corrigendum 2]
+    changes:
+      specification:
+        text: |
+          Release contains the specification for the User Services Platform 1.4.2
+
+          * Fixes the examples of GetSupportedDM which incorrectly included unique_key_set when first_level_only was true
+          * Explicitly mentions Unique Keys in the list of elements not returned when first_level_only is true   
   v1.4.1:
     date: 2025-06-09
     title: |
@@ -204,10 +215,8 @@ versions:
     acknowledgments:
       - name: Matthieu Anne
         company: Orange
-        email: matthieu.anne@orange.com
       - name: Thales Fragoso
         company: Axiros
-        email: thales.fragoso@axiros.com
 
   v1.2.0:
     date: 2022-01-27
@@ -406,56 +415,43 @@ editors-from-versions: False
 editors:
   - name: Tim Spets
     company: Nokia
-    email: timothy.spets@nokia.com
     role: Editor/USP Project Lead
 
   - name: Jason Walls
     company: QA Cafe, LLC
-    email: jason@qacafe.com
     role: Editor/Broadband User Services Work Area Director
 
   - name: John Blackford
     company: Vantiva
-    email: john.blackford@vantiva.com
     role: Editor/Broadband User Services Work Area Director
 
 acknowledgments:
   - name: Jean-Didier Ott
     company: Orange
-    email: jeandidier.ott@orange.com
 
   - name: Timothy Carey
     company: Nokia
-    email: timothy.carey@nokia.com
 
   - name: Steven Nicolai
     company: Arris
-    email: Steven.Nicolai@arris.com
 
   - name: Apostolos Papageorgiou
     company: NEC
-    email: apostolos.Papageorgiou@neclab.eu
 
   - name: Mark Tabry
     company: Google
-    email: mtab@google.com
 
   - name: Klaus Wich
     company: Huawei
-    email: klaus.wich@huawei.com
 
   - name: Daniel Egger
     company: Axiros
-    email: daniel.egger@axiros.com
 
   - name: Bahadir Danisik
     company: Nokia
-    email: bahadir.danisik@nokia.com
 
   - name: William Lupton
     company: Broadband Forum
-    email: wlupton@broadband-forum.org
 
   - name: Barbara Stark
     company: AT&T
-    email: barbara.stark@att.com

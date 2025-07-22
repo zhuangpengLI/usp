@@ -213,83 +213,75 @@
     * Updated R-MQTT.4 profile.
     * Fixed typo in Bulk Data.
 
+* - [Release 1.4.2][TR-369 Amendment 4 Corrigendum 2]
+  - July 2025
+  - Release contains the specification for the User Services Platform 1.4.2
+    
+    * Fixes the examples of GetSupportedDM which incorrectly included unique_key_set when first_level_only was true
+    * Explicitly mentions Unique Keys in the list of elements not returned when first_level_only is true   
+
 :::
 
 Comments or questions about this Broadband Forum Technical Report should be directed to <info@broadband-forum.org>.
 
 ### Editors {.unnumbered .unlisted}
 
-::: {.list-table .editors aligns=l,l,l,l widths=12,10,15,21}
+::: {.list-table .editors aligns=l,l,l widths=12,10,21}
 
 * - Name
   - Company
-  - Email
   - Role
 
 * - Tim Spets
   - Nokia
-  - timothy.spets@nokia.com
   - Editor/USP Project Lead
 
 * - Jason Walls
   - QA Cafe, LLC
-  - jason@qacafe.com
   - Editor/Broadband User Services Work Area Director
 
 * - John Blackford
   - Vantiva
-  - john.blackford@vantiva.com
   - Editor/Broadband User Services Work Area Director
 
 :::
 
 ### Acknowledgments {.unnumbered .unlisted}
 
-::: {.list-table .acknowledgments aligns=l,l,l widths=12,10,15}
+::: {.list-table .acknowledgments aligns=l,l widths=12,10}
 
 * - Name
   - Company
-  - Email
 
 * - Jean-Didier Ott
   - Orange
-  - jeandidier.ott@orange.com
 
 * - Timothy Carey
   - Nokia
-  - timothy.carey@nokia.com
 
 * - Steven Nicolai
   - Arris
-  - Steven.Nicolai@arris.com
 
 * - Apostolos Papageorgiou
   - NEC
-  - apostolos.Papageorgiou@neclab.eu
 
 * - Mark Tabry
   - Google
-  - mtab@google.com
 
 * - Klaus Wich
   - Huawei
-  - klaus.wich@huawei.com
 
 * - Daniel Egger
   - Axiros
-  - daniel.egger@axiros.com
 
 * - Bahadir Danisik
   - Nokia
-  - bahadir.danisik@nokia.com
 
 * - William Lupton
   - Broadband Forum
-  - wlupton@broadband-forum.org
 
 * - Barbara Stark
   - AT&T
-  - barbara.stark@att.com
 
 :::
 
@@ -300,6 +292,7 @@ Comments or questions about this Broadband Forum Technical Report should be dire
 [TR-369 Amendment 3 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Amendment-3_Corrigendum-2.pdf
 [TR-369 Amendment 4]: https://www.broadband-forum.org/download/TR-369_Amendment-4.pdf
 [TR-369 Amendment 4 Corrigendum 1]: https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-1.pdf
+[TR-369 Amendment 4 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-2.pdf
 [TR-369 Corrigendum 1]: https://www.broadband-forum.org/download/TR-369_Corrigendum-1.pdf
 [TR-369 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Corrigendum-2.pdf
 [TR-369 Issue 1]: https://www.broadband-forum.org/download/TR-369_Issue-1.pdf

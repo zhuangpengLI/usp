@@ -28,8 +28,8 @@
 
 #show: doc => conf(
   title: [TR\-369 – The User Services Platform],
-  subtitle: [Issue: 1 Amendment 4 Corrigendum 1 #bbf-release[]],
-  date: [Issue Date: June 2025],
+  subtitle: [Issue: 1 Amendment 4 Corrigendum 2 #bbf-release[]],
+  date: [Issue Date: July 2025],
   pagenumbering: none,
   cols: 1,
   linenumbering: none,
@@ -48,14 +48,14 @@
     bbfMajor: [1],
     bbfMicro: [0],
     bbfMinor: [4],
-    bbfMonth: [June],
+    bbfMonth: [July],
     bbfNumber: [TR\-369],
-    bbfPatch: [1],
+    bbfPatch: [2],
     bbfProjectStream: [],
     bbfStatus: [],
     bbfTitle: [The User Services Platform],
     bbfType: [Technical Report],
-    bbfVersion: [1 Amendment 4 Corrigendum 1],
+    bbfVersion: [1 Amendment 4 Corrigendum 2],
     bbfWorkArea: [],
     bbfYear: [2025],
     citation-style: [bbf.csl],
@@ -64,7 +64,7 @@ specification, resources and faq
 
 ],
     copydate: [2025],
-    date: [Issue Date: June 2025],
+    date: [Issue Date: July 2025],
     description: [
 
 == What is USP? <what-is-usp>
@@ -144,7 +144,7 @@ devices, IoT endpoints, user services and home networks],
     shortname: [USP],
     siteurl: [..\/index.html],
     status: [],
-    subtitle: [Issue: 1 Amendment 4 Corrigendum 1 #bbf-release[]],
+    subtitle: [Issue: 1 Amendment 4 Corrigendum 2 #bbf-release[]],
     summary: [See
 #link("https://usp.technology")[https:\/\/usp.technology] for the
 current USP specification.
@@ -592,6 +592,21 @@ the notices, legends, and other provisions set forth on this page.
     - Clarified R\-WS.4 to specifically apply to any two USP endpoints.
     - Updated R\-MQTT.4 profile.
     - Fixed typo in Bulk Data.
+    ],
+    [#link("https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-2.pdf")[Release
+    1.4.2]
+
+    ],
+    [July 2025
+
+    ],
+    [Release contains the specification for the User Services Platform
+    1.4.2
+
+    - Fixes the examples of GetSupportedDM which incorrectly included
+      unique\_key\_set when first\_level\_only was true
+    - Explicitly mentions Unique Keys in the list of elements not
+      returned when first\_level\_only is true
     ]
   )
 ]
@@ -611,15 +626,13 @@ be directed to
   #show regex("\>,"): "," + sym.zws
   #show regex("\>\."): "." + sym.zws
   #table(
-    columns: (auto, auto, auto, auto),
-    align: (left, left, left, left),
-    fill: bbf-table-fill.with(columns: 4, header-rows: 1),
+    columns: (auto, auto, auto),
+    align: (left, left, left),
+    fill: bbf-table-fill.with(columns: 3, header-rows: 1),
     table.header(
     [Name
     ],
     [Company
-    ],
-    [Email
     ],
     [Role
     ]),
@@ -627,23 +640,17 @@ be directed to
     ],
     [Nokia
     ],
-    [timothy.spets\@nokia.com
-    ],
     [Editor\/USP Project Lead
     ],
     [Jason Walls
     ],
     [QA Cafe, LLC
     ],
-    [jason\@qacafe.com
-    ],
     [Editor\/Broadband User Services Work Area Director
     ],
     [John Blackford
     ],
     [Vantiva
-    ],
-    [john.blackford\@vantiva.com
     ],
     [Editor\/Broadband User Services Work Area Director
     ]
@@ -661,75 +668,53 @@ be directed to
   #show regex("\>,"): "," + sym.zws
   #show regex("\>\."): "." + sym.zws
   #table(
-    columns: (auto, auto, auto),
-    align: (left, left, left),
-    fill: bbf-table-fill.with(columns: 3, header-rows: 1),
+    columns: (auto, auto),
+    align: (left, left),
+    fill: bbf-table-fill.with(columns: 2, header-rows: 1),
     table.header(
     [Name
     ],
     [Company
-    ],
-    [Email
     ]),
     [Jean\-Didier Ott
     ],
     [Orange
     ],
-    [jeandidier.ott\@orange.com
-    ],
     [Timothy Carey
     ],
     [Nokia
-    ],
-    [timothy.carey\@nokia.com
     ],
     [Steven Nicolai
     ],
     [Arris
     ],
-    [Steven.Nicolai\@arris.com
-    ],
     [Apostolos Papageorgiou
     ],
     [NEC
-    ],
-    [apostolos.Papageorgiou\@neclab.eu
     ],
     [Mark Tabry
     ],
     [Google
     ],
-    [mtab\@google.com
-    ],
     [Klaus Wich
     ],
     [Huawei
-    ],
-    [klaus.wich\@huawei.com
     ],
     [Daniel Egger
     ],
     [Axiros
     ],
-    [daniel.egger\@axiros.com
-    ],
     [Bahadir Danisik
     ],
     [Nokia
-    ],
-    [bahadir.danisik\@nokia.com
     ],
     [William Lupton
     ],
     [Broadband Forum
     ],
-    [wlupton\@broadband\-forum.org
-    ],
     [Barbara Stark
     ],
     [AT&T
-    ],
-    [barbara.stark\@att.com
     ]
   )
 ]
@@ -9213,48 +9198,21 @@ The Agent’s response would be:
           supported_obj_path: "Device.WiFi.Radio.{i}."
           access: OBJ_READ_ONLY
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "Name"
-          }
         }
         supported_objs {
           supported_obj_path: "Device.WiFi.SSID.{i}."
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "Name"
-          }
-          unique_key_sets {
-            key_names: "BSSID"
-          }
         }
         supported_objs {
           supported_obj_path: "Device.WiFi.AccessPoint.{i}."
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "SSIDReference"
-          }
         }
         supported_objs {
           supported_obj_path: "Device.WiFi.EndPoint.{i}."
           access: OBJ_ADD_DELETE
           is_multi_instance: true
-          unique_key_sets {
-            key_names: "Alias"
-          }
-          unique_key_sets {
-            key_names: "SSIDReference"
-          }
         }
       }
     }
@@ -9282,8 +9240,8 @@ ignored.];
 This field, if `true`, indicates that the Agent returns only those
 objects matched by the Path Name or Search Path in `obj_path` and its
 immediate (i.e., next level) child objects. The list of child objects
-does not include commands, events, or Parameters of the child objects
-regardless of the values of the following elements:
+does not include Commands, Events Parameters, or Unique Keys of the
+child objects regardless of the values of the following elements:
 
 `bool return_commands`
 
