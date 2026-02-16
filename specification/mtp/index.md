@@ -74,7 +74,23 @@ Required. Receiving/Target USP Endpoint Identifier.
 
 `string from_id`
 
-Required. Originating/Source USP Endpoint Identifier.
+Required. Source USP Endpoint Identifier.
+
+`string originator_id`
+
+Optional. Originating USP Endpoint Identifier. 
+
+**[R-MTP.4c]{}** - A USP Endpoint that receives a message that needs to be forwarded to another USP Endpoint MUST populate the `originator_id` with the `from_id` from the received message.
+
+**[R-MTP.4d]{}** - A USP Endpoint that receives a message where the `originator_id` is expected and is either empty or not available MUST consider the `from_id` to be the originator.
+
+`string destination_id`
+
+Optional. Destination USP Endpoint Identifier. 
+
+Some Events, e.g. `Device.Bulkdata.Profile.{i}.Push!`, are sent only to the USP Controller that configured the source of the Event (assuming it has an associated Subscription), even if another USP Controller has an associated Subscription. In these cases, the data model stores the identifier of the USP Controller that configured the source of the Event. When a USP Endpoint emits a USP event, the identifier of the USP Controller is communicated to other USP Endpoints using the `destination_id` field of the USP record. This enables the receiving USP Endpoint to determine which USP Controller needs to receive the forwarded USP event.  
+
+**[R-MTP.4e]{}** A USP Agent that is sending a Notify message containing an Event that is defined on a per Controller basis (e.g., Device.BulkData., Device.LocalAgent.Monitor., and Device.LocalAgent.Threshold.) MUST populate the `destination_id` field of the USP Record with the USP Controller Endpoint ID associated with the `Event`.
 
 `enum PayloadSecurity payload_security`
 

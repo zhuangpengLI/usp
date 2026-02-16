@@ -28,13 +28,13 @@
 
 #show: doc => conf(
   title: [TR\-369 – The User Services Platform],
-  subtitle: [Issue: 1 Amendment 4 Corrigendum 2 #bbf-release[]],
-  date: [Issue Date: July 2025],
+  subtitle: [Issue: 1 Amendment 5 #bbf-release[]],
+  date: [Issue Date: January 2026],
   pagenumbering: none,
   cols: 1,
   linenumbering: none,
   info: (
-    PYTHONDIR: [..\/..\/..\/install\/pandoc\/\/..\/python],
+    PYTHONDIR: [..\/..\/install\/pandoc\/\/..\/python],
     ROOTDIR: [..],
     analyticstag: [],
     autoSectionLabels: [true],
@@ -47,24 +47,24 @@
     bbfIssue: [Issue],
     bbfMajor: [1],
     bbfMicro: [0],
-    bbfMinor: [4],
-    bbfMonth: [July],
+    bbfMinor: [5],
+    bbfMonth: [January],
     bbfNumber: [TR\-369],
-    bbfPatch: [2],
+    bbfPatch: [0],
     bbfProjectStream: [],
     bbfStatus: [],
     bbfTitle: [The User Services Platform],
     bbfType: [Technical Report],
-    bbfVersion: [1 Amendment 4 Corrigendum 2],
+    bbfVersion: [1 Amendment 5],
     bbfWorkArea: [],
-    bbfYear: [2025],
+    bbfYear: [2026],
     citation-style: [bbf.csl],
     comment: [common.yaml contains common definitions shared by
 specification, resources and faq
 
 ],
-    copydate: [2025],
-    date: [Issue Date: July 2025],
+    copydate: [2026],
+    date: [Issue Date: January 2026],
     description: [
 
 == What is USP? <what-is-usp>
@@ -144,7 +144,7 @@ devices, IoT endpoints, user services and home networks],
     shortname: [USP],
     siteurl: [..\/index.html],
     status: [],
-    subtitle: [Issue: 1 Amendment 4 Corrigendum 2 #bbf-release[]],
+    subtitle: [Issue: 1 Amendment 5 #bbf-release[]],
     summary: [See
 #link("https://usp.technology")[https:\/\/usp.technology] for the
 current USP specification.
@@ -160,12 +160,12 @@ networks],
     titleDelim: [ –],
     titleid: [title],
     toc: [false],
-    usp-msg-proto-file: [usp\-msg\-1\-4.proto],
-    usp-msg-proto-url: [..\/specification\/usp\-msg\-1\-4.proto],
-    usp-record-proto-file: [usp\-record\-1\-4.proto],
-    usp-record-proto-url: [..\/specification\/usp\-record\-1\-4.proto],
+    usp-msg-proto-file: [usp\-msg\-1\-5.proto],
+    usp-msg-proto-url: [..\/specification\/usp\-msg\-1\-5.proto],
+    usp-record-proto-file: [usp\-record\-1\-5.proto],
+    usp-record-proto-url: [..\/specification\/usp\-record\-1\-5.proto],
     version: [],
-    versionNumber: [1.4],
+    versionNumber: [1.5],
     website: [https:\/\/usp.technology],
     ),
   doc,
@@ -607,6 +607,40 @@ the notices, legends, and other provisions set forth on this page.
       unique\_key\_set when first\_level\_only was true
     - Explicitly mentions Unique Keys in the list of elements not
       returned when first\_level\_only is true
+    ],
+    [#link("https://www.broadband-forum.org/download/TR-369_Amendment-5.pdf")[Release
+    1.5]
+
+    ],
+    [January 2026
+
+    ],
+    [Release contains the specification for the User Services Platform
+    1.5
+
+    - R\-SET.2a: Added details related to how allow\_partial impacts
+      Search Paths.
+    - USPServices: Added references to the USPServices.Trust Data Model
+      table that provides a mechanism to configure access control for
+      USP Service Registration.
+    - Examples in 7.5.3.1: Removed unique\_key\_sets and added Unique
+      Keys.
+    - R\-MQTT.48a: Added ALPN support to MQTT.
+    - R\-DEL.2: Clarified the description of repeated string
+      affected\_path.
+    - UDS MTP: Added UDS Frame definition to support authentication via
+      a password.
+    - R\-MTP.4c, R\-MTP.4d: Added originator\_id requirement to all
+      forwarded messages, and added to USP message header.
+    - R\-MTP.4e: Added requirement of destination\_id in Notifiy message
+      for specific events, and added to the USP message header.
+    - IoTCapability: Added binding support and examples to the
+      IoTCapability data model, and prefixed all examples in the IoT
+      section with Device
+    - Clarified and unified how Add, Set, and Delete behave with respect
+      to Search Paths, which impacted Add Requirements (0, 1, 1a, 1b,
+      2a, 2b, and 3), Set Requirements (0, 1, 2, 2a, 2b, 2c, and 2d),
+      and Delete Requirements (0, 1, 1a, 1b, 2, and 2a).
     ]
   )
 ]
@@ -1086,68 +1120,75 @@ Application Protocol (CoAP)]];, IETF, 2014]
 ] <ref-RFC7252>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[30\] ]#bbf-csl-right-inline[RFC 7925,
+#bbf-csl-left-margin[\[30\] ]#bbf-csl-right-inline[RFC 7301,
+#emph[#link("https://www.rfc-editor.org/rfc/rfc7301.html")[Transport
+#[Layer] #[Security] #[(TLS)] #[Application\-Layer] #[Protocol]
+#[Negotiation] #[Extension]]];, IETF, 2014]
+] <ref-RFC7301>
+
+#bbf-csl-entry[
+#bbf-csl-left-margin[\[31\] ]#bbf-csl-right-inline[RFC 7925,
 #emph[#link("https://tools.ietf.org/html/rfc7925")[Transport Layer
 Security (TLS) \/ Datagram Transport Layer Security (DTLS) Profiles for
 the Internet of Things]];, IETF, 2016]
 ] <ref-RFC7925>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[31\] ]#bbf-csl-right-inline[RFC 7959,
+#bbf-csl-left-margin[\[32\] ]#bbf-csl-right-inline[RFC 7959,
 #emph[#link("https://tools.ietf.org/html/rfc7959")[Block\-Wise Transfers
 in the Constrained Application Protocol (CoAP)]];, IETF, 2016]
 ] <ref-RFC7959>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[32\] ]#bbf-csl-right-inline[RFC 8446,
+#bbf-csl-left-margin[\[33\] ]#bbf-csl-right-inline[RFC 8446,
 #emph[#link("https://tools.ietf.org/html/rfc8446")[The Transport Layer
 Security (TLS) Protocol Version 1.3]];, IETF, 2018]
 ] <ref-RFC8446>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[33\] ]#bbf-csl-right-inline[RFC 8766,
+#bbf-csl-left-margin[\[34\] ]#bbf-csl-right-inline[RFC 8766,
 #emph[#link("https://tools.ietf.org/html/rfc8766")[Discovery Proxy for
 Multicast DNS\-Based Service Discovery]];, IETF, 2020]
 ] <ref-RFC8766>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[34\] ]#bbf-csl-right-inline[FIPS PUB 180\-4,
+#bbf-csl-left-margin[\[35\] ]#bbf-csl-right-inline[FIPS PUB 180\-4,
 #emph[#link("https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.180-4.pdf")[Secure
 Hash Standard (SHS)]];, NIST]
 ] <ref-FIPS-180.4>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[35\] ]#bbf-csl-right-inline[FIPS PUB 186\-4,
+#bbf-csl-left-margin[\[36\] ]#bbf-csl-right-inline[FIPS PUB 186\-4,
 #emph[#link("https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf")[Digital
 Signature Standard (DSS)]];, NIST]
 ] <ref-FIPS-186.4>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[36\] ]#bbf-csl-right-inline[MQTT 3.1.1,
+#bbf-csl-left-margin[\[37\] ]#bbf-csl-right-inline[MQTT 3.1.1,
 #emph[#link("http://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html")[MQ
 Telemetry Transport 3.1.1]];, OASIS]
 ] <ref-MQTT-3-1-1>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[37\] ]#bbf-csl-right-inline[MQTT 5.0,
+#bbf-csl-left-margin[\[38\] ]#bbf-csl-right-inline[MQTT 5.0,
 #emph[#link("https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html")[MQ
 Telemetry Transport 5.0]];, OASIS]
 ] <ref-MQTT-5-0>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[38\] ]#bbf-csl-right-inline[SOAP 1.1,
+#bbf-csl-left-margin[\[39\] ]#bbf-csl-right-inline[SOAP 1.1,
 #emph[#link("https://www.w3.org/TR/2000/NOTE-SOAP-20000508/")[Simple
 Object Access Protocol (SOAP) 1.1]];, W3C, 2000]
 ] <ref-SOAP-1-1>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[39\] ]#bbf-csl-right-inline[XML Schema Part 2,
+#bbf-csl-left-margin[\[40\] ]#bbf-csl-right-inline[XML Schema Part 2,
 #emph[#link("https://www.w3.org/TR/xmlschema-2/")[XML Schema Part 2:
 Datatypes Second Edition]];, W3C, 2004]
 ] <ref-XMLSCHEMA-2>
 
 #bbf-csl-entry[
-#bbf-csl-left-margin[\[40\] ]#bbf-csl-right-inline[STOMP\-1\-2,
+#bbf-csl-left-margin[\[41\] ]#bbf-csl-right-inline[STOMP\-1\-2,
 #emph[#link("https://stomp.github.io/stomp-specification-1.2.html")[Simple
 Text Oriented Message Protocol]];]
 ] <ref-STOMP-1-2>
@@ -1156,6 +1197,11 @@ Text Oriented Message Protocol]];]
 == 1.4 Definitions <sec:definitions>
 
 The following terminology is used throughout this specification.
+
+#strong[Absolute Time];
+
+Time maintained by the Device that is synchronized with a trusted
+external time source, such as an NTP server or a real\-time clock.
 
 #strong[Agent];
 
@@ -2319,8 +2365,8 @@ The basic format of a Search Path is:
 `Device.IP.Interface.[<expression>].Status`
 
 An Expression consists of one or more Expression Components that are
-concatenated by the AND (&&) logical operator #emph[(Note: the OR
-logical operator is not supported)];.
+concatenated by either the AND (&&) logical operator or the OR (||)
+logical operator. An expression may not contain a mix of operators.
 
 The basic format of a Search Path with the Expression element expanded
 is:
@@ -2621,7 +2667,9 @@ parampath ::= objpath name
 cmdpath   ::= objpath  name '()'
 evntpath  ::= objpath  name '!'
 inst      ::= posnum | expr | '*'
-expr      ::= '[' (exprcomp ( '&&' exprcomp )*) ']'
+expr      ::= '[' ( andexpr | orexpr ) ']'
+andexpr   ::=  exprcomp ( '&&' exprcomp )*
+orexpr    ::=  exprcomp ( '||' exprcomp )*
 exprcomp  ::= relpath oper value
 relpath   ::= name (reffollow? '.' name )*
 reffollow ::=  ( '#' (posnum | '*') '+' )|  '+'
@@ -2719,8 +2767,14 @@ referenced by:
 
 #bbf-image("architecture/diagram/expr.png")
 
+#bbf-image("architecture/diagram/andexpr.png")
+
+#bbf-image("architecture/diagram/orexpr.png")
+
 #bbf-ebnf[
-expr ::\= '\[’ exprcomp ( ’&&’ exprcomp )\* ’\]'
+expr ::\= '\[’ ( andexpr | orexpr ) ’\]' \
+andexpr ::\= exprcomp ( '&&' exprcomp )#emph[ \
+orexpr ::\= exprcomp ( '||' exprcomp )];
 ]
 
 referenced by:
@@ -3635,7 +3689,41 @@ Required. Receiving\/Target USP Endpoint Identifier.
 
 `string from_id`
 
-Required. Originating\/Source USP Endpoint Identifier.
+Required. Source USP Endpoint Identifier.
+
+`string originator_id`
+
+Optional. Originating USP Endpoint Identifier.
+
+#strong[#[R\-MTP.4c]<r-mtp.4c>]; \- A USP Endpoint that receives a
+message that needs to be forwarded to another USP Endpoint MUST populate
+the `originator_id` with the `from_id` from the received message.
+
+#strong[#[R\-MTP.4d]<r-mtp.4d>]; \- A USP Endpoint that receives a
+message where the `originator_id` is expected and is either empty or not
+available MUST consider the `from_id` to be the originator.
+
+`string destination_id`
+
+Optional. Destination USP Endpoint Identifier.
+
+Some Events, e.g.~`Device.Bulkdata.Profile.{i}.Push!`, are sent only to
+the USP Controller that configured the source of the Event (assuming it
+has an associated Subscription), even if another USP Controller has an
+associated Subscription. In these cases, the data model stores the
+identifier of the USP Controller that configured the source of the
+Event. When a USP Endpoint emits a USP event, the identifier of the USP
+Controller is communicated to other USP Endpoints using the
+`destination_id` field of the USP record. This enables the receiving USP
+Endpoint to determine which USP Controller needs to receive the
+forwarded USP event.
+
+#strong[#[R\-MTP.4e]<r-mtp.4e>]; A USP Agent that is sending a Notify
+message containing an Event that is defined on a per Controller basis
+(e.g., Device.BulkData., Device.LocalAgent.Monitor., and
+Device.LocalAgent.Threshold.) MUST populate the `destination_id` field
+of the USP Record with the USP Controller Endpoint ID associated with
+the `Event`.
 
 `enum PayloadSecurity payload_security`
 
@@ -4055,7 +4143,7 @@ Record MUST be encapsulated within the CoAP message as defined in RFC
 
 #strong[#[R\-COAP.5]<r-coap.5>]; – USP Records that exceed the CoAP
 message size MUST be block encapsulated in accordance with
-#link(<ref-RFC7959>)[\[31\]].
+#link(<ref-RFC7959>)[\[32\]].
 
 USP Records are transferred using the CoAP resource that represents the
 receiving USP Endpoint using the CoAP POST method as defined in RFC
@@ -4136,11 +4224,11 @@ RFC 7262 #link(<ref-RFC7252>)[\[29\]].
 While section 9 of RFC 7262 #link(<ref-RFC7252>)[\[29\]] provides
 guidance on securing CoAP, further guidance related to DTLS
 implementations for the Internet of Things is provided by RFC 7925
-#link(<ref-RFC7925>)[\[30\]].
+#link(<ref-RFC7925>)[\[31\]].
 
 #strong[#[R\-COAP.15]<r-coap.15>]; \- CoAP clients and servers MUST
 implement the mandatory statements of RFC 7925
-#link(<ref-RFC7925>)[\[30\]] with the exception that:
+#link(<ref-RFC7925>)[\[31\]] with the exception that:
 
 - Section 4.4.1 USP Controller certificates can contain domain names
   with wildcard characters per RFC 6125 #link(<ref-RFC6125>)[\[22\]]
@@ -4567,7 +4655,7 @@ contain domain names with wildcard characters per RFC 6125
 == 4.4 STOMP Binding <sec:stomp-binding>
 
 The STOMP MTP transfers USP Records between USP endpoints using version
-1.2 of the STOMP protocol #link(<ref-STOMP-1-2>)[\[40\]], further
+1.2 of the STOMP protocol #link(<ref-STOMP-1-2>)[\[41\]], further
 referred to as "STOMP Specification", or the Simple Text Oriented
 Message Protocol. Messages that are transferred between STOMP clients
 utilize a message bus interaction model where the STOMP server is the
@@ -4987,11 +5075,11 @@ this section for their use when MQTT is a USP MTP.
 ] <fig:mqtt-packets>
 #strong[#[R\-MQTT.1]<r-mqtt.1>]; \- USP Endpoints utilizing MQTT clients
 for message transport MUST implement MQTT 5.0
-#link(<ref-MQTT-5-0>)[\[37\]].
+#link(<ref-MQTT-5-0>)[\[38\]].
 
 #strong[#[R\-MQTT.2]<r-mqtt.2>]; \- USP Endpoints utilizing MQTT clients
 for message transport MAY implement MQTT 3.1.1
-#link(<ref-MQTT-3-1-1>)[\[36\]].
+#link(<ref-MQTT-3-1-1>)[\[37\]].
 
 Requirements in this MQTT MTP specification are common to both the MQTT
 3.1.1 and MQTT 5.0 specifications unless an MQTT version is named.
@@ -5236,8 +5324,8 @@ from the MQTT server.
 
 For each Topic listed in a `SUBSCRIBE` packet, the client will also
 provide a desired QoS level. See the MQTT specification (MQTT 3.1.1
-#link(<ref-MQTT-3-1-1>)[\[36\]] or MQTT 5.0
-#link(<ref-MQTT-5-0>)[\[37\]], Section 4.3) for description of the three
+#link(<ref-MQTT-3-1-1>)[\[37\]] or MQTT 5.0
+#link(<ref-MQTT-5-0>)[\[38\]], Section 4.3) for description of the three
 QoS levels (QoS 0, QoS 1, QoS 2). The usefulness of these QoS levels in
 the context of USP depends on the particulars of the MQTT deployment. It
 is therefore up to the implementer \/ deployer to decide which QoS
@@ -5504,10 +5592,10 @@ AAAA records instead of the USP Endpoint’s address information.
 === 4.5.7 MQTT Server Requirements <sec:mqtt-server-requirements>
 
 #strong[#[R\-MQTT.39]<r-mqtt.39>]; \- MQTT servers MUST implement MQTT
-5.0 #link(<ref-MQTT-5-0>)[\[37\]].
+5.0 #link(<ref-MQTT-5-0>)[\[38\]].
 
 #strong[#[R\-MQTT.40]<r-mqtt.40>]; \- MQTT servers SHOULD implement MQTT
-3.1.1 #link(<ref-MQTT-3-1-1>)[\[36\]].
+3.1.1 #link(<ref-MQTT-3-1-1>)[\[37\]].
 
 #strong[#[R\-MQTT.41]<r-mqtt.41>]; \- MQTT servers MUST implement MQTT
 over TCP transport protocol.
@@ -5551,6 +5639,11 @@ described in section 10.5 and section 10.6 of RFC 6455
 clients for message transport MUST implement TLS 1.2
 #link(<ref-RFC5246>)[\[18\]] or later with backward compatibility to TLS
 1.2.
+
+#strong[#[R\-MQTT.48a]<r-mqtt.48a>]; \- USP Endpoints utilizing MQTT
+clients for message transport SHOULD support
+`Application-Layer Protocol Negotiation (ALPN)` extensions as defined in
+#link(<ref-RFC7301>)[\[30\]] as part of the TLS handshake.
 
 #strong[#[R\-MQTT.49]<r-mqtt.49>]; \- MQTT server certificates MAY
 contain domain names and those domain names MAY contain domain names
@@ -5730,6 +5823,13 @@ fields:
     ],
     [The USP Record contains the Google Protocol Buffer binary\-encoded
     USP Record being sent between a USP Agent and USP Controller.
+    ],
+    [`4`
+    ],
+    [Password
+    ],
+    [The password contains a UTF\-8 string that represents the shared
+    secret associated with the USP Endpoint sending the message
     ]
   )
 ]
@@ -5764,16 +5864,18 @@ UNIX domain socket connection.
 
 #strong[#[R\-UDS.16]<r-uds.16>]; \- A USP Endpoint acting as a UNIX
 domain socket client MUST send a Unix domain socket Frame containing a
-Type 1 (Handshake) TLV field once it establishes a UNIX domain socket
-connection. This message MUST contain the Endpoint ID of the USP
-Endpoint sending the message.
+Type 1 (Handshake) TLV field, and optionally a Type 4 (Password )TLV
+field, once it establishes a UNIX domain socket connection. This message
+MUST contain the Endpoint ID of the USP Endpoint sending the message,
+and optionally its associated password.
 
 #strong[#[R\-UDS.17]<r-uds.17>]; \- A USP Endpoint acting as a UNIX
 domain socket server MUST send a Unix domain socket Frame containing a
 Type 1 (Handshake) TLV field once it receives a Unix domain socket Frame
-containing a Type 1 (Handshake) TLV field from a USP Endpoint acting as
-a UNIX domain socket client. This message MUST contain the Endpoint ID
-of the USP Endpoint sending the message.
+containing a Type 1 (Handshake) TLV field, and optionally a Type 4
+(Password) TLV field, from a USP Endpoint acting as a UNIX domain socket
+client. This message MUST contain the Endpoint ID of the USP Endpoint
+sending the message, and optionally its associated password.
 
 #strong[#[R\-UDS.18]<r-uds.18>]; \- A USP Endpoint acting as a UNIX
 domain socket client MUST terminate the UNIX domain socket connection if
@@ -5784,12 +5886,13 @@ domain socket Frame containing a Type 1 (Handshake) TLV field.
 Once both sides of the UNIX domain socket have successfully completed
 the handshake process, which is done by the USP Agent and the USP
 Controller exchanging Unix domain socket Frames that contain a Type 1
-(Handshake) TLV field, then either the USP Agent or USP Controller may
-begin sending USP Record messages.
+(Handshake) TLV field, and optionally a Type 4 (Password) TLV field,
+then either the USP Agent or USP Controller may begin sending USP Record
+messages.
 
 #strong[#[R\-UDS.19]<r-uds.19>]; \- A USP Endpoint acting as a UNIX
 domain socket client or server MUST ignore an unexpected UNIX domain
-socket Frame that contains a Type 2 (Handshake) TLV field.
+socket Frame that contains a Type 1 (Handshake) TLV field.
 
 #strong[#[R\-UDS.20]<r-uds.20>]; \- A USP Endpoint acting as a UNIX
 domain socket client or server MUST ignore any UNIX domain socket Frames
@@ -5806,6 +5909,17 @@ used is "os::00256D\-0123456789".
     ])[
   #bbf-image("mtp/unix-domain-socket/./USP-UDS-Handshake.png")<img:unix-domain-socket-frame-with-handshake-message>
 ] <fig:unix-domain-socket-frame-with-handshake-message>
+The following image shows an example of a UNIX domain socket Frame that
+contains a Type 4 (Handshake with shared secret) TLV field used for
+handshaking between a USP Agent and USP Controller. In this example, the
+Endpoint ID being used is "os::00256D\-0123456789" and a shared secret
+of "xxxxxxxxxxxxx".
+
+#figure(
+  caption: [Figure 11 – UNIX Domain Socket Frame with Handshake Message
+    ])[
+  #bbf-image("mtp/unix-domain-socket/./USP-UDS-Password.png")<img:unix-domain-socket-frame-with-handshake-message-1>
+] <fig:unix-domain-socket-frame-with-handshake-message-1>
 
 ==== 4.6.2.1 Handling Failures to Handshake <sec:handling-failures-to-handshake>
 
@@ -5842,7 +5956,7 @@ contains a Type 3 (USP Record) TLV field, which is used for sending a
 USP Record between a USP Agent and USP Controller.
 
 #figure(
-  caption: [Figure 11 – UNIX Domain Socket Frame with USP Record Message
+  caption: [Figure 12 – UNIX Domain Socket Frame with USP Record Message
     ])[
   #bbf-image("mtp/unix-domain-socket/./USP-UDS-Record.png")<img:unix-domain-socket-frame-with-usp-record-message>
 ] <fig:unix-domain-socket-frame-with-usp-record-message>
@@ -5920,12 +6034,12 @@ specification includes support for:
 #strong[#[R\-ENC.0]<r-enc.0>]; \- An implementation using protocol
 buffers encoding to encode USP Messages (Requests, Responses, and
 Errors) MUST conform to the schema defined in
-#link("../specification/usp-msg-1-4.proto")[usp\-msg\-1\-4.proto].
+#link("../specification/usp-msg-1-5.proto")[usp\-msg\-1\-5.proto].
 
 #strong[#[R\-ENC.1]<r-enc.1>]; \- An implementation using protocol
 buffers encoding to encode USP Records MUST conform to the schema
 defined in
-#link("../specification/usp-record-1-4.proto")[usp\-record\-1\-4.proto].
+#link("../specification/usp-record-1-5.proto")[usp\-record\-1\-5.proto].
 
 Protocol Buffers Version 3 uses a set of enumerated elements to
 coordinate encoding and decoding during transmission. It is intended
@@ -5952,7 +6066,7 @@ Arguments).
 
 == 5.1 Parameter and Argument Value Encoding <sec:parameter-value-encoding>
 
-#link("../specification/usp-msg-1-4.proto")[usp\-msg\-1\-4.proto]
+#link("../specification/usp-msg-1-5.proto")[usp\-msg\-1\-5.proto]
 specifies that Parameter and argument values in USP Messages are
 represented as Protocol Buffers Version 3 strings (which are
 UTF\-8\-encoded).
@@ -5967,19 +6081,19 @@ string representations of the TR\-106 Appendix I.4
 
 TR\-106 Appendix I.4 states that "Parameters make use of a limited
 subset of the default SOAP data types". The SOAP 1.1 specification
-#link(<ref-SOAP-1-1>)[\[38\]] states that all SOAP simple types are
+#link(<ref-SOAP-1-1>)[\[39\]] states that all SOAP simple types are
 defined by the XML Schema Part 2: Datatypes specification
-#link(<ref-XMLSCHEMA-2>)[\[39\]], and this is the ultimate reference.
+#link(<ref-XMLSCHEMA-2>)[\[40\]], and this is the ultimate reference.
 
 In practice there should be few surprises, e.g., XML Schema Part 2,
-Section 3.3.22 #link(<ref-XMLSCHEMA-2>)[\[39\]] states that it has a
+Section 3.3.22 #link(<ref-XMLSCHEMA-2>)[\[40\]] states that it has a
 lexical representation consisting of a finite\-length sequence of
 decimal digits (\#x30\-\#x39).
 
 Some of the encoding rules are quite complicated, e.g.~SOAP 1.1, Section
-5.2.3 #link(<ref-SOAP-1-1>)[\[38\]] states that `base64` line length
+5.2.3 #link(<ref-SOAP-1-1>)[\[39\]] states that `base64` line length
 restrictions don’t apply to SOAP, and XML Schema Part 2, Section 3.2.7
-#link(<ref-XMLSCHEMA-2>)[\[39\]] has a lot of detail about which aspects
+#link(<ref-XMLSCHEMA-2>)[\[40\]] has a lot of detail about which aspects
 of ISO 8601 are and are not supported by the `dateTime` data type.
 
 = 6 End to End Message Exchange <sec:e2e-message-exchange>
@@ -6374,7 +6488,7 @@ figure depicts the high\-level processing for USP Endpoints that receive
 a USP Record.
 
 #figure(
-  caption: [Figure 12 – Processing of Received USP Records
+  caption: [Figure 13 – Processing of Received USP Records
     ])[
   #bbf-image("e2e-message-exchange/processing-received-records.png")<img:processing-of-received-usp-records>
 ] <fig:processing-received-records>
@@ -6509,7 +6623,7 @@ capabilities are alleviated. USP Messages of any size can now be
 conveyed across any USP MTP Endpoint as depicted below:
 
 #figure(
-  caption: [Figure 13 – E2E Segmentation and Reassembly
+  caption: [Figure 14 – E2E Segmentation and Reassembly
     ])[
   #bbf-image("e2e-message-exchange/segmentation-and-reassembly.png")<img:e2e-segmentation-and-reassembly>
 ] <fig:segmentation-and-reassembly>
@@ -6778,10 +6892,10 @@ Exchange.
 
 This signature method uses the SHA\-256 hash algorithm, as defined in
 FIPS PUB 180\-4 Secure Hash Standard (SHS)
-#link(<ref-FIPS-180.4>)[\[34\]], and the NIST P\-256 curve that
+#link(<ref-FIPS-180.4>)[\[35\]], and the NIST P\-256 curve that
 generates a signature for the hash using the Digital Signature Standard
 (DSS) scheme as defined in FIPS PUB 186\-4 Digital Signature Standard
-(DSS) #link(<ref-FIPS-186.4>)[\[35\]]. To reduce the burden of requiring
+(DSS) #link(<ref-FIPS-186.4>)[\[36\]]. To reduce the burden of requiring
 a strong source of randomness, the signature algorithm may apply the
 method described in RFC 6979 #link(<ref-RFC6979>)[\[27\]] to
 deterministically derive encryption parameters. The signature must be
@@ -6811,7 +6925,7 @@ this purpose is the SHA\-256 keyed\-Hash Message Authentication Code
 (HMAC) algorithm. The keys used for the HMAC algorithm are derived in
 accordance with RFC 5705 #link(<ref-RFC5705>)[\[20\]] when using TLS 1.2
 or in accordance with the updated version found in RFC 8446
-#link(<ref-RFC8446>)[\[32\]] when using TLS 1.3. These procedures
+#link(<ref-RFC8446>)[\[33\]] when using TLS 1.3. These procedures
 require the following inputs: a label, a context and the length of the
 output keying material. The label used must be
 "`EXPORTER-BBF-USP-Record`", the context must be empty (note that, for
@@ -6854,7 +6968,7 @@ proceeding from lowest to highest.
 protect the integrity of a USP Record, when generating or validating the
 MAC of the USP Record, the USP Endpoint MUST derive the keys in
 accordance with RFC 5705 #link(<ref-RFC5705>)[\[20\]] when using TLS 1.2
-or with accordance with RFC 8446 #link(<ref-RFC8446>)[\[32\]] when using
+or with accordance with RFC 8446 #link(<ref-RFC8446>)[\[33\]] when using
 TLS 1.3.
 
 #strong[#[R\-E2E.36]<r-e2e.36>]; – If using the TLS MAC method to
@@ -6933,7 +7047,7 @@ more of the above\-defined USP Record payload datagrams. Per the TLS
 protocol, establishment of a new TLS session requires two round\-trips.
 
 #figure(
-  caption: [Figure 14 – TLS Session Handshake
+  caption: [Figure 15 – TLS Session Handshake
     ])[
   #bbf-image("e2e-message-exchange/tls-session-handshake.png")<img:tls-session-handshake>
 ] <fig:handshake>
@@ -7080,7 +7194,7 @@ Responses may be received in a different order than that in which
 Requests were made.];
 
 #figure(
-  caption: [Figure 15 – A successful request\/response sequence
+  caption: [Figure 16 – A successful request\/response sequence
     ])[
   #bbf-image("messages/successful_response.png")<img:a-successful-requestresponse-sequence>
 ] <fig:a-successful-requestresponse-sequence>
@@ -7090,7 +7204,7 @@ the Agent throws an error. The error arguments are generated and sent in
 an Error Message.
 
 #figure(
-  caption: [Figure 16 – A failed request\/response sequence
+  caption: [Figure 17 – A failed request\/response sequence
     ])[
   #bbf-image("messages/error_response.png")<img:a-failed-requestresponse-sequence>
 ] <fig:a-failed-requestresponse-sequence>
@@ -7104,7 +7218,7 @@ from one USP Endpoint to another.
 
 #strong[#[R\-MSG.5]<r-msg.5>]; \- A Message MUST conform to the schemas
 defined in
-#link("../specification/usp-msg-1-4.proto")[usp\-msg\-1\-4.proto].
+#link("../specification/usp-msg-1-5.proto")[usp\-msg\-1\-5.proto].
 
 #emph[See the section on #link(<sec:usp-record-encapsulation>)[USP
 Record Encapsulation] for information about Protocol Buffers default
@@ -7589,17 +7703,6 @@ The logic can be described as follows:
   )
 ]
 
-==== 7.4.4.1 Search Paths and allow\_partial in Set <sec:search-paths-in-set>
-
-In a Set Request that specifies a Search Path that matches multiple
-objects, it is intended that the Agent treats the requested path
-holistically regardless of the value of allow\_partial. This represents
-a special case. Information about the failure reason for one or more
-objects that failed to be created or updated is still desired, but would
-be lost if an Error message was returned rather than a Response message
-containing OperationFailure elements. See #link(<r-set.2a>)[R\-SET.2a]
-and #link(<r-set.2b>)[R\-SET.2b] for the specific requirements.
-
 === 7.4.5 The Add Message <sec:add>
 
 The Add Message is used to create new Instances of Multi\-Instance
@@ -7675,16 +7778,16 @@ creation.
 
 #strong[#[R\-ADD.0]<r-add.0>]; \- If the `allow_partial` field is set to
 `true`, and no other exceptions are encountered, the Agent treats each
-Object matched in `obj_path` independently. The Agent MUST complete the
-creation of valid Objects regardless of the inability to create or
-update one or more Objects (see
+`CreateObject` entry independently. The Agent MUST complete the creation
+of valid Objects regardless of the inability to create or update one or
+more Objects (see
 #link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
 
 #strong[#[R\-ADD.1]<r-add.1>]; \- If the `allow_partial` field is set to
-`false`, and no other exceptions are encountered, the Agent treats each
-Object matched in `obj_path` holistically. A failure to create any one
-Object MUST cause the Add Message to fail and return an `Error` Message
-(see
+`false`, and no other exceptions are encountered, the Agent treats the
+entire Add Message as a single operation. A failure to create any one
+Object MUST cause the entire Add Message to fail and return an `Error`
+Message, and the state of the Data Model MUST NOT change (see
 #link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
 
 `repeated CreateObject create_objs`
@@ -7707,6 +7810,24 @@ previous USP versions too narrowly restricted the usage of various paths
 in the obj\_path field. If multiple paths are impacted, then the AddResp
 can contain multiple CreatedObjectResult instances that include the same
 requested\_path.];
+
+#strong[#[R\-ADD.1a]<r-add.1a>]; \- The following error conditions MUST
+cause the Add to fail for the corresponding `obj_path`: \* any
+`obj_path` that does not reference a Multi\-Instance Object Path \* any
+`obj_path` that is not in the Supported Data Model \* any `obj_path`
+that is non\-writable as per the Supported Data Model \* any `obj_path`
+that is a Multi\-Instance Object with no InstantiatedObj Write
+permission
+
+See requirements #link(<r-add.2a>)[R\-ADD.2a] and
+#link(<r-add.2b>)[R\-ADD.2b] for handling of `obj_path` fields
+containing Search Expressions (see also
+#link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
+
+#strong[#[R\-ADD.1b]<r-add.1b>]; \- The Agent MAY terminate processing a
+Add Request with an `obj_path` field in the `CreateObject` message that
+contains a Search Path matching more than one object after encountering
+any number of errors if `allow_partial` is `false`.
 
 `repeated CreateParamSetting param_settings`
 
@@ -7757,6 +7878,20 @@ of the Object.];
 to `false` and the `obj_path` field contains a Search Expression, a
 failure in any of the Paths matched by the Search Expression MUST result
 in a failure and the state of the Data Model MUST NOT change.
+
+#strong[#[R\-ADD.2b]<r-add.2b>]; \- If the `allow_partial` field is set
+to `true` and the `obj_path` field contains a Search Expression, the
+Agent MUST NOT roll back or undo any Objects that were successfully
+created when a failure occurs for other Paths matched by the Search
+Expression. Each matched path is treated independently, and successful
+object creations remain in the Data Model even if other object creations
+fail.
+
+#emph[Note: If the Search Path matches zero Objects in the Agent’s
+Instantiated Data Model this is seen as a successful operation as
+explained in #link(<r-msg.4a>)[R\-MSG.4a]. If multiple paths are
+impacted, then the AddResp can contain multiple CreatedObjectResult
+instances that include the same requested\_path.];
 
 #strong[#[R\-ADD.3]<r-add.3>]; \- If the `required` field is set to
 true, a failure to update this Parameter MUST result in a failure to
@@ -7928,9 +8063,9 @@ one or more of the Objects matched in the `obj_path` fails to update.
 
 #strong[#[R\-SET.0]<r-set.0>]; \- If the `allow_partial` field is set to
 true, and no other exceptions are encountered, the Agent treats each
-`UpdateObject` message `obj_path` independently. The Agent MUST complete
-the update of valid Objects regardless of the inability to update one or
-more Objects (see
+`UpdateObject` entry independently. The Agent MUST complete the update
+of valid Objects regardless of the inability to update one or more
+Objects (see
 #link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
 
 #emph[Note: This may cause some counterintuitive behavior if there are
@@ -7939,11 +8074,10 @@ in a Set Response (rather than an Error Message) if `allow_partial` is
 set to true.];
 
 #strong[#[R\-SET.1]<r-set.1>]; \- If the `allow_partial` field is set to
-false, and no other exceptions are encountered, the Agent treats each
-`UpdateObject` message `obj_path` holistically. A failure to update any
-one Object MUST cause the Set Message to fail and return an Error
-Message (see
-#link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
+false, and no other exceptions are encountered, the Agent treats the
+entire Set Message as a single operation. A failure to update any one
+Object MUST cause the entire Set Message to fail and return an Error
+Message, and the state of the Data Model MUST NOT change.
 
 `repeated UpdateObject update_objs`
 
@@ -7955,6 +8089,17 @@ This field contains a repeated set of UpdateObject messages.
 
 This field contains an Object Path, Object Instance Path, or Search Path
 to Objects or Object Instances in the Agent’s Instantiated Data Model.
+
+#strong[#[R\-SET.1a]<r-set.1a>]; \- The following error conditions MUST
+cause the Set to fail for the corresponding `obj_path`: \* any
+`obj_path` that is not an Object Path, Object Instance Path, or Search
+Path \* any `obj_path` that is not in the Supported Data Model \* any
+`obj_path` that is a Multi\-Instance Object
+
+See requirements #link(<r-set.2b>)[R\-SET.2b],
+#link(<r-set.2c>)[R\-SET.2c], and #link(<r-set.2d>)[R\-SET.2d] for
+handling of `obj_path` fields containing Search Paths (see also
+#link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
 
 `repeated UpdateParamSetting param_settings`
 
@@ -7993,16 +8138,48 @@ matching more than one object, the Agent MUST treat the results of that
 Path fails to be updated due to a failure, the Agent MUST undo any
 changes that were already processed due to this `obj_path`, and the
 Agent returns either an `Error` with the appropriate `param_errs`
-elements or a `Set` Response with an UpdatedObjectResult containing:
+elements or a `Set` Response with an UpdatedObjectResult containing
+(DEPRECATED): \* A `requested_path` equal to the `obj_path` in the
+request. \* An `oper_status` field containing an OperationFailure
+message. \* At least one UpdatedInstanceFailure message with an
+`affected_path` that reflects the object that failed to update.
 
-- A `requested_path` equal to the `obj_path` in the request.
-- An `oper_status` field containing an OperationFailure message.
-- At least one UpdatedInstanceFailure message with an `affected_path`
-  that reflects the object that failed to update.
+#emph[Note: The 3 bullet points above are DEPRECATED together with
+requirement `R-SET.2a` to make the requirements for the SET more clear
+and more consistent with the behavior of the ADD. Refer to requirements
+R\-SET.2c and R\-SET.2d for more information on processing SET requests
+with Search Paths.];
+
 #strong[#[R\-SET.2b]<r-set.2b>]; \- The Agent MAY terminate processing a
 Set Request with an `obj_path` field in the `UpdateObject` message that
 contains a Search Path matching more than one object after encountering
-any number of errors.
+any number of errors if `allow_partial` is `false`.
+
+#strong[#[R\-SET.2c]<r-set.2c>]; \- If the `allow_partial` field is set
+to `false` and the `obj_path` field in the `UpdateObject` message of a
+`Set` Request contains a Search Path matching more than one object, the
+Agent MUST treat all objects matched by that `obj_path` as a single
+operation. That is, if any object that matches the Search Path fails to
+be updated due to a failure, the Agent MUST undo any changes that were
+already processed due to this `obj_path`, and the state of the Data
+Model MUST NOT change. The Agent returns an `Error` Message with the
+appropriate `param_errs` elements.
+
+#strong[#[R\-SET.2d]<r-set.2d>]; \- If the `allow_partial` field is set
+to `true` and the `obj_path` field in the `UpdateObject` message of a
+`Set` Request contains a Search Path matching more than one object, the
+Agent MUST treat each matched object independently. The Agent MUST NOT
+roll back or undo any Objects that were successfully updated when a
+failure occurs for other objects matched by the Search Path. Successful
+object updates remain in the Data Model even if other object updates
+fail. The Agent returns a `Set` Response with UpdatedObjectResult
+elements for each independently processed object.
+
+#emph[Note: If the Search Path matches zero Objects in the Agent’s
+Instantiated Data Model this is seen as a successful operation as
+explained in #link(<r-msg.4a>)[R\-MSG.4a]. If multiple paths are
+impacted, then the SetResp can contain multiple UpdatedObjectResult
+instances that include the same requested\_path.];
 
 ==== 7.4.6.3 Set Response <sec:set-response>
 
@@ -8196,25 +8373,42 @@ one or more of the Objects specified in the `obj_path` argument fails
 deletion.
 
 #strong[#[R\-DEL.0]<r-del.0>]; \- If the `allow_partial` field is set to
-true, and no other exceptions are encountered, the Agent treats each
-entry in `obj_path` independently. The Agent MUST complete the deletion
+`true`, and no other exceptions are encountered, the Agent treats each
+entry in `obj_paths` independently. The Agent MUST complete the deletion
 of valid Objects regardless of the inability to delete one or more
 Objects (see
 #link(<sec:using-allow-partial-and-required-parameters>)[Using Allow Partial and Required Parameters]).
 
-#[R\-DEL.1]<r-del.1> \- If the allow\_partial field is set to false, the
-Agent treats each entry in obj\_path holistically. The following error
-conditions MUST cause the Delete Message to fail and return an Error
-Message: any entry that is not an Object Instance Path, any entry that
-is an Object Instance that does not exist, any entry that is
-non\-deletable as per the the Supported Data Model (e.g., a
-non\-writable multi\-instance Object), or any entry that is an Object
-Instance with no InstantiatedObj Write permission.
+#strong[#[R\-DEL.1]<r-del.1>]; \- If the `allow_partial` field is set to
+`false`, and no other exceptions are encountered, the Agent treats the
+entire Delete Message as a single operation. A failure to delete any one
+Object MUST cause the entire Delete Message to fail and return an
+`Error` Message, and the state of the Data Model MUST NOT change. This
+also applies to `obj_paths` that contain Search Expressions, which
+resolve to multiple objects.
+
+#strong[#[R\-DEL.1a]<r-del.1a>]; \- If the `allow_partial` field is set
+to `true` and an entry in `obj_paths` contains a Search Path matching
+more than one object, the Agent MUST treat each matched object
+independently. The Agent MUST NOT roll back or undo any Objects that
+were successfully deleted when a failure occurs for other objects
+matched by the Search Path. Successful object deletions are removed from
+the Data Model even if other object deletions fail. The Agent returns a
+`DeleteResp` Response with a single `DeletedObjectResult` for each of
+the `obj_paths` in the `Delete` Request.
 
 `repeated string obj_paths`
 
 This field contains a repeated set of Object Instance Paths or Search
 Paths.
+
+#strong[#[R\-DEL.1b]<r-del.1b>]; \- The following error conditions MUST
+cause the Delete to fail for the corresponding `obj_paths` entry: \* any
+`obj_path` that is not an Object Instance Path or Search Path \* any
+`obj_path` that is not in the Supported Data Model \* any `obj_path`
+that is non\-deletable as per the Supported Data Model (e.g., a
+non\-writable multi\-instance Object) \* any `obj_path` that is an
+Object Instance with no InstantiatedObj Write permission.
 
 ==== 7.4.7.3 Delete Response Fields <sec:delete-response-fields>
 
@@ -8264,7 +8458,9 @@ error.
 
 `repeated string affected_paths`
 
-This field returns a repeated set of Path Names to Object Instances.
+This field contains a repeated set of Object Instance Paths matching the
+`requested_path` in this `DeletedObjectResult`. Child Objects of the
+matching path are not included in the set.
 
 #strong[#[R\-DEL.2]<r-del.2>]; \- If the Controller does not have Read
 permission on any of the Objects specified in `affected_paths`, these
@@ -8274,7 +8470,9 @@ Objects MUST NOT be returned in this field.
 (i.e., properly formatted and in the Agent’s supported data model) but
 did not resolve to any Objects in the Agent’s instantiated data model,
 the Agent MUST return an OperationSuccess for this requested\_path, and
-include an empty set for affected\_path.
+include an empty set for affected\_path. This includes requested\_paths
+that point to instances that are not in the Instantiated Data Model.
+This requirement does not depend on the value of allow\_partial.
 
 `repeated UnaffectedPathError unaffected_path_errs`
 
@@ -10530,7 +10728,7 @@ doesn’t need the returned information (if any), and the Agent does not
 send an Operate Response.
 
 #figure(
-  caption: [Figure 17 – Operate Message Flow for Synchronous Operations
+  caption: [Figure 18 – Operate Message Flow for Synchronous Operations
     ])[
   #bbf-image("messages/synchronous_operation.png")<img:operate-message-flow-for-synchronous-operations>
 ] <fig:operate-message-flow-for-synchronous-operations>
@@ -10574,7 +10772,7 @@ A Controller can cancel a request that is still present in the Agent’s
 Message.
 
 #figure(
-  caption: [Figure 18 – Operate Message Flow for Asynchronous Operations
+  caption: [Figure 19 – Operate Message Flow for Asynchronous Operations
     ])[
   #bbf-image("messages/asynchronous_operation.png")<img:operate-message-flow-for-asynchronous-operations>
 ] <fig:operate-message-flow-for-asynchronous-operations>
@@ -11198,13 +11396,14 @@ end\-to\-end ecosystem.
 == 8.1 Authentication <sec:authentication-1>
 
 Authentication of Controllers is done using X.509 certificates as
-defined in #link(<ref-RFC5280>)[\[19\]] and
-#link(<ref-RFC6818>)[\[26\]]. Authentication of Agents is done either by
-using X.509 certificates or shared secrets. X.509 certificates, at a
-minimum, need to be usable for #link(<sec:securing-mtps>)[Securing MTPs]
-with TLS or DTLS protocols. It is recommended that Agents implement the
-ability to encrypt all MTPs using one of these two protocols, enable it
-by default, and not implement the ability to disable it.
+defined in #link(<ref-RFC5280>)[\[19\]] and #link(<ref-RFC6818>)[\[26\]]
+or shared secrets when using a UDS MTP. Authentication of Agents is done
+either by using X.509 certificates or shared secrets. X.509
+certificates, at a minimum, need to be usable for
+#link(<sec:securing-mtps>)[Securing MTPs] with TLS or DTLS protocols. It
+is recommended that Agents implement the ability to encrypt all MTPs
+using one of these two protocols, enable it by default, and not
+implement the ability to disable it.
 
 In order to support various authentication models (e.g., trust Endpoint
 identity and associated certificate on first use; precise Endpoint
@@ -11228,6 +11427,9 @@ a Controller, the Agent MUST either:
 - have a Trusted Broker’s certificate information and have a
   cryptographically protected connection between the Agent and the
   Trusted Broker
+- If using a UDS MTP, provide a shared secret to the Controller to
+  authenticate it when the UDS connection requires password
+  authentication.
 #strong[#[R\-SEC.0a]<r-sec.0a>]; \- Whenever a X.509 certificate is used
 to authenticate a USP Endpoint, the certificate MUST contain a
 representation of the Endpoint ID in the `subjectAltName` extension.
@@ -11336,8 +11538,8 @@ CAs.
 Note that if an Agent supports and has enabled a Trust on First Use
 (TOFU) policy, it is possible for Controllers signed by unknown CAs to
 be granted the "untrusted role". See
-#link(<fig:check-cert>)[Figure 22] and 
-#link(<fig:determine-role>)[Figure 23] and the penultimate bullet in the
+#link(<fig:check-cert>)[Figure 23] and 
+#link(<fig:determine-role>)[Figure 24] and the penultimate bullet in the
 #link(<sec:assigning-controller-roles>)[Assigning Controller Roles]
 section below for more information related to TOFU and the "untrusted"
 role.
@@ -11404,8 +11606,8 @@ Controllers an "untrusted" Role on first use.
 
 That is, the Agent will trust the certificate for purpose of encryption,
 but will heavily restrict what the Controller is authorized to do. See
-#link(<fig:check-cert>)[Figure 22] and 
-#link(<fig:determine-role>)[Figure 23] and the penultimate bullet in the
+#link(<fig:check-cert>)[Figure 23] and 
+#link(<fig:determine-role>)[Figure 24] and the penultimate bullet in the
 #link(<sec:assigning-controller-roles>)[Assigning Controller Roles]
 section below for more information related to TOFU and the "untrusted"
 role.
@@ -11562,17 +11764,17 @@ encryption session and Role authorization information when it reboots.
 #strong[#[R\-SEC.22]<r-sec.22>]; \- When an Agent receives a USP Record,
 the Agent MUST execute logic that achieves the same results as in the
 mandatory decision flow elements (identified with "MUST") from
-#link(<fig:receive-record>)[Figure 19] and 
-#link(<fig:no-secure-message-exchange>)[Figure 20].
+#link(<fig:receive-record>)[Figure 20] and 
+#link(<fig:no-secure-message-exchange>)[Figure 21].
 
 #strong[#[R\-SEC.22a]<r-sec.22a>]; \- When an Agent receives a USP
 Record, the Agent SHOULD execute logic that achieves the same results as
 in the optional decision flow elements (identified with "OPT") from
-#link(<fig:receive-record>)[Figure 19] and 
-#link(<fig:no-secure-message-exchange>)[Figure 20].
+#link(<fig:receive-record>)[Figure 20] and 
+#link(<fig:no-secure-message-exchange>)[Figure 21].
 
 #figure(
-  caption: [Figure 19 – Receiving a USP Record
+  caption: [Figure 20 – Receiving a USP Record
     ])[
   #bbf-image("security/receive-record.png")<img:receiving-a-usp-record>
 ] <fig:receive-record>
@@ -11580,7 +11782,7 @@ in the optional decision flow elements (identified with "OPT") from
 #line(length: 100%)
 
 #figure(
-  caption: [Figure 20 – USP Record without USP Layer Secure Message
+  caption: [Figure 21 – USP Record without USP Layer Secure Message
     Exchange
     ])[
   #bbf-image("security/no-secure-message-exchange.png")<img:usp-record-without-usp-layer-secure-message-exchange>
@@ -11591,15 +11793,15 @@ in the optional decision flow elements (identified with "OPT") from
 #strong[#[R\-SEC.23]<r-sec.23>]; \- When an Agent sends a USP Record,
 the Agent MUST execute logic that achieves the same results as in the
 mandatory decision flow elements (identified with "MUST") from
-#link(<fig:send-record>)[Figure 21].
+#link(<fig:send-record>)[Figure 22].
 
 #strong[#[R\-SEC.23a]<r-sec.23a>]; \- When an Agent sends a USP Record,
 the Agent SHOULD execute logic that achieves the same results as in the
 optional decision flow elements (identified with "OPT") from
-#link(<fig:send-record>)[Figure 21].
+#link(<fig:send-record>)[Figure 22].
 
 #figure(
-  caption: [Figure 21 – Sending a USP Record
+  caption: [Figure 22 – Sending a USP Record
     ])[
   #bbf-image("security/send-record.png")<img:sending-a-usp-record>
 ] <fig:send-record>
@@ -11610,22 +11812,22 @@ optional decision flow elements (identified with "OPT") from
 certificate for authentication and determining permissions (Role), the
 Agent MUST execute logic that achieves the same results as in the
 mandatory decision flow elements (identified with "MUST") from
-#link(<fig:check-cert>)[Figure 22] and 
-#link(<fig:determine-role>)[Figure 23].
+#link(<fig:check-cert>)[Figure 23] and 
+#link(<fig:determine-role>)[Figure 24].
 
 #strong[#[R\-SEC.24a]<r-sec.24a>]; \- When an Agent analyzes a
 Controller certificate for authentication and determining permissions
 (Role), the Agent SHOULD execute logic that achieves the same results as
 in the optional decision flow elements (identified with "OPT") from
-#link(<fig:check-cert>)[Figure 22] and 
-#link(<fig:determine-role>)[Figure 23].
+#link(<fig:check-cert>)[Figure 23] and 
+#link(<fig:determine-role>)[Figure 24].
 
 #strong[#[R\-SEC.25]<r-sec.25>]; \- When determining the inherited Role
 to apply based on Roles associated with a trusted CA, only the first
 matching CA in the chain will be used.
 
 #figure(
-  caption: [Figure 22 – Checking a Certificate
+  caption: [Figure 23 – Checking a Certificate
     ])[
   #bbf-image("security/check-cert.png")<img:checking-a-certificate>
 ] <fig:check-cert>
@@ -11633,7 +11835,7 @@ matching CA in the chain will be used.
 #line(length: 100%)
 
 #figure(
-  caption: [Figure 23 – Determining the Role
+  caption: [Figure 24 – Determining the Role
     ])[
   #bbf-image("security/determine-role.png")<img:determining-the-role>
 ] <fig:determine-role>
@@ -11645,25 +11847,25 @@ Support for Trusted Broker logic is optional.
 #strong[#[R\-SEC.26]<r-sec.26>]; \- If Trusted Brokers are supported,
 and a Trusted Broker is encountered (from the optional "OPT" "Trusted
 Broker cert?" decision diamonds in
-#link(<fig:no-secure-message-exchange>)[Figure 20, Figure 21]) the Agent
+#link(<fig:no-secure-message-exchange>)[Figure 21, Figure 22]) the Agent
 MUST execute logic that achieves the same results as in the mandatory
 decision flow elements (identified with "MUST") from
-#link(<fig:broker-with-received-record>)[Figure 24] for a received USP
-Record and #link(<fig:broker-with-sent-record>)[Figure 25] for sending a
+#link(<fig:broker-with-received-record>)[Figure 25] for a received USP
+Record and #link(<fig:broker-with-sent-record>)[Figure 26] for sending a
 USP Record.
 
 #strong[#[R\-SEC.26a]<r-sec.26a>]; \- If Trusted Brokers are supported,
 and a Trusted Broker is encountered (from the optional "OPT" "Trusted
 Broker cert?" decision diamonds in
-#link(<fig:no-secure-message-exchange>)[Figure 20, Figure 21]) the Agent
+#link(<fig:no-secure-message-exchange>)[Figure 21, Figure 22]) the Agent
 SHOULD execute logic that achieves the same results as in the optional
 decision flow elements (identified with "OPT") from
-#link(<fig:broker-with-received-record>)[Figure 24] for a received USP
-Record and #link(<fig:broker-with-sent-record>)[Figure 25] for sending a
+#link(<fig:broker-with-received-record>)[Figure 25] for a received USP
+Record and #link(<fig:broker-with-sent-record>)[Figure 26] for sending a
 USP Record.
 
 #figure(
-  caption: [Figure 24 – Trusted Broker with Received Record
+  caption: [Figure 25 – Trusted Broker with Received Record
     ])[
   #bbf-image("security/broker-with-received-record.png")<img:trusted-broker-with-received-record>
 ] <fig:broker-with-received-record>
@@ -11671,7 +11873,7 @@ USP Record.
 #line(length: 100%)
 
 #figure(
-  caption: [Figure 25 – Trusted Broker Sending a Record
+  caption: [Figure 26 – Trusted Broker Sending a Record
     ])[
   #bbf-image("security/broker-with-sent-record.png")<img:trusted-broker-sending-a-record>
 ] <fig:broker-with-sent-record>
@@ -11956,8 +12158,8 @@ definitions (as identified by the `UntrustedRole` and `BannedRole`
 Parameters) without exposing these through the data model. If the data
 is maintained but not exposed, the same methods can still be used.
 
-#link(<fig:check-cert>)[Figure 22] and 
-#link(<fig:determine-role>)[Figure 23] in the above
+#link(<fig:check-cert>)[Figure 23] and 
+#link(<fig:determine-role>)[Figure 24] in the above
 #link(<sec:analysis-controller-certificates>)[Analysis of Controller Certificates]
 section identify points in the decision logic where some of the
 following calls to data model Parameters can be made. The following
@@ -11975,13 +12177,13 @@ bullets note when they are identified in one of these figures.
   Controller inherits the Role from the associated
   `ControllerTrust.Credential.{i}.Role`. The Agent writes this value to
   the `Controller.{i}.InheritedRole` Parameter. This step is shown in
-  #link(<fig:determine-role>)[Figure 23].
+  #link(<fig:determine-role>)[Figure 24].
 - A Controller whose associated certificate is revoked by a CA can be
   assigned the role in `BannedRole`, if this Parameter or policy is
   implemented. In this case, the value of `BannedRole` must be the only
   value in `Controller.{i}.AssignedRole` (all other entries are removed)
   and `Controller.{i}.InheritedRole` must be empty (all entries are
-  removed). This step is shown in #link(<fig:check-cert>)[Figure 22]. In
+  removed). This step is shown in #link(<fig:check-cert>)[Figure 23]. In
   the case of a Controller that has not previously been assigned a Role
   or who has been assigned the value of `UntrustedRole`:
 - If the Controller’s certificate is validated by credentials in a
@@ -11990,7 +12192,7 @@ bullets note when they are identified in one of these figures.
   value is empty) and `Controller.{i}.AssignedRole` is empty, then the
   Controller is assigned the role in `UntrustedRole` (written to the
   `Controller.{i}.AssignedRole` Parameter). This step is shown in
-  #link(<fig:determine-role>)[Figure 23]. Note that assigning
+  #link(<fig:determine-role>)[Figure 24]. Note that assigning
   `UntrustedRole` means there needs to be some implemented way to
   elevate the Controller’s Role, either by another Controller
   manipulating the Role, implementing Challenges, or some non\-USP
@@ -12000,8 +12202,8 @@ bullets note when they are identified in one of these figures.
   may be to assign the role in `UntrustedRole`. The optional policy
   decision (whether or not to allow Trust on First Use (TOFU), which can
   be codified in the data model with the ControllerTrust.TOFUAllowed
-  flag) is shown in #link(<fig:check-cert>)[Figure 22];
-  #link(<fig:determine-role>)[Figure 23] shows the Role assignment.
+  flag) is shown in #link(<fig:check-cert>)[Figure 23];
+  #link(<fig:determine-role>)[Figure 24] shows the Role assignment.
 - If the Agent implements the `RequestChallenge()` and
   `ChallengeResponse()` commands, a Controller assigned the role in
   `UntrustedRole` can have permission to read one or more
@@ -12016,8 +12218,8 @@ bullets note when they are identified in one of these figures.
 When an Agent is presented with a Controller’s certificate, the Agent
 will always attempt to validate the certificate to whatever extent
 possible.
-#link(<fig:no-secure-message-exchange>)[Figure 20, Figure 22] and 
-#link(<fig:determine-role>)[Figure 23] identify points in the decision
+#link(<fig:no-secure-message-exchange>)[Figure 21, Figure 23] and 
+#link(<fig:determine-role>)[Figure 24] identify points in the decision
 logic where data model Parameters can be used to influence policy
 decisions related to Controller certificate analysis.
 
@@ -13477,7 +13679,7 @@ Below is the state machine diagram#footnote[
 ] for the lifecycle of DUs.
 
 #figure(
-  caption: [Figure 26 – Deployment Unit State Diagram
+  caption: [Figure 27 – Deployment Unit State Diagram
     ])[
   #bbf-image("extensions/software-module-management/du_state.png")<img:deployment-unit-state-diagram>
 ] <fig:deployment-unit-state-diagram>
@@ -13649,7 +13851,7 @@ Below is the state machine diagram#footnote[
 ] for the lifecycle of EUs.
 
 #figure(
-  caption: [Figure 27 – Execution Unit State Diagram
+  caption: [Figure 28 – Execution Unit State Diagram
     ])[
   #bbf-image("extensions/software-module-management/eu_state.png")<img:execution-unit-state-diagram>
 ] <fig:execution-unit-state-diagram>
@@ -13790,7 +13992,7 @@ each other. The following diagram gives a possible implementation of
 multiple EEs.
 
 #figure(
-  caption: [Figure 28 – Possible Multi\-Execution Environment
+  caption: [Figure 29 – Possible Multi\-Execution Environment
     Implementation
     ])[
   #bbf-image("extensions/software-module-management/smm_concepts.png")<img:possible-multi-execution-environment-implementation>
@@ -13841,7 +14043,7 @@ and the time of the restart to be recorded in
 `SoftwareModules.ExecEnc.{i}.LastRestarted` respectively.
 
 #figure(
-  caption: [Figure 29 – Execution Environment State Diagram
+  caption: [Figure 30 – Execution Environment State Diagram
     ])[
   #bbf-image("extensions/software-module-management/ee_state.png")<img:execution-environment-state-diagram>
 ] <fig:execution-environment-state-diagram>
@@ -13864,7 +14066,7 @@ result in the device becoming unmanageable via USP.
 An implementation may provide for Execution Environments to be added or
 removed at run\-time. These implementations should provide the
 `SoftwareModules.ExecEnvClass` table and its associated `AddExecEnv()`
-command. For example in #link(<fig:multi-exec-env>)[Figure 28] the
+command. For example in #link(<fig:multi-exec-env>)[Figure 29] the
 `ExecEnvClassRef` of the Linux EE would point to one entry in
 `SoftwareModules.ExecEnvClass` while the two OSGI Frameworks would point
 to to another entry. A new OSGI Framework instance could be created
@@ -13876,7 +14078,7 @@ terms of the kinds of DUs it supports. For example a web services
 framework would probably support the installation of WAR files, but it
 may also support OSGi Bundles as a DU format.
 
-(Note: In the example shown in #link(<fig:multi-exec-env>)[Figure 28]
+(Note: In the example shown in #link(<fig:multi-exec-env>)[Figure 29]
 the `ExecEnvClassRef` of the Linux EE could also be left blank, as
 apparently this EE does not support the installation of any kind of DU
 nor is it possible to add new instances.)
@@ -14461,7 +14663,7 @@ functions described in
 A Discovery Proxy simply repeats the exact information that it discovers
 from Endpoints. This is particularly useful in a multi\-segment LAN,
 where mDNS messages do not cross segment boundaries. The DNS\-SD
-Discovery Proxy #link(<ref-RFC8766>)[\[33\]] functionality is
+Discovery Proxy #link(<ref-RFC8766>)[\[34\]] functionality is
 recommended as a component of a Discovery Proxy. When used inside a LAN,
 this would need the #emph[Non\-USP Discovery Function]; and the
 #emph[Non\-USP Advertisement Function]; described in
@@ -14707,14 +14909,14 @@ implementations.
   )]
 ] <tbl:possible-mtp-proxy-methods>
 
-#link(<fig:example-of-mtp-proxy-in-lan-with-wan-controller>)[Figure 30]
+#link(<fig:example-of-mtp-proxy-in-lan-with-wan-controller>)[Figure 31]
 shows an example of how an MTP Proxy might be used to proxy between an
 MTP used by a Cloud Server in the WAN and an MTP used inside the LAN. It
 also shows proxying between MTPs and internal APIs used to communicate
 with multiple Agents internal to the Services Gateway.
 
 #figure(
-  caption: [Figure 30 – Example of MTP Proxy in LAN with WAN Controller
+  caption: [Figure 31 – Example of MTP Proxy in LAN with WAN Controller
     ])[
   #bbf-image("extensions/proxying/MTP-proxy-example.png")<img:example-of-mtp-proxy-in-lan-with-wan-controller>
 ] <fig:example-of-mtp-proxy-in-lan-with-wan-controller>
@@ -14742,7 +14944,7 @@ as a Trusted Broker. \* the proxy uses the subscribe\-dest value
 header.
 
 #figure(
-  caption: [Figure 31 – CoAP\-STOMP MTP Proxy Example Flow
+  caption: [Figure 32 – CoAP\-STOMP MTP Proxy Example Flow
     ])[
   #bbf-image("extensions/proxying/CoAP-STOMP-MTP-proxy-example.png")<img:coap-stomp-mtp-proxy-example-flow>
 ] <fig:coap-stomp-mtp-proxy-example-flow>
@@ -14863,7 +15065,7 @@ below).
 The figure shows the overall structure of the IoT data model:
 
 #figure(
-  caption: [Figure 32 – IoT Data Model
+  caption: [Figure 33 – IoT Data Model
     ])[
   #bbf-image("extensions/iot/./figure-73.png")<img:iot-data-model>
 ] <fig:iot-data-model>
@@ -14954,7 +15156,7 @@ Agent, provide their own data models, which expose the IoT sensor and
 control capabilities of the device:
 
 #figure(
-  caption: [Figure 33 – IoT individual device models
+  caption: [Figure 34 – IoT individual device models
     ])[
   #bbf-image("extensions/iot/./figure-74.png")<img:iot-individual-device-models>
 ] <fig:iot-individual-device-models>
@@ -14971,7 +15173,7 @@ control device hosting the USP Agent are modeled as proxied devices
 control device’s USP Agent:
 
 #figure(
-  caption: [Figure 34 – IoT proxied device model
+  caption: [Figure 35 – IoT proxied device model
     ])[
   #bbf-image("extensions/iot/./figure-75.png")<img:iot-proxied-device-model>
 ] <fig:iot-proxied-device-model>
@@ -15187,7 +15389,7 @@ set to `true`. As soon as the measured value goes below the threshold
 the `Value` Parameter is set to `false`.
 
 #figure(
-  caption: [Figure 35 – IoT threshold trigger sensitivity
+  caption: [Figure 36 – IoT threshold trigger sensitivity
     ])[
   #bbf-image("extensions/iot/./figure-76.png")<img:iot-threshold-trigger-sensitivity>
 ] <fig:iot-threshold-trigger-sensitivity>
@@ -15211,7 +15413,7 @@ This figure shows the effect of the `HoldTime` Parameter on the
 resulting value:
 
 #figure(
-  caption: [Figure 36 – IoT threshold trigger hold time
+  caption: [Figure 37 – IoT threshold trigger hold time
     ])[
   #bbf-image("extensions/iot/./figure-77.png")<img:iot-threshold-trigger-hold-time>
 ] <fig:iot-threshold-trigger-hold-time>
@@ -15237,7 +15439,7 @@ miliseconds) after the first trigger has been detected, resulting in the
 following pattern:
 
 #figure(
-  caption: [Figure 37 – IoT threshold trigger rest time
+  caption: [Figure 38 – IoT threshold trigger rest time
     ])[
   #bbf-image("extensions/iot/./figure-78.png")<img:iot-threshold-trigger-rest-time>
 ] <fig:iot-threshold-trigger-rest-time>
@@ -15260,7 +15462,7 @@ To get readings with a minimum duration, combine rest and hold times:
 Which results in the following pattern:
 
 #figure(
-  caption: [Figure 38 – IoT threshold trigger minimum duration
+  caption: [Figure 39 – IoT threshold trigger minimum duration
     ])[
   #bbf-image("extensions/iot/./figure-79.png")<img:iot-threshold-trigger-minimum-duration>
 ] <fig:iot-threshold-trigger-minimum-duration>
@@ -15448,6 +15650,31 @@ For example, a traffic light could be modeled as:
     IoTCapability.1.EnumSensor.Value       = "Green"
 ```
 
+#bbf-appendix3[
+=== V.4.4 IoTCapability Binding <sec:iotcapability-binding>]
+
+The IoTCapability Binding mechanism provides a path to route IoT data
+from Sensor IoTCapabilities to Control IoTCapabilities. This concept
+supports data flow orchestration between sensors and actuators.
+
+When an event (e.g., motion, temperature change, or status update) is
+encountered, the #emph[Value]; parameter of the Sensor IoTCapability is
+updated. If a binding is configured and enabled, the #emph[Value];
+parameter of the specified Control IoTCapability instance is updated
+with the value provided by the Sensor IoTCapability. See
+#link(<sec:example-remote-motion-sensor-binding-to-a-remote-control>)[Example: Remote Motion Sensor Binding to a Remote Control]
+and
+#link(<sec:example-native-motion-sensor-binding-to-a-remote-control>)[Example: Native Motion Sensor Binding to a Remote Control].
+
+The Binding definition may only exist on a Sensor IoTCapability binding
+it to a Control IoTCapability of a equivalent class. The following
+binding may be established:
+
+- BinarySensor IoTCapability –> BinaryControl IoTCapability
+- LevelSensor IoTCapability –> LevelControl IoTCapability
+- EnumSensor IoTCapability –> EnumControl IoTCapability
+- PulseSensor IoTCapability –> PulseControl IoTCapability
+
 #bbf-appendix2[
 == V.5 Examples <sec:examples>]
 
@@ -15476,71 +15703,71 @@ Structure elements:
 Instantiated data model:
 
 ```
-    ProxiedDevice.1.Type                                    = "Thermostat"
-    ProxiedDevice.1.Online                                  = true
-    ProxiedDevice.1.ProxyProtocol                           = "Z-Wave"
+    Device.ProxiedDevice.1.Type                                    = "Thermostat"
+    Device.ProxiedDevice.1.Online                                  = true
+    Device.ProxiedDevice.1.ProxyProtocol                           = "Z-Wave"
 
-    ProxiedDevice.1.IoTCapabilityNumberOfEntries            = 9
+    Device.ProxiedDevice.1.IoTCapabilityNumberOfEntries            = 9
 
-    ProxiedDevice.1.IoTCapability.1.Class                   = "EnumControl"
-    ProxiedDevice.1.IoTCapability.1.EnumControl.Type        = "ThermostatMode"
-    ProxiedDevice.1.IoTCapability.1.EnumControl.Value       = "Cool"
-    ProxiedDevice.1.IoTCapability.1.EnumControl.ValidValues = "Heat, Cool,
-                                                              Energy_heat,
-                                                              Energy_cool, Off,
-                                                              Auto"
+    Device.ProxiedDevice.1.IoTCapability.1.Class                   = "EnumControl"
+    Device.ProxiedDevice.1.IoTCapability.1.EnumControl.Type        = "ThermostatMode"
+    Device.ProxiedDevice.1.IoTCapability.1.EnumControl.Value       = "Cool"
+    Device.ProxiedDevice.1.IoTCapability.1.EnumControl.ValidValues = "Heat, Cool,
+                                                                     Energy_heat,
+                                                                     Energy_cool, Off,
+                                                                     Auto"
 
-    ProxiedDevice.1.IoTCapability.2.Class                   = "LevelControl"
-    ProxiedDevice.1.IoTCapability.2.LevelControl.Type       = "Temperature"
-    ProxiedDevice.1.IoTCapability.2.LevelControl.Description = "TargetCoolTemperature"
-    ProxiedDevice.1.IoTCapability.2.LevelControl.Value      = 17
-    ProxiedDevice.1.IoTCapability.2.LevelControl.Unit       = "degC"
-    ProxiedDevice.1.IoTCapability.2.LevelControl.MinValue   = 14
-    ProxiedDevice.1.IoTCapability.2.LevelControl.MaxValue   = 25
+    Device.ProxiedDevice.1.IoTCapability.2.Class                   = "LevelControl"
+    Device.ProxiedDevice.1.IoTCapability.2.LevelControl.Type       = "Temperature"
+    Device.ProxiedDevice.1.IoTCapability.2.LevelControl.Description = "TargetCoolTemperature"
+    Device.ProxiedDevice.1.IoTCapability.2.LevelControl.Value      = 17
+    Device.ProxiedDevice.1.IoTCapability.2.LevelControl.Unit       = "degC"
+    Device.ProxiedDevice.1.IoTCapability.2.LevelControl.MinValue   = 14
+    Device.ProxiedDevice.1.IoTCapability.2.LevelControl.MaxValue   = 25
 
-    ProxiedDevice.1.IoTCapability.3.Class                   = "LevelControl"
-    ProxiedDevice.1.IoTCapability.3.LevelControl.Type       = "Temperature"
-    ProxiedDevice.1.IoTCapability.3.LevelControl.Description = "TargetHeatTemperature"
-    ProxiedDevice.1.IoTCapability.3.LevelControl.Value      = 21
-    ProxiedDevice.1.IoTCapability.3.LevelControl.Unit       = "degC"
-    ProxiedDevice.1.IoTCapability.3.LevelControl.MinValue   = 14
-    ProxiedDevice.1.IoTCapability.3.LevelControl.MaxValue   = 25
+    Device.ProxiedDevice.1.IoTCapability.3.Class                   = "LevelControl"
+    Device.ProxiedDevice.1.IoTCapability.3.LevelControl.Type       = "Temperature"
+    Device.ProxiedDevice.1.IoTCapability.3.LevelControl.Description = "TargetHeatTemperature"
+    Device.ProxiedDevice.1.IoTCapability.3.LevelControl.Value      = 21
+    Device.ProxiedDevice.1.IoTCapability.3.LevelControl.Unit       = "degC"
+    Device.ProxiedDevice.1.IoTCapability.3.LevelControl.MinValue   = 14
+    Device.ProxiedDevice.1.IoTCapability.3.LevelControl.MaxValue   = 25
 
-    ProxiedDevice.1.IoTCapability.4.Class                   = "LevelControl"
-    ProxiedDevice.1.IoTCapability.4.LevelControl.Type       = "Temperature"
-    ProxiedDevice.1.IoTCapability.4.LevelControl.Description = "TargetEnergyCoolTemp"
-    ProxiedDevice.1.IoTCapability.4.LevelControl.Value      = 19
-    ProxiedDevice.1.IoTCapability.4.LevelControl.Unit       = "degC"
-    ProxiedDevice.1.IoTCapability.4.LevelControl.MinValue   = 14
-    ProxiedDevice.1.IoTCapability.4.LevelControl.MaxValue   = 25
+    Device.ProxiedDevice.1.IoTCapability.4.Class                   = "LevelControl"
+    Device.ProxiedDevice.1.IoTCapability.4.LevelControl.Type       = "Temperature"
+    Device.ProxiedDevice.1.IoTCapability.4.LevelControl.Description = "TargetEnergyCoolTemp"
+    Device.ProxiedDevice.1.IoTCapability.4.LevelControl.Value      = 19
+    Device.ProxiedDevice.1.IoTCapability.4.LevelControl.Unit       = "degC"
+    Device.ProxiedDevice.1.IoTCapability.4.LevelControl.MinValue   = 14
+    Device.ProxiedDevice.1.IoTCapability.4.LevelControl.MaxValue   = 25
 
-    ProxiedDevice.1.IoTCapability.5.Class                   = "LevelControl"
-    ProxiedDevice.1.IoTCapability.5.LevelControl.Type       = "Temperature"
-    ProxiedDevice.1.IoTCapability.5.LevelControl.Description = "TargetEnergyHeatTemp"
-    ProxiedDevice.1.IoTCapability.5.LevelControl.Value      = 19
-    ProxiedDevice.1.IoTCapability.5.LevelControl.Unit       = "degC"
-    ProxiedDevice.1.IoTCapability.5.LevelControl.MinValue   = 14
-    ProxiedDevice.1.IoTCapability.5.LevelControl.MaxValue   = 25
+    Device.ProxiedDevice.1.IoTCapability.5.Class                   = "LevelControl"
+    Device.ProxiedDevice.1.IoTCapability.5.LevelControl.Type       = "Temperature"
+    Device.ProxiedDevice.1.IoTCapability.5.LevelControl.Description = "TargetEnergyHeatTemp"
+    Device.ProxiedDevice.1.IoTCapability.5.LevelControl.Value      = 19
+    Device.ProxiedDevice.1.IoTCapability.5.LevelControl.Unit       = "degC"
+    Device.ProxiedDevice.1.IoTCapability.5.LevelControl.MinValue   = 14
+    Device.ProxiedDevice.1.IoTCapability.5.LevelControl.MaxValue   = 25
 
-    ProxiedDevice.1.IoTCapability.6.Class                   = "LevelSensor"
-    ProxiedDevice.1.IoTCapability.6.LevelSensor.Type        = "Temperature"
-    ProxiedDevice.1.IoTCapability.6.LevelSensor.Value       = 19.5
-    ProxiedDevice.1.IoTCapability.6.LevelSensor.Unit        = "degC"
+    Device.ProxiedDevice.1.IoTCapability.6.Class                   = "LevelSensor"
+    Device.ProxiedDevice.1.IoTCapability.6.LevelSensor.Type        = "Temperature"
+    Device.ProxiedDevice.1.IoTCapability.6.LevelSensor.Value       = 19.5
+    Device.ProxiedDevice.1.IoTCapability.6.LevelSensor.Unit        = "degC"
 
-    ProxiedDevice.1.IoTCapability.7.Class                   = "EnumControl"
-    ProxiedDevice.1.IoTCapability.7.EnumControl.Type        = "FanMode"
-    ProxiedDevice.1.IoTCapability.7.EnumControl.Value       = "Low"
-    ProxiedDevice.1.IoTCapability.7.EnumControl.ValidValues = "Auto_low, Low,
+    Device.ProxiedDevice.1.IoTCapability.7.Class                   = "EnumControl"
+    Device.ProxiedDevice.1.IoTCapability.7.EnumControl.Type        = "FanMode"
+    Device.ProxiedDevice.1.IoTCapability.7.EnumControl.Value       = "Low"
+    Device.ProxiedDevice.1.IoTCapability.7.EnumControl.ValidValues = "Auto_low, Low,
                                                               Circulation, Off"
 
-    ProxiedDevice.1.IoTCapability.8.Class                   = "EnumSensor"
-    ProxiedDevice.1.IoTCapability.8.EnumSensor.Type         = "OperatingState"
-    ProxiedDevice.1.IoTCapability.8.EnumSensor.Value        = "Cooling"
-    ProxiedDevice.1.IoTCapability.8.EnumSensor.ValidValues  =
-                "Heating, Cooling,
-                FanOnly, PendingHeat, PendingCool, VentEconomizer,
-                AuxHeating, 2ndStageHeating, 2ndStageCooling,
-                2ndStageAuxHeat, 3rdStageAuxHeat"
+    Device.ProxiedDevice.1.IoTCapability.8.Class                   = "EnumSensor"
+    Device.ProxiedDevice.1.IoTCapability.8.EnumSensor.Type         = "OperatingState"
+    Device.ProxiedDevice.1.IoTCapability.8.EnumSensor.Value        = "Cooling"
+    Device.ProxiedDevice.1.IoTCapability.8.EnumSensor.ValidValues  =
+                              "Heating, Cooling,
+                              FanOnly, PendingHeat, PendingCool, VentEconomizer,
+                              AuxHeating, 2ndStageHeating, 2ndStageCooling,
+                              2ndStageAuxHeat, 3rdStageAuxHeat"
 ```
 
 #bbf-appendix3[
@@ -15557,22 +15784,22 @@ Structure elements:
 Instantiated data model:
 
 ```
-    ProxiedDevice.2.Type                                      = "Light"
-    ProxiedDevice.2.Online                                    = "true"
-    ProxiedDevice.2.ProxyProtocol                             = "Z-Wave"
-    ProxiedDevice.2.Name                                      = "GE DimMing Bulb"
-    ProxiedDevice.2.IoTCapabilityNumberOfEntries              = 2
+    Device.ProxiedDevice.2.Type                                      = "Light"
+    Device.ProxiedDevice.2.Online                                    = "true"
+    Device.ProxiedDevice.2.ProxyProtocol                             = "Z-Wave"
+    Device.ProxiedDevice.2.Name                                      = "GE DimMing Bulb"
+    Device.ProxiedDevice.2.IoTCapabilityNumberOfEntries              = 2
 
-    ProxiedDevice.2.IoTCapability.1.Class                     = "BinaryControl"
-    ProxiedDevice.2.IoTCapability.1.BinaryControl.Type        = "Switch"
-    ProxiedDevice.2.IoTCapability.1.BinaryControl.Value       = true
+    Device.ProxiedDevice.2.IoTCapability.1.Class                     = "BinaryControl"
+    Device.ProxiedDevice.2.IoTCapability.1.BinaryControl.Type        = "Switch"
+    Device.ProxiedDevice.2.IoTCapability.1.BinaryControl.Value       = true
 
-    ProxiedDevice.2.IoTCapability.2.Class                     = "LevelControl"
-    ProxiedDevice.2.IoTCapability.2.LevelControl.Type         = "Brightness"
-    ProxiedDevice.2.IoTCapability.2.LevelControl.Value        = 100
-    ProxiedDevice.2.IoTCapability.2.LevelControl.Min          = 0
-    ProxiedDevice.2.IoTCapability.2.LevelControl.Max          = 100
-    ProxiedDevice.2.IoTCapability.2.LevelControl.Unit         = "%"
+    Device.ProxiedDevice.2.IoTCapability.2.Class                     = "LevelControl"
+    Device.ProxiedDevice.2.IoTCapability.2.LevelControl.Type         = "Brightness"
+    Device.ProxiedDevice.2.IoTCapability.2.LevelControl.Value        = 100
+    Device.ProxiedDevice.2.IoTCapability.2.LevelControl.Min          = 0
+    Device.ProxiedDevice.2.IoTCapability.2.LevelControl.Max          = 100
+    Device.ProxiedDevice.2.IoTCapability.2.LevelControl.Unit         = "%"
 ```
 
 #bbf-appendix3[
@@ -15587,17 +15814,17 @@ Structure elements:
 Instantiated data model:
 
 ```
-    ProxiedDevice.3.Type                                       = "Fan"
-    ProxiedDevice.3.Online                                     = "true"
-    ProxiedDevice.3.ProxyProtocol                              = "Z-Wave"
-    ProxiedDevice.3.name                                       = "GE Fan"
-    ProxiedDevice.3.IoTCapabilityNumberOfEntries               = 1
+    Device.ProxiedDevice.3.Type                                       = "Fan"
+    Device.ProxiedDevice.3.Online                                     = "true"
+    Device.ProxiedDevice.3.ProxyProtocol                              = "Z-Wave"
+    Device.ProxiedDevice.3.name                                       = "GE Fan"
+    Device.ProxiedDevice.3.IoTCapabilityNumberOfEntries               = 1
 
-    ProxiedDevice.2.IoTCapability.1.Class                      = "EnumControl"
-    ProxiedDevice.3.IoTCapability.1.EnumControl.Type           = "FanMode"
-    ProxiedDevice.3.IoTCapability.1.EnumControl.Value          = "Off"
-    ProxiedDevice.3.IoTCapability.1.EnumControlValidValues     =
-                            "Off, Low, Medium, High, On, Auto, Smart"
+    Device.ProxiedDevice.2.IoTCapability.1.Class                      = "EnumControl"
+    Device.ProxiedDevice.3.IoTCapability.1.EnumControl.Type           = "FanMode"
+    Device.ProxiedDevice.3.IoTCapability.1.EnumControl.Value          = "Off"
+    Device.ProxiedDevice.3.IoTCapability.1.EnumControlValidValues     =
+                                   "Off, Low, Medium, High, On, Auto, Smart"
 ```
 
 #bbf-appendix3[
@@ -15609,30 +15836,30 @@ switch, battery, energy consumption and manufacturer.
 Instantiated data model:
 
 ```
-    ProxiedDevice.4.Type                                             = "SensorStrip"
-    ProxiedDevice.4.Online                                           = true
-    ProxiedDevice.4.ProxyProtocol                                    = "Z-Wave"
-    ProxiedDevice.4.Name                                             = "Insertable Sensor Strip"
-    ProxiedDevice.4.IoTCapabilityNumberOfEntries                     = 1
-    ProxiedDevice.4.NodeNumberOfEntries                              = 2
+    Device.ProxiedDevice.4.Type                                             = "SensorStrip"
+    Device.ProxiedDevice.4.Online                                           = true
+    Device.ProxiedDevice.4.ProxyProtocol                                    = "Z-Wave"
+    Device.ProxiedDevice.4.Name                                             = "Insertable Sensor Strip"
+    Device.ProxiedDevice.4.IoTCapabilityNumberOfEntries                     = 1
+    Device.ProxiedDevice.4.NodeNumberOfEntries                              = 2
 
-    ProxiedDevice.4.IoTCapability.1.Class                            = "LevelSensor"
-    ProxiedDevice.4.IoTCapability.1.LevelSensor.Value                = 80
-    ProxiedDevice.4.IoTCapability.1.LevelSensor.Unit                 = "%"
-    ProxiedDevice.4.IoTCapability.1.LevelSensor.Type                 = "Battery"
-    ProxiedDevice.4.IoTCapability.1.LevelSensor.LowLevelThreshold    = 30
-    ProxiedDevice.4.IoTCapability.1.LevelSensor.LowLevel             = false
+    Device.ProxiedDevice.4.IoTCapability.1.Class                            = "LevelSensor"
+    Device.ProxiedDevice.4.IoTCapability.1.LevelSensor.Value                = 80
+    Device.ProxiedDevice.4.IoTCapability.1.LevelSensor.Unit                 = "%"
+    Device.ProxiedDevice.4.IoTCapability.1.LevelSensor.Type                 = "Battery"
+    Device.ProxiedDevice.4.IoTCapability.1.LevelSensor.LowLevelThreshold    = 30
+    Device.ProxiedDevice.4.IoTCapability.1.LevelSensor.LowLevel             = false
 
-    ProxiedDevice.4.Node.1.Type                                      = "Sensor"
-    ProxiedDevice.4.Node.1.IoTCapabilityNumberOfEntries              = 1
+    Device.ProxiedDevice.4.Node.1.Type                                      = "Sensor"
+    Device.ProxiedDevice.4.Node.1.IoTCapabilityNumberOfEntries              = 1
 
-    ProxiedDevice.4.Node.1.IoTCapability.1.Class                     = "BinarySensor"
-    ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.HoldTime     = 0
-    ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.Sensitivity  = 5
-    ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.RestTime     = 10000
-    ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.Value        = false
-    ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.Type         = "MotionDetected"
-    ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.LastSensingTime  = 1573344000
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.Class                     = "BinarySensor"
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.HoldTime     = 0
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.Sensitivity  = 5
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.RestTime     = 10000
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.Value        = false
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.Type         = "MotionDetected"
+    Device.ProxiedDevice.4.Node.1.IoTCapability.1.BinarySensor.LastSensingTime  = 1573344000
 ```
 
 #bbf-appendix3[
@@ -15653,41 +15880,41 @@ Structure elements:
 Instantiated data model:
 
 ```
-    ProxiedDevice.5.Type                                           = "Fan"
-    ProxiedDevice.5.Online                                         = true
-    ProxiedDevice.5.ProxyProtocol                                  = "Z-Wave"
-    ProxiedDevice.5.Name                                           = "42'' Ceiling Fan"
+    Device.ProxiedDevice.5.Type                                           = "Fan"
+    Device.ProxiedDevice.5.Online                                         = true
+    Device.ProxiedDevice.5.ProxyProtocol                                  = "Z-Wave"
+    Device.ProxiedDevice.5.Name                                           = "42'' Ceiling Fan"
 
-    ProxiedDevice.5.IoTCapabilityNumberOfEntries                   = 1
-    ProxiedDevice.5.NodeNumberOfEntries                            = 2
+    Device.ProxiedDevice.5.IoTCapabilityNumberOfEntries                   = 1
+    Device.ProxiedDevice.5.NodeNumberOfEntries                            = 2
 
-    ProxiedDevice.5.IoTCapability.1.Class                          = "BinaryControl"
-    ProxiedDevice.5.IoTCapability.1.BinaryControl.Type             = "Switch"
-    ProxiedDevice.5.IoTCapability.1.BinaryControl.State            = true
+    Device.ProxiedDevice.5.IoTCapability.1.Class                          = "BinaryControl"
+    Device.ProxiedDevice.5.IoTCapability.1.BinaryControl.Type             = "Switch"
+    Device.ProxiedDevice.5.IoTCapability.1.BinaryControl.State            = true
 
-    ProxiedDevice.5.Node.1.Type                                    = "Light"
-    ProxiedDevice.5.Node.1.IoTCapabilityNumberOfEntries            = 2
+    Device.ProxiedDevice.5.Node.1.Type                                    = "Light"
+    Device.ProxiedDevice.5.Node.1.IoTCapabilityNumberOfEntries            = 2
 
-    ProxiedDevice.5.Node.1.IoTCapability.1.Class                   = "LevelControl"
-    ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.Type       = "Brightness"
-    ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.Value      = 99
-    ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.MinValue   = 0
-    ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.MaxValue   = 100
-    ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.Unit       = "%"
+    Device.ProxiedDevice.5.Node.1.IoTCapability.1.Class                   = "LevelControl"
+    Device.ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.Type       = "Brightness"
+    Device.ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.Value      = 99
+    Device.ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.MinValue   = 0
+    Device.ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.MaxValue   = 100
+    Device.ProxiedDevice.5.Node.1.IoTCapability.1.LevelControl.Unit       = "%"
 
-    ProxiedDevice.5.Node.1.IoTCapability.2.Class                   = "BinaryControl"
-    ProxiedDevice.5.Node.1.IoTCapability.2.BinaryControl.Type      = "Switch"
-    ProxiedDevice.5.Node.1.IoTCapability.2.BinaryControl.Value     = true
+    Device.ProxiedDevice.5.Node.1.IoTCapability.2.Class                   = "BinaryControl"
+    Device.ProxiedDevice.5.Node.1.IoTCapability.2.BinaryControl.Type      = "Switch"
+    Device.ProxiedDevice.5.Node.1.IoTCapability.2.BinaryControl.Value     = true
 
-    ProxiedDevice.5.Node.2.Type                                    = "Fan"
-    ProxiedDevice.5.Node.2.IoTCapabilityNumberOfEntries            = 1
+    Device.ProxiedDevice.5.Node.2.Type                                    = "Fan"
+    Device.ProxiedDevice.5.Node.2.IoTCapabilityNumberOfEntries            = 1
 
-    ProxiedDevice.5.Node.2.IoTCapability.1.Class                   = "EnumControl"
-    ProxiedDevice.5.Node.2.IoTCapability.1.EnumControl.Type        = "FanMode"
-    ProxiedDevice.5.Node.2.IoTCapability.1.EnumControl.Value       = "Off"
-    ProxiedDevice.5.Node.2.IoTCapability.1.EnumControl.ValidValues = "Off, Low,
-                                                                  Medium, High,
-                                                                  Auto, Smart
+    Device.ProxiedDevice.5.Node.2.IoTCapability.1.Class                   = "EnumControl"
+    Device.ProxiedDevice.5.Node.2.IoTCapability.1.EnumControl.Type        = "FanMode"
+    Device.ProxiedDevice.5.Node.2.IoTCapability.1.EnumControl.Value       = "Off"
+    Device.ProxiedDevice.5.Node.2.IoTCapability.1.EnumControl.ValidValues = "Off, Low,
+                                                                         Medium, High,
+                                                                         Auto, Smart
 ```
 
 #bbf-appendix3[
@@ -15711,66 +15938,66 @@ Structure elements:
 Instantiated data model:
 
 ```
-    ProxiedDevice.6.Type                                         = "PowerStrip"
-    ProxiedDevice.6.Online                                       = "true"
-    ProxiedDevice.6.ProxyProtocol                                = "Z-Wave"
-    ProxiedDevice.6.Name                                         = "3 Plug Strip"
-    ProxiedDevice.6.IoTCapabilityNumberOfEntries                 = 2
-    ProxiedDevice.6.NodeNumberOfEntries                          = 3
+    Device.ProxiedDevice.6.Type                                         = "PowerStrip"
+    Device.ProxiedDevice.6.Online                                       = "true"
+    Device.ProxiedDevice.6.ProxyProtocol                                = "Z-Wave"
+    Device.ProxiedDevice.6.Name                                         = "3 Plug Strip"
+    Device.ProxiedDevice.6.IoTCapabilityNumberOfEntries                 = 2
+    Device.ProxiedDevice.6.NodeNumberOfEntries                          = 3
 
-    ProxiedDevice.6.IoTCapability.1.Class                        = "BinaryControl"
-    ProxiedDevice.6.IoTCapability.1.BinaryControl.Type           = "Switch"
-    ProxiedDevice.6.IoTCapability.1.BinaryControl.Value          = true
-    ProxiedDevice.6.IoTCapability.3.Class                        = "LevelSensor"
-    ProxiedDevice.6.IoTCapability.3 Name                         = "Total Accumulated Power"
-    ProxiedDevice.6.IoTCapability.3.LevelSensor.Type             = "Power"
-    ProxiedDevice.6.IoTCapability.3.LevelSensor.Unit             = "KWh"
-    ProxiedDevice.6.IoTCapability.3.LevelSensor.Value            = "2227,56"
+    Device.ProxiedDevice.6.IoTCapability.1.Class                        = "BinaryControl"
+    Device.ProxiedDevice.6.IoTCapability.1.BinaryControl.Type           = "Switch"
+    Device.ProxiedDevice.6.IoTCapability.1.BinaryControl.Value          = true
+    Device.ProxiedDevice.6.IoTCapability.3.Class                        = "LevelSensor"
+    Device.ProxiedDevice.6.IoTCapability.3 Name                         = "Total Accumulated Power"
+    Device.ProxiedDevice.6.IoTCapability.3.LevelSensor.Type             = "Power"
+    Device.ProxiedDevice.6.IoTCapability.3.LevelSensor.Unit             = "KWh"
+    Device.ProxiedDevice.6.IoTCapability.3.LevelSensor.Value            = "2227,56"
 
-    ProxiedDevice.6.Node.1.Type                                  = "Switch"
-    ProxiedDevice.6.Node.1.IoTCapabilityNumberOfEntries          = 3
-    ProxiedDevice.6.Node.1.IoTCapability.1.Class                 = "BinaryControl"
-    ProxiedDevice.6.Node.1.IoTCapability.1.BinaryControl.Type    = "Switch"
-    ProxiedDevice.6.Node.1.IoTCapability.1.BinaryControl.State   = true
-    ProxiedDevice.6.Node.1.IoTCapability.2.Class                 = "LevelSensor"
-    ProxiedDevice.6.Node.1.IoTCapability.2.LevelSensor.Type      = "Power"
-    ProxiedDevice.6.Node.1.IoTCapability.2.LevelSensor.Unit      = "W"
-    ProxiedDevice.6.Node.1.IoTCapability.2.LevelSensor.Value     = 99
-    ProxiedDevice.6.Node.1.IoTCapability.3.Class                 = "LevelSensor"
-    ProxiedDevice.6.Node.1.IoTCapability.3 Name                  = "Accumulated Power"
-    ProxiedDevice.6.Node.1.IoTCapability.3.LevelSensor.Type      = "Power"
-    ProxiedDevice.6.Node.1.IoTCapability.3.LevelSensor.Unit      = "KWh"
-    ProxiedDevice.6.Node.1.IoTCapability.3.LevelSensor.Value     = 390.67
+    Device.ProxiedDevice.6.Node.1.Type                                  = "Switch"
+    Device.ProxiedDevice.6.Node.1.IoTCapabilityNumberOfEntries          = 3
+    Device.ProxiedDevice.6.Node.1.IoTCapability.1.Class                 = "BinaryControl"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.1.BinaryControl.Type    = "Switch"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.1.BinaryControl.State   = true
+    Device.ProxiedDevice.6.Node.1.IoTCapability.2.Class                 = "LevelSensor"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.2.LevelSensor.Type      = "Power"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.2.LevelSensor.Unit      = "W"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.2.LevelSensor.Value     = 99
+    Device.ProxiedDevice.6.Node.1.IoTCapability.3.Class                 = "LevelSensor"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.3 Name                  = "Accumulated Power"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.3.LevelSensor.Type      = "Power"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.3.LevelSensor.Unit      = "KWh"
+    Device.ProxiedDevice.6.Node.1.IoTCapability.3.LevelSensor.Value     = 390.67
 
-    ProxiedDevice.6.Node.2.Type                                  = "Switch"
-    ProxiedDevice.6.Node.2.IoTCapabilityNumberOfEntries          = 3
-    ProxiedDevice.6.Node.2.IoTCapability.1.Class                 = "BinaryControl"
-    ProxiedDevice.6.Node.2.IoTCapability.1.BinaryControl.Type    = "Switch"
-    ProxiedDevice.6.Node.2.IoTCapability.1.BinaryControl.State   = true
-    ProxiedDevice.6.Node.2.IoTCapability.2.Class                 = "LevelSensor"
-    ProxiedDevice.6.Node.2.IoTCapability.2.LevelSensor.Type      = "Power"
-    ProxiedDevice.6.Node.2.IoTCapability.2.LevelSensor.Unit      = "W"
-    ProxiedDevice.6.Node.2.IoTCapability.2.LevelSensor.Value     = 76
-    ProxiedDevice.6.Node.2.IoTCapability.3.Class                 = "LevelSensor"
-    ProxiedDevice.6.Node.2.IoTCapability.3 Name                  = "Accumulated Power"
-    ProxiedDevice.6.Node.2.IoTCapability.3.LevelSensor.Type      = "Power"
-    ProxiedDevice.6.Node.2.IoTCapability.3.LevelSensor.Unit      = "KWh"
-    ProxiedDevice.6.Node.2.IoTCapability.3.LevelSensor.Value     = 1783.63
+    Device.ProxiedDevice.6.Node.2.Type                                  = "Switch"
+    Device.ProxiedDevice.6.Node.2.IoTCapabilityNumberOfEntries          = 3
+    Device.ProxiedDevice.6.Node.2.IoTCapability.1.Class                 = "BinaryControl"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.1.BinaryControl.Type    = "Switch"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.1.BinaryControl.State   = true
+    Device.ProxiedDevice.6.Node.2.IoTCapability.2.Class                 = "LevelSensor"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.2.LevelSensor.Type      = "Power"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.2.LevelSensor.Unit      = "W"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.2.LevelSensor.Value     = 76
+    Device.ProxiedDevice.6.Node.2.IoTCapability.3.Class                 = "LevelSensor"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.3 Name                  = "Accumulated Power"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.3.LevelSensor.Type      = "Power"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.3.LevelSensor.Unit      = "KWh"
+    Device.ProxiedDevice.6.Node.2.IoTCapability.3.LevelSensor.Value     = 1783.63
 
-    ProxiedDevice.6.Node.3.Type                                  = "Switch"
-    ProxiedDevice.6.Node.3.IoTCapabilityNumberOfEntries          = 3
-    ProxiedDevice.6.Node.3.IoTCapability.1.Class                 = "BinaryControl"
-    ProxiedDevice.6.Node.3.IoTCapability.1.BinaryControl.Type    = "Switch"
-    ProxiedDevice.6.Node.3.IoTCapability.1.BinaryControl.State   = true
-    ProxiedDevice.6.Node.3.IoTCapability.2.Class                 = "LevelSensor"
-    ProxiedDevice.6.Node.3.IoTCapability.2.LevelSensor.Type      = "Power"
-    ProxiedDevice.6.Node.3.IoTCapability.2.LevelSensor.Unit      = "W"
-    ProxiedDevice.6.Node.3.IoTCapability.2.LevelSensor.Value     = 0
-    ProxiedDevice.6.Node.3.IoTCapability.3.Class                 = "LevelSensor"
-    ProxiedDevice.6.Node.3.IoTCapability.3 Name                  = "Accumulated Power"
-    ProxiedDevice.6.Node.3.IoTCapability.3.LevelSensor.Type      = "Power"
-    ProxiedDevice.6.Node.3.IoTCapability.3.LevelSensor.Unit      = "KWh"
-    ProxiedDevice.6.Node.3.IoTCapability.3.LevelSensor.Value     = 53.26
+    Device.ProxiedDevice.6.Node.3.Type                                  = "Switch"
+    Device.ProxiedDevice.6.Node.3.IoTCapabilityNumberOfEntries          = 3
+    Device.ProxiedDevice.6.Node.3.IoTCapability.1.Class                 = "BinaryControl"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.1.BinaryControl.Type    = "Switch"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.1.BinaryControl.State   = true
+    Device.ProxiedDevice.6.Node.3.IoTCapability.2.Class                 = "LevelSensor"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.2.LevelSensor.Type      = "Power"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.2.LevelSensor.Unit      = "W"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.2.LevelSensor.Value     = 0
+    Device.ProxiedDevice.6.Node.3.IoTCapability.3.Class                 = "LevelSensor"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.3 Name                  = "Accumulated Power"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.3.LevelSensor.Type      = "Power"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.3.LevelSensor.Unit      = "KWh"
+    Device.ProxiedDevice.6.Node.3.IoTCapability.3.LevelSensor.Value     = 53.26
 ```
 
 #bbf-appendix3[
@@ -15855,6 +16082,81 @@ Instantiated data model:
     Device.IoTCapability.6.LevelSensor.Value       = 82      # e.g. 82% battery load
 ```
 
+#bbf-appendix3[
+=== V.5.8 Example: Remote Motion Sensor Binding to a Remote Control <sec:example-remote-motion-sensor-binding-to-a-remote-control>]
+
+A Motion Sensor, sends its value to the Agent and maps onto
+ProxiedDevice \- IoTCapability Object:
+"Device.ProxiedDevice.1.IoTCapability.1."
+
+Via the IoTCapability Binding, this motion sensor value will be
+forwarded to ProxiedDevice \- IoTCapability Object:
+"Device.ProxiedDevice.2.IoTCapability.1."
+
+Every time, when the value of the Motion Sensor changes, this new value
+is received by the LevelSensor IoTCapability of
+"Device.ProxiedDevice.1.IoTCapability.1." and due to the binding
+immediately passed to LevelControl IoTCapability of
+"Device.ProxiedDevice.2.IoTCapability.1.".
+
+The LevelControl IoTCapability is connected to an actuator, such as a
+alarm or a light.
+
+Instantiated data model:
+
+```
+    Device.ProxiedDevice.1.Type                                    = "Sensor"
+    Device.ProxiedDevice.1.Online                                  = true
+    Device.ProxiedDevice.1.ProxyProtocol                           = "Z-Wave"
+
+    Device.ProxiedDevice.1.IoTCapability.1.Class                   = "LevelSensor"
+    Device.ProxiedDevice.1.IoTCapability.1.LevelSensor.Type        = "Motion"
+    Device.ProxiedDevice.1.IoTCapability.1.LevelSensor.Value       = 0
+    Device.ProxiedDevice.1.IoTCapability.1.LevelSensor.Unit        = "Energy"
+    Device.ProxiedDevice.1.IoTCapability.1.Binding.Destination     = "Device.ProxiedDevice.2.IoTCapability.1"
+    Device.ProxiedDevice.1.IoTCapability.1.Binding.1.Enable        = true
+
+    Device.ProxiedDevice.2.IoTCapability.1.Class                   = "LevelControl"
+    Device.ProxiedDevice.2.IoTCapability.1.LevelControl.Type       = "Intensity"
+    Device.ProxiedDevice.2.IoTCapability.1.LevelControl.Value      = 0
+    Device.ProxiedDevice.2.IoTCapability.1.LevelControl.Unit       = "Energy"
+```
+
+#bbf-appendix3[
+=== V.5.9 Example: Native Motion Sensor Binding to a Remote Control <sec:example-native-motion-sensor-binding-to-a-remote-control>]
+
+A Motion Sensor, senses a value and updates its USP Agent \-
+IoTCapability Object: "Device.IoTCapability.1."
+
+Via the IoTCapability Binding, this motion sensor value will be
+forwarded to ProxiedDevice \- IoTCapability Object:
+"Device.ProxiedDevice.2.IoTCapability.1."
+
+Every time, when the value of the Motion Sensor changes, this new value
+is received by the LevelSensor IoTCapability of
+"Device.IoTCapability.1." and due to the binding immediately passed to
+LevelControl IoTCapability of "Device.ProxiedDevice.2.IoTCapability.1.".
+
+The LevelControl IoTCapability is connected to an actuator, such as a
+alarm or a light.
+
+Instantiated data model:
+
+```
+Device.IoTCapability.1.Class                                   = "LevelSensor"
+Device.IoTCapability.1.LevelSensor.Type                        = "Motion"
+Device.IoTCapability.1.LevelSensor.Value                       = 0
+Device.IoTCapability.1.LevelSensor.Unit                        = "Energy"
+Device.IoTCapability.1.Binding.Destination                     = "Device.ProxiedDevice.2.IoTCapability.1"
+Device.IoTCapability.1.Binding.1.Enable                        = true
+
+Device.ProxiedDevice.2.IoTCapability.1.Class                   = "LevelControl"
+Device.ProxiedDevice.2.IoTCapability.1.LevelControl.Type       = "Intensity"
+Device.ProxiedDevice.2.IoTCapability.1.LevelControl.Value      = 0
+Device.ProxiedDevice.2.IoTCapability.1.LevelControl.Unit       = "Energy"
+```
+\`\`\`
+
 #bbf-appendix1[
 = Appendix VI: Software Modularization and USP\-Enabled Applications Theory of Operation <sec:software-modularization-theory-of-operations>]
 
@@ -15907,8 +16209,14 @@ USP\-enabled applications.
     USP Controllers that reside inside the device.
   - The USP Controller serves as the Controller for all communications
     with USP services.
-  - For a USP Broker to recognize a USP Agent as a USP Service, it needs
-    to register a portion of its data model via the Register message.
+    - For a USP Broker to recognize a USP Agent as a USP Service, it
+      needs to register a portion of its data model via the Register
+      message.
+    - The USP Broker populates the `originator_id` field in the USP
+      Record when forwarding a message to another USP Endpoint.
+    - When the USP Broker receives a Notify message containing an Event,
+      the USP Broker uses the `destination_id` in the USP Record to
+      determine which subscriptions to act upon.
 - USP Service:
   - #strong[An entity that is responsible for implementing a portion of
     the device’s overall functionality. A USP Service exposes a set of
@@ -15932,6 +16240,11 @@ USP\-enabled applications.
       Endpoints as a single USP Service.
   - Based on use cases (see below) not all USP Services will need a USP
     Controller.
+    - When a USP Service sends a Notify message containing an Event to a
+      specific USP Controller, it populates the `destination_id` field
+      of the USP record with that USP Controller’s identifier (e.g., an
+      event that is only relevant to the Controller that configured the
+      USP Service).
 - UNIX Domain Socket MTP:
   - #strong[An internal MTP for communications within the device via
     UNIX Domain Sockets.];
@@ -15982,6 +16295,11 @@ full breadth of the Wi\-Fi Object), then Service 1 would register
 #strong[Device.WiFi.DataElements]; and Service 2 would register
 #strong[Device.WiFi.RadioNumberOfEntries];, #strong[Device.WiFi.Radio];.
 
+The Device:2 root data model allows a set of permissions to be
+associated with a USP Service, which determine the data model paths that
+the USP Service’s Agent is allowed to register. These permissions take
+priority over the rules described above.
+
 #bbf-appendix2[
 == VI.3 USP Service Use Cases <sec:usp-service-use-cases>]
 
@@ -16012,7 +16330,7 @@ number corresponds to the use case number (i.e., USP Service 1 is a
 reflection of use case 1).
 
 #figure(
-  caption: [Figure 39 – Software Modularization Use Cases
+  caption: [Figure 40 – Software Modularization Use Cases
     ])[
   #bbf-image("extensions/device-modularization/./use-cases.png")<img:software-modularization-use-cases>
 ] <fig:software-modularization-use-cases>
@@ -16034,6 +16352,9 @@ model) should be exposed for this USP Service. This means that one of
 the key responsibilities of the USP Broker is to track the portion of
 the data model associated with each USP Service, which is facilitated by
 receiving a Register USP message from the USP Agent of the USP Service.
+A subset of this key responsibility is to ensure that the USP Service is
+allowed to register the data model paths based on the permissions
+associated with the USP Service’s Agent.
 
 The USP Agent portion of the USP Broker provides a consolidated view of
 the device’s Service Elements (including all Service Elements exposed by
@@ -16107,15 +16428,47 @@ read\-only.
 
 Due to the lack of a discovery mechanism and to ensure a interoperable
 environment where 3rd party USP Services can communicate with the USP
-Broker, it is highly recommended that the USP Broker’s UNIX Domain
-Socket paths used for both its USP Agent and USP Controller be preset as
-follows:
+Broker, it is highly recommended that the USP Broker’s secured (either
+via TLS or Password authentication)UNIX Domain Socket paths used for
+both its USP Agent and USP Controller be preset as follows:
 
 - USP Broker’s USP Agent: \/var\/run\/usp\/broker\_agent\_path
 - USP Broker’s USP Controller: \/var\/run\/usp\/broker\_controller\_path
+  It is also conceivable that some solutions might choose to have other
+  UNIX Domain Socket paths for internal use.
 
 #bbf-appendix3[
-=== VI.5.2 USPService Data Model Table <sec:uspservice-data-model-table>]
+=== VI.5.2 USPServices.Trust Data Model Table <sec:uspservices.trust-data-model-table>]
+
+The USP Broker needs to validate which data model paths a USP Service is
+allowed to register. This information is tracked in the
+USPServcies.Trust table, which includes the following parameters:
+
+- #strong[EndpointID:]; the Endpoint ID of the USP Agent within the USP
+  Service
+- #strong[Targets:]; a list of data model paths that the USP Service’s
+  Agent is allowed to register
+This table is populated as part of the processing of the `InstallDU()`
+and `Update()` data model commands based on the `RegisterTrustPaths`
+input argument. This table can also be updated after the USP Service has
+been installed via a Set message as the Parameters are writable.
+
+When a USP Service disconnects then the associated USPServices.Trust
+table instance is not removed (it is persisted until the associated
+Software Module Deployment Unit is uninstalled).
+
+If the USPServices.Trust table doesn’t contain an entry for an Endpoint
+ID of a USP Service’s Agent when it starts, then there are no
+permissions associated for that USP Service and it is not allowed to
+register any data model paths.
+
+If the USPServices.Trust table has an entry for an Endpoint ID of a USP
+Service’s Agent when it starts, but the `TargetPaths` Parameter is empty
+then there are no permissions associated for that USP Service and it is
+not allowed to register any data model paths.
+
+#bbf-appendix3[
+=== VI.5.3 USPServices.USPService Data Model Table <sec:uspservices.uspservice-data-model-table>]
 
 The USP Broker should keep track of all USP Services it has an active
 connection to, which includes the following parameters:
@@ -16131,11 +16484,11 @@ connection to, which includes the following parameters:
   when the USP Service’s USP Controller connects to the USP Broker’s USP
   Agent if it is using the same Endpoint ID as the USP Service’s USP
   Agent)
-When a USP Service disconnects then the associated USPService table
-instance is removed.
+When a USP Service disconnects then the associated
+USPServices.USPService table instance is removed.
 
 #bbf-appendix3[
-=== VI.5.3 Example Data Models for a USP Broker and USP Services <sec:example-data-models-for-a-usp-broker-and-usp-services>]
+=== VI.5.4 Example Data Models for a USP Broker and USP Services <sec:example-data-models-for-a-usp-broker-and-usp-services>]
 
 Here’s an example set of data models for a USP Broker and 2 USP Services
 that matches the use cases depicted in the Figure shown in the previous

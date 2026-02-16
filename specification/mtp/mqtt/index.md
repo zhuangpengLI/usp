@@ -253,4 +253,6 @@ MQTT MTP message encryption is provided using certificates in TLS as described i
 
 **[R-MQTT.48]{}** - USP Endpoints utilizing MQTT clients for message transport MUST implement TLS 1.2 [@RFC5246] or later with backward compatibility to TLS 1.2.
 
+**[R-MQTT.48a]{}** - USP Endpoints utilizing MQTT clients for message transport SHOULD support `Application-Layer Protocol Negotiation (ALPN)` extensions as defined in [@RFC7301] as part of the TLS handshake.
+
 **[R-MQTT.49]{}** - MQTT server certificates MAY contain domain names and those domain names MAY contain domain names with wildcard characters per RFC 6125 [@RFC6125] guidance.

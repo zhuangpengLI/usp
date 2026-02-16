@@ -66,6 +66,7 @@ The following set of Types are defined as allowable types in the TLV fields:
 | `1` | Handshake  | The Handshake contains a UTF-8 string that represents the Endpoint ID of the USP Endpoint sending the message. |
 | `2` | Error      | The Error contains a UTF-8 string that provides the error message related to the communications failure. |
 | `3` | USP Record | The USP Record contains the Google Protocol Buffer binary-encoded USP Record being sent between a USP Agent and USP Controller. |
+| `4` | Password   | The password contains a UTF-8 string that represents the shared secret associated with the USP Endpoint sending the message |
 
 **[R-UDS.12]{}** - A Frame sent across a UNIX domain socket that is being used as an MTP MUST contain a TLV with Type 1 for any Handshake negotiation messages
 
@@ -79,21 +80,25 @@ The following set of Types are defined as allowable types in the TLV fields:
 
 After a UNIX domain socket is established between a server (either a USP Agent acting as a server or a USP Controller acting as a server) and a client (either a USP Agent acting as a client or a USP Controller acting as a client), the USP Endpoints need to exchange Handshake Frames to provide each other with their identities because every USP Record contains the from and to Endpoint ID.  This means that both the USP Agent and USP Controller will send a Frame with a Type 1 TLV and their own Endpoint ID before sending any USP Record across the newly established UNIX domain socket connection.
 
-**[R-UDS.16]{}** - A USP Endpoint acting as a UNIX domain socket client MUST send a Unix domain socket Frame containing a Type 1 (Handshake) TLV field once it establishes a UNIX domain socket connection.  This message MUST contain the Endpoint ID of the USP Endpoint sending the message.
+**[R-UDS.16]{}** - A USP Endpoint acting as a UNIX domain socket client MUST send a Unix domain socket Frame containing a Type 1 (Handshake) TLV field, and optionally a Type 4 (Password )TLV field, once it establishes a UNIX domain socket connection.  This message MUST contain the Endpoint ID of the USP Endpoint sending the message, and optionally its associated password. 
 
-**[R-UDS.17]{}** - A USP Endpoint acting as a UNIX domain socket server MUST send a Unix domain socket Frame containing a Type 1 (Handshake) TLV field once it receives a Unix domain socket Frame containing a Type 1 (Handshake) TLV field from a USP Endpoint acting as a UNIX domain socket client. This message MUST contain the Endpoint ID of the USP Endpoint sending the message.
+**[R-UDS.17]{}** - A USP Endpoint acting as a UNIX domain socket server MUST send a Unix domain socket Frame containing a Type 1 (Handshake) TLV field once it receives a Unix domain socket Frame containing a Type 1 (Handshake) TLV field, and optionally a Type 4 (Password) TLV field, from a USP Endpoint acting as a UNIX domain socket client. This message MUST contain the Endpoint ID of the USP Endpoint sending the message, and optionally its associated password.
 
 **[R-UDS.18]{}** - A USP Endpoint acting as a UNIX domain socket client MUST terminate the UNIX domain socket connection if it doesn't receive a Unix domain socket Frame containing a Type 1 (Handshake) TLV field within 30 seconds of when it sent its own Unix domain socket Frame containing a Type 1 (Handshake) TLV field.
 
-Once both sides of the UNIX domain socket have successfully completed the handshake process, which is done by the USP Agent and the USP Controller exchanging Unix domain socket Frames that contain a Type 1 (Handshake) TLV field, then either the USP Agent or USP Controller may begin sending USP Record messages.
+Once both sides of the UNIX domain socket have successfully completed the handshake process, which is done by the USP Agent and the USP Controller exchanging Unix domain socket Frames that contain a Type 1 (Handshake) TLV field, and optionally a Type 4 (Password) TLV field, then either the USP Agent or USP Controller may begin sending USP Record messages.
 
-**[R-UDS.19]{}** - A USP Endpoint acting as a UNIX domain socket client or server MUST ignore an unexpected UNIX domain socket Frame that contains a Type 2 (Handshake) TLV field.
+**[R-UDS.19]{}** - A USP Endpoint acting as a UNIX domain socket client or server MUST ignore an unexpected UNIX domain socket Frame that contains a Type 1 (Handshake) TLV field.
 
 **[R-UDS.20]{}** - A USP Endpoint acting as a UNIX domain socket client or server MUST ignore any UNIX domain socket Frames that contain a Type 3 (USP Record) TLV field until it has successfully completed the handshake process.
 
 The following image shows an example of a UNIX domain socket Frame that contains a Type 1 (Handshake) TLV field used for handshaking between a USP Agent and USP Controller.  In this example, the Endpoint ID being used is "os::00256D-0123456789".
 
 ![UNIX Domain Socket Frame with Handshake Message](./USP-UDS-Handshake.png)
+
+The following image shows an example of a UNIX domain socket Frame that contains a Type 4 (Handshake with shared secret) TLV field used for handshaking between a USP Agent and USP Controller. In this example, the Endpoint ID being used is “os::00256D-0123456789” and a shared secret of “xxxxxxxxxxxxx”.
+
+![UNIX Domain Socket Frame with Handshake Message](./USP-UDS-Password.png)
 
 #### Handling Failures to Handshake
 

@@ -281,7 +281,7 @@ The basic format of a Search Path is:
 
 `Device.IP.Interface.[<expression>].Status`
 
-An Expression consists of one or more Expression Components that are concatenated by the AND (&&) logical operator *(Note: the OR logical operator is not supported)*.
+An Expression consists of one or more Expression Components that are concatenated by either the AND (&&) logical operator or the OR (||) logical operator. An expression may not contain a mix of operators.
 
 The basic format of a Search Path with the Expression element expanded is:
 
@@ -487,7 +487,9 @@ parampath ::= objpath name
 cmdpath   ::= objpath  name '()'
 evntpath  ::= objpath  name '!'
 inst      ::= posnum | expr | '*'
-expr      ::= '[' (exprcomp ( '&&' exprcomp )*) ']'
+expr      ::= '[' ( andexpr | orexpr ) ']'
+andexpr   ::=  exprcomp ( '&&' exprcomp )*
+orexpr    ::=  exprcomp ( '||' exprcomp )*
 exprcomp  ::= relpath oper value
 relpath   ::= name (reffollow? '.' name )*
 reffollow ::=  ( '#' (posnum | '*') '+' )|  '+'
@@ -595,8 +597,14 @@ referenced by:
 
 ![](diagram/expr.png)
 
+![](diagram/andexpr.png)
+
+![](diagram/orexpr.png)
+
 ::: {.ebnf}
-expr ::= '[' exprcomp ( '&&' exprcomp )* ']'
+expr      ::= '[' ( andexpr | orexpr ) ']'\
+andexpr   ::=  exprcomp ( '&&' exprcomp )*\
+orexpr    ::=  exprcomp ( '||' exprcomp )*
 :::
 
 referenced by:

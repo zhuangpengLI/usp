@@ -4,6 +4,25 @@
 
 See <https://usp.technology> for the current USP specification.
 
+## 2026-01-09: [Release 1.5][TR-369 Amendment 5]
+
+*Tags: [v1.5.0] (USP specification), 
+       [v1.4.0][usp-data-models-v1.4.0] (data models didn't change)*
+
+### TR-369 Document
+Release contains the specification for the User Services Platform 1.5
+
+* R-SET.2a: Added details related to how allow_partial impacts Search Paths.
+* USPServices: Added references to the USPServices.Trust Data Model table that provides a mechanism to configure access control for USP Service Registration.
+* Examples in 7.5.3.1: Removed unique_key_sets and added Unique Keys.
+* R-MQTT.48a: Added ALPN support to MQTT.
+* R-DEL.2: Clarified the description of repeated string affected_path.
+* UDS MTP: Added UDS Frame definition to support authentication via a password.
+* R-MTP.4c, R-MTP.4d: Added originator_id requirement to all forwarded messages, and added to USP message header.
+* R-MTP.4e: Added requirement of destination_id in Notifiy message for specific events, and added to the USP message header.
+* IoTCapability: Added binding support and examples to the IoTCapability data model, and prefixed all examples in the IoT section with Device
+* Clarified and unified how Add, Set, and Delete behave with respect to Search Paths, which impacted Add Requirements (0, 1, 1a, 1b, 2a, 2b, and 3), Set Requirements (0, 1, 2, 2a, 2b, 2c, and 2d), and Delete Requirements (0, 1, 1a, 1b, 2, and 2a).
+
 ## 2025-07-14: [Release 1.4.2][TR-369 Amendment 4 Corrigendum 2]
 
 *Tags: [v1.4.2] (USP specification), 
@@ -310,6 +329,7 @@ USP v1.0 Message Schema
 [TR-369 Amendment 4]: https://www.broadband-forum.org/download/TR-369_Amendment-4.pdf
 [TR-369 Amendment 4 Corrigendum 1]: https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-1.pdf
 [TR-369 Amendment 4 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Amendment-4_Corrigendum-2.pdf
+[TR-369 Amendment 5]: https://www.broadband-forum.org/download/TR-369_Amendment-5.pdf
 [TR-369 Corrigendum 1]: https://www.broadband-forum.org/download/TR-369_Corrigendum-1.pdf
 [TR-369 Corrigendum 2]: https://www.broadband-forum.org/download/TR-369_Corrigendum-2.pdf
 [TR-369 Issue 1]: https://www.broadband-forum.org/download/TR-369_Issue-1.pdf
@@ -336,3 +356,4 @@ USP v1.0 Message Schema
 [v1.4.0]: https://github.com/BroadbandForum/usp/releases/tag/v1.4.0
 [v1.4.1]: https://github.com/BroadbandForum/usp/releases/tag/v1.4.1
 [v1.4.2]: https://github.com/BroadbandForum/usp/releases/tag/v1.4.2
+[v1.5.0]: https://github.com/BroadbandForum/usp/releases/tag/v1.5.0

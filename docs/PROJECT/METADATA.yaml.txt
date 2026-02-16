@@ -4,15 +4,15 @@
 bbfNumber: TR-369
 bbfTitle: The User Services Platform
 bbfIssue: Issue
-bbfVersion: 1 Amendment 4 Corrigendum 2
-bbfMonth: July
-bbfYear: 2025
+bbfVersion: 1 Amendment 5
+bbfMonth: January
+bbfYear: 2026
 bbfType: Technical Report
 bbfStatus: ''
 bbfContrib: ''
 bbfMajor: 1
-bbfMinor: 4
-bbfPatch: 2
+bbfMinor: 5
+bbfPatch: 0
 bbfMicro: 0
 bbfExtra: 0
 bbfDraft: ''

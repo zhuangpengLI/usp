@@ -15,7 +15,9 @@ The following concepts are key components of the overall solution to enable conn
 	- A USP Broker has both a USP Agent and a USP Controller embedded in it.
 	- The USP Agent serves as both the Agent that exposes the device’s management environment to the external world and the Agent to any USP Controllers that reside inside the device.
 	- The USP Controller serves as the Controller for all communications with USP services.
-	- For a USP Broker to recognize a USP Agent as a USP Service, it needs to register a portion of its data model via the Register message.
+      - For a USP Broker to recognize a USP Agent as a USP Service, it needs to register a portion of its data model via the Register message.
+      - The USP Broker populates the `originator_id` field in the USP Record when forwarding a message to another USP Endpoint.
+      - When the USP Broker receives a Notify message containing an Event, the USP Broker uses the `destination_id` in the USP Record to determine which subscriptions to act upon.
 
 - USP Service:
 	- **An entity that is responsible for implementing a portion of the device's overall functionality. A USP Service exposes a set of Service Elements related to the functionality that it is responsible for implementing. A USP Service could have a need to interact with Service Elements that are outside of its functional domain, whether that be Service Elements exposed by the USP Broker or some other USP Service.**
@@ -25,6 +27,7 @@ The following concepts are key components of the overall solution to enable conn
 	- If a USP Service has both a USP Agent and a USP Controller then it is highly recommended that they both use the same Endpoint ID.
 		- If the USP Agent and USP Controller don't use the same Endpoint ID then the USP Broker won't be able to correlate the two USP Endpoints as a single USP Service.
 	- Based on use cases (see below) not all USP Services will need a USP Controller.
+      - When a USP Service sends a Notify message containing an Event to a specific USP Controller, it populates the `destination_id` field of the USP record with that USP Controller's identifier (e.g., an event that is only relevant to the Controller that configured the USP Service).
 
 - UNIX Domain Socket MTP:
 	- **An internal MTP for communications within the device via UNIX Domain Sockets.**
@@ -45,6 +48,8 @@ The following rules detail the usage of the Register Operation by a USP Service 
 3. A USP Service cannot register something that is a sub-object of something that is already registered by another USP Service. For example: If Service 1 registers **Device.WiFi** first, then Service 2 attempts to register **Device.WiFi.DataElements** - that results in a failure; Service 1 should only register what it needs to instead of attempting to register all of WiFi.
 
 A USP Service is expected to only register the portion of the data model that it is responsible for implementing, but if that USP Service expects no overlap then it could register a sub-Object of the root data model object. For example, if Service 1 intends to implement all of **Device.WiFi** without any overlaps, then it would register **Device.WiFi**. However, if Service 1 and Service 2 expect an overlap at the **Device.WiFi** level (due to not implementing the full breadth of the Wi-Fi Object), then Service 1 would register **Device.WiFi.DataElements** and Service 2 would register **Device.WiFi.RadioNumberOfEntries**, **Device.WiFi.Radio**.
+
+The Device:2 root data model allows a set of permissions to be associated with a USP Service, which determine the data model paths that the USP Service's Agent is allowed to register. These permissions take priority over the rules described above.
 
 ## USP Service Use Cases
 
@@ -78,7 +83,7 @@ A USP Broker generally has 3 main responsibilities:
 * Proxy USP communications internally within the device based on the Service Elements that the USP Services have exposed.
 * Provide a consolidated view of the device's Service Elements to USP Controllers that reside externally to the device.
 
-When a USP Service is started, there will be a data model registration to inform the USP Broker which Service Elements (portions of the data model) should be exposed for this USP Service. This means that one of the key responsibilities of the USP Broker is to track the portion of the data model associated with each USP Service, which is facilitated by receiving a Register USP message from the USP Agent of the USP Service.
+When a USP Service is started, there will be a data model registration to inform the USP Broker which Service Elements (portions of the data model) should be exposed for this USP Service. This means that one of the key responsibilities of the USP Broker is to track the portion of the data model associated with each USP Service, which is facilitated by receiving a Register USP message from the USP Agent of the USP Service. A subset of this key responsibility is to ensure that the USP Service is allowed to register the data model paths based on the permissions associated with the USP Service's Agent.
 
 The USP Agent portion of the USP Broker provides a consolidated view of the device's Service Elements (including all Service Elements exposed by USP Services) to USP Controllers that are external to the device, and those USP Controllers will send USP messages to the device that require the USP Broker to proxy either the entire USP message or a portion of the USP message to one or more USP Services based on the Service Elements being exposed by the various USP Services. These USP messages can come in many forms:
 
@@ -100,12 +105,28 @@ Each instance of the LocalAgent.Controller table represents a USP Controller tha
 
 The LocalAgent.MTP.UDS instance will be auto-created based on the USP Broker or USP Service supporting the UNIX Domain Socket MTP. The LocalAgent.Controller instances for a USP Broker and USP Services will be automatically created with the UDS instance based on USP Service startup procedures. Given that and the USP Broker has well-known paths for the Agent and Controller UNIX Domain Socket MTP, the UDS objects are read-only.
 
-Due to the lack of a discovery mechanism and to ensure a interoperable environment where 3rd party USP Services can communicate with the USP Broker, it is highly recommended that the USP Broker's UNIX Domain Socket paths used for both its USP Agent and USP Controller be preset as follows:
+Due to the lack of a discovery mechanism and to ensure a interoperable environment where 3rd party USP Services can communicate with the USP Broker, it is highly recommended that the USP Broker's secured (either via TLS or Password authentication)UNIX Domain Socket paths used for both its USP Agent and USP Controller be preset as follows:
 
 * USP Broker's USP Agent: /var/run/usp/broker_agent_path
 * USP Broker's USP Controller: /var/run/usp/broker_controller_path
+It is also conceivable that some solutions might choose to have other UNIX Domain Socket paths for internal use.
 
-### USPService Data Model Table
+### USPServices.Trust Data Model Table
+
+The USP Broker needs to validate which data model paths a USP Service is allowed to register.  This information is tracked in the USPServcies.Trust table, which includes the following parameters:
+
+* **EndpointID:** the Endpoint ID of the USP Agent within the USP Service
+* **Targets:** a list of data model paths that the USP Service's Agent is allowed to register
+
+This table is populated as part of the processing of the `InstallDU()` and `Update()` data model commands based on the `RegisterTrustPaths` input argument.  This table can also be updated after the USP Service has been installed via a Set message as the Parameters are writable. 
+
+When a USP Service disconnects then the associated USPServices.Trust table instance is not removed (it is persisted until the associated Software Module Deployment Unit is uninstalled). 
+
+If the USPServices.Trust table doesn't contain an entry for an Endpoint ID of a USP Service's Agent when it starts, then there are no permissions associated for that USP Service and it is not allowed to register any data model paths.
+
+If the USPServices.Trust table has an entry for an Endpoint ID of a USP Service's Agent when it starts, but the `TargetPaths` Parameter is empty then there are no permissions associated for that USP Service and it is not allowed to register any data model paths.
+
+### USPServices.USPService Data Model Table
 
 The USP Broker should keep track of all USP Services it has an active connection to, which includes the following parameters:
 
@@ -114,7 +135,7 @@ The USP Broker should keep track of all USP Services it has an active connection
 * **DeploymentUnitRef:** a reference to the Software Module Deployment Unit, if applicable
 * **HasController:** a flag that indicates whether or not the USP Service has an embedded USP Controller (NOTE: this can be determined when the USP Service's USP Controller connects to the USP Broker's USP Agent if it is using the same Endpoint ID as the USP Service's USP Agent)
 
-When a USP Service disconnects then the associated USPService table instance is removed.
+When a USP Service disconnects then the associated USPServices.USPService table instance is removed.
 
 ### Example Data Models for a USP Broker and USP Services
 

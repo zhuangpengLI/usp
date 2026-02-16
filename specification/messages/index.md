@@ -351,10 +351,6 @@ The logic can be described as follows:
 | `true` | Yes | Yes | - | Response | `oper_failure` | Yes |
 | `false` | Yes | Yes | - | Error | N/A | Yes |
 
-#### Search Paths and allow_partial in Set {#sec:search-paths-in-set}
-
-In a Set Request that specifies a Search Path that matches multiple objects, it is intended that the Agent treats the requested path holistically regardless of the value of allow_partial. This represents a special case. Information about the failure reason for one or more objects that failed to be created or updated is still desired, but would be lost if an Error message was returned rather than a Response message containing OperationFailure elements. See [R-SET.2a]() and [R-SET.2b]() for the specific requirements.
-
 ### The Add Message {#sec:add}
 
 The Add Message is used to create new Instances of Multi-Instance Objects in the Agent's Instantiated Data Model.
@@ -425,9 +421,9 @@ body {
 
 This field tells the Agent how to process the Message in the event that one or more of the Objects specified in the `create_objs` argument fails creation.
 
-**[R-ADD.0]{}** - If the `allow_partial` field is set to `true`, and no other exceptions are encountered, the Agent treats each Object matched in `obj_path` independently. The Agent MUST complete the creation of valid Objects regardless of the inability to create or update one or more Objects (see [](#sec:using-allow-partial-and-required-parameters)).
+**[R-ADD.0]{}** - If the `allow_partial` field is set to `true`, and no other exceptions are encountered, the Agent treats each `CreateObject` entry independently. The Agent MUST complete the creation of valid Objects regardless of the inability to create or update one or more Objects (see [](#sec:using-allow-partial-and-required-parameters)).
 
-**[R-ADD.1]{}** - If the `allow_partial` field is set to `false`, and no other exceptions are encountered, the Agent treats each Object matched in `obj_path` holistically. A failure to create any one Object MUST cause the Add Message to fail and return an `Error` Message (see [](#sec:using-allow-partial-and-required-parameters)).
+**[R-ADD.1]{}** - If the `allow_partial` field is set to `false`, and no other exceptions are encountered, the Agent treats the entire Add Message as a single operation. A failure to create any one Object MUST cause the entire Add Message to fail and return an `Error` Message, and the state of the Data Model MUST NOT change (see [](#sec:using-allow-partial-and-required-parameters)).
 
 `repeated CreateObject create_objs`
 
@@ -442,6 +438,16 @@ This field contains an Object Path to a writeable Table in the Agent’s Instant
 **[R-ADD.2]{}** - The `obj_path` field in the `CreateObject` Message of an Add Request MUST specify or match exactly one Object Path. (DEPRECATED)
 
 *Note: The R-ADD.2 requirement was deprecated in USP 1.3 because previous USP versions too narrowly restricted the usage of various paths in the obj_path field. If multiple paths are impacted, then the AddResp can contain multiple CreatedObjectResult instances that include the same requested_path.*
+
+**[R-ADD.1a]{}** - The following error conditions MUST cause the Add to fail for the corresponding `obj_path`:
+* any `obj_path` that does not reference a Multi-Instance Object Path
+* any `obj_path` that is not in the Supported Data Model
+* any `obj_path` that is non-writable as per the Supported Data Model
+* any `obj_path` that is a Multi-Instance Object with no InstantiatedObj Write permission
+
+See requirements [R-ADD.2a]() and [R-ADD.2b]() for handling of `obj_path` fields containing Search Expressions (see also [](#sec:using-allow-partial-and-required-parameters)).
+
+**[R-ADD.1b]{}** - The Agent MAY terminate processing a Add Request with an `obj_path` field in the `CreateObject` message that contains a Search Path matching more than one object after encountering any number of errors if `allow_partial` is `false`.
 
 `repeated CreateParamSetting param_settings`
 
@@ -471,6 +477,10 @@ This field specifies whether the Agent should treat the creation of the Object s
 *Note: Any Unique Key Parameter contained in the Add Message will be considered as required regardless of how this field is set. This is to ensure that Unique Key constraints are met when creating the instance of the Object.*
 
 **[R-ADD.2a]{}** - If the `allow_partial` field is set to `false` and the `obj_path` field contains a Search Expression, a failure in any of the Paths matched by the Search Expression MUST result in a failure and the state of the Data Model MUST NOT change.
+
+**[R-ADD.2b]{}** - If the `allow_partial` field is set to `true` and the `obj_path` field contains a Search Expression, the Agent MUST NOT roll back or undo any Objects that were successfully created when a failure occurs for other Paths matched by the Search Expression. Each matched path is treated independently, and successful object creations remain in the Data Model even if other object creations fail.
+
+*Note: If the Search Path matches zero Objects in the Agent’s Instantiated Data Model this is seen as a successful operation as explained in [R-MSG.4a](). If multiple paths are impacted, then the AddResp can contain multiple CreatedObjectResult instances that include the same requested_path.*
 
 **[R-ADD.3]{}** - If the `required` field is set to true, a failure to update this Parameter MUST result in a failure to create the Object.
 
@@ -615,11 +625,11 @@ body {
 
 This field tells the Agent how to process the Message in the event that one or more of the Objects matched in the `obj_path` fails to update.
 
-**[R-SET.0]{}** - If the `allow_partial` field is set to true, and no other exceptions are encountered, the Agent treats each `UpdateObject` message `obj_path` independently. The Agent MUST complete the update of valid Objects regardless of the inability to update one or more Objects (see [](#sec:using-allow-partial-and-required-parameters)).
+**[R-SET.0]{}** - If the `allow_partial` field is set to true, and no other exceptions are encountered, the Agent treats each `UpdateObject` entry independently. The Agent MUST complete the update of valid Objects regardless of the inability to update one or more Objects (see [](#sec:using-allow-partial-and-required-parameters)).
 
 *Note: This may cause some counterintuitive behavior if there are no required Parameters to be updated. The Set Request can still result in a Set Response (rather than an Error Message) if `allow_partial` is set to true.*
 
-**[R-SET.1]{}** - If the `allow_partial` field is set to false, and no other exceptions are encountered, the Agent treats each `UpdateObject` message `obj_path` holistically. A failure to update any one Object MUST cause the Set Message to fail and return an Error Message (see [](#sec:using-allow-partial-and-required-parameters)).
+**[R-SET.1]{}** - If the `allow_partial` field is set to false, and no other exceptions are encountered, the Agent treats the entire Set Message as a single operation. A failure to update any one Object MUST cause the entire Set Message to fail and return an Error Message, and the state of the Data Model MUST NOT change.
 
 `repeated UpdateObject update_objs`
 
@@ -630,6 +640,13 @@ This field contains a repeated set of UpdateObject messages.
 `string obj_path`
 
 This field contains an Object Path, Object Instance Path, or Search Path to Objects or Object Instances in the Agent’s Instantiated Data Model.
+
+**[R-SET.1a]{}** - The following error conditions MUST cause the Set to fail for the corresponding `obj_path`:
+* any `obj_path` that is not an Object Path, Object Instance Path, or Search Path
+* any `obj_path` that is not in the Supported Data Model
+* any `obj_path` that is a Multi-Instance Object
+
+See requirements [R-SET.2b](), [R-SET.2c](), and [R-SET.2d]() for handling of `obj_path` fields containing Search Paths (see also [](#sec:using-allow-partial-and-required-parameters)).
 
 `repeated UpdateParamSetting param_settings`
 
@@ -652,13 +669,20 @@ This field specifies whether the Agent should treat the update of the Object spe
 
 **[R-SET.2]{}** - If the `required` field is set to `true`, a failure to update this Parameter MUST result in a failure to update the Object (see [](#sec:using-allow-partial-and-required-parameters)).
 
-**[R-SET.2a]{}** - If the `obj_path` field in the `UpdateObject` message of a `Set` Request contains a Search Path matching more than one object, the Agent MUST treat the results of that `obj_path` holistically. That is, if any object that matches the Search Path fails to be updated due to a failure, the Agent MUST undo any changes that were already processed due to this `obj_path`, and the Agent returns either an `Error` with the appropriate `param_errs` elements or a `Set` Response with an UpdatedObjectResult containing:
-
+**[R-SET.2a]{}** - If the `obj_path` field in the `UpdateObject` message of a `Set` Request contains a Search Path matching more than one object, the Agent MUST treat the results of that `obj_path` holistically. That is, if any object that matches the Search Path fails to be updated due to a failure, the Agent MUST undo any changes that were already processed due to this `obj_path`, and the Agent returns either an `Error` with the appropriate `param_errs` elements or a `Set` Response with an UpdatedObjectResult containing (DEPRECATED):
   * A `requested_path` equal to the `obj_path` in the request.
   * An `oper_status` field containing an OperationFailure message.
   * At least one UpdatedInstanceFailure message with an `affected_path` that reflects the object that failed to update.
 
-**[R-SET.2b]{}** - The Agent MAY terminate processing a Set Request with an `obj_path` field in the `UpdateObject` message that contains a Search Path matching more than one object after encountering any number of errors.
+*Note: The 3 bullet points above are DEPRECATED together with requirement `R-SET.2a` to make the requirements for the SET more clear and more consistent with the behavior of the ADD. Refer to requirements R-SET.2c and R-SET.2d for more information on processing SET requests with Search Paths.*
+
+**[R-SET.2b]{}** - The Agent MAY terminate processing a Set Request with an `obj_path` field in the `UpdateObject` message that contains a Search Path matching more than one object after encountering any number of errors if `allow_partial` is `false`.
+
+**[R-SET.2c]{}** - If the `allow_partial` field is set to `false` and the `obj_path` field in the `UpdateObject` message of a `Set` Request contains a Search Path matching more than one object, the Agent MUST treat all objects matched by that `obj_path` as a single operation. That is, if any object that matches the Search Path fails to be updated due to a failure, the Agent MUST undo any changes that were already processed due to this `obj_path`, and the state of the Data Model MUST NOT change. The Agent returns an `Error` Message with the appropriate `param_errs` elements.
+
+**[R-SET.2d]{}** - If the `allow_partial` field is set to `true` and the `obj_path` field in the `UpdateObject` message of a `Set` Request contains a Search Path matching more than one object, the Agent MUST treat each matched object independently. The Agent MUST NOT roll back or undo any Objects that were successfully updated when a failure occurs for other objects matched by the Search Path. Successful object updates remain in the Data Model even if other object updates fail. The Agent returns a `Set` Response with UpdatedObjectResult elements for each independently processed object.
+
+*Note: If the Search Path matches zero Objects in the Agent’s Instantiated Data Model this is seen as a successful operation as explained in [R-MSG.4a](). If multiple paths are impacted, then the SetResp can contain multiple UpdatedObjectResult instances that include the same requested_path.*
 
 #### Set Response
 
@@ -821,13 +845,21 @@ body {
 
 This field tells the Agent how to process the Message in the event that one or more of the Objects specified in the `obj_path` argument fails deletion.
 
-**[R-DEL.0]{}** - If the `allow_partial` field is set to true, and no other exceptions are encountered, the Agent treats each entry in `obj_path` independently. The Agent MUST complete the deletion of valid Objects regardless of the inability to delete one or more Objects (see [](#sec:using-allow-partial-and-required-parameters)).
+**[R-DEL.0]{}** - If the `allow_partial` field is set to `true`, and no other exceptions are encountered, the Agent treats each entry in `obj_paths` independently. The Agent MUST complete the deletion of valid Objects regardless of the inability to delete one or more Objects (see [](#sec:using-allow-partial-and-required-parameters)).
 
-[R-DEL.1]{} - If the allow_partial field is set to false, the Agent treats each entry in obj_path holistically. The following error conditions MUST cause the Delete Message to fail and return an Error Message: any entry that is not an Object Instance Path, any entry that is an Object Instance that does not exist, any entry that is non-deletable as per the the Supported Data Model (e.g., a non-writable multi-instance Object), or any entry that is an Object Instance with no InstantiatedObj Write permission.
+**[R-DEL.1]{}** - If the `allow_partial` field is set to `false`, and no other exceptions are encountered, the Agent treats the entire Delete Message as a single operation. A failure to delete any one Object MUST cause the entire Delete Message to fail and return an `Error` Message, and the state of the Data Model MUST NOT change. This also applies to `obj_paths` that contain Search Expressions, which resolve to multiple objects.
+
+**[R-DEL.1a]{}** - If the `allow_partial` field is set to `true` and an entry in `obj_paths` contains a Search Path matching more than one object, the Agent MUST treat each matched object independently. The Agent MUST NOT roll back or undo any Objects that were successfully deleted when a failure occurs for other objects matched by the Search Path. Successful object deletions are removed from the Data Model even if other object deletions fail. The Agent returns a `DeleteResp` Response with a single `DeletedObjectResult` for each of the `obj_paths` in the `Delete` Request.
 
 `repeated string obj_paths`
 
 This field contains a repeated set of Object Instance Paths or Search Paths.
+
+**[R-DEL.1b]{}** - The following error conditions MUST cause the Delete to fail for the corresponding `obj_paths` entry:
+* any `obj_path` that is not an Object Instance Path or Search Path
+* any `obj_path` that is not in the Supported Data Model
+* any `obj_path` that is non-deletable as per the Supported Data Model (e.g., a non-writable multi-instance Object)
+* any `obj_path` that is an Object Instance with no InstantiatedObj Write permission.
 
 #### Delete Response Fields
 
@@ -873,11 +905,12 @@ This field contains additional information about the reason behind the error.
 
 `repeated string affected_paths`
 
-This field returns a repeated set of Path Names to Object Instances.
+This field contains a repeated set of Object Instance Paths matching the `requested_path` in this `DeletedObjectResult`.
+Child Objects of the matching path are not included in the set.
 
 **[R-DEL.2]{}** - If the Controller does not have Read permission on any of the Objects specified in `affected_paths`, these Objects MUST NOT be returned in this field.
 
-**[R-DEL.2a]{}** - If the requested_path was valid (i.e., properly formatted and in the Agent's supported data model) but did not resolve to any Objects in the Agent's instantiated data model, the Agent MUST return an OperationSuccess for this requested_path, and include an empty set for affected_path.
+**[R-DEL.2a]{}** - If the requested_path was valid (i.e., properly formatted and in the Agent's supported data model) but did not resolve to any Objects in the Agent's instantiated data model, the Agent MUST return an OperationSuccess for this requested_path, and include an empty set for affected_path. This includes requested_paths that point to instances that are not in the Instantiated Data Model. This requirement does not depend on the value of allow_partial.
 
 `repeated UnaffectedPathError unaffected_path_errs`
 

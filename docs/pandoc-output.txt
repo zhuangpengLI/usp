@@ -1,54 +1,46 @@
-make[1]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf'
-PYTHONPATH=./../../install/python/ ./../../install/bin/project-parser.py --outdir=./docs --loglevel=1 PROJECT.yaml 2>&1 >docs/PROJECT.yaml.outputs || true
+make[1]: Entering directory '/opt/atlassian/pipelines/agent/build/WT-369'
+PYTHONPATH=./../install/python/ ./../install/bin/project-parser.py --outdir=./docs --loglevel=1 PROJECT.yaml 2>&1 >docs/PROJECT.yaml.outputs || true
 INFO:project-parser:created WT-369 project (valid)
-INFO:project-parser:find_file usp-data-models /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/usp-data-models/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/usp-data-models/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/usp-data-models/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/usp-data-models/PROJECT.yaml
+INFO:project-parser:find_file usp-data-models /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/usp-data-models/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/usp-data-models/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/usp-data-models/PROJECT.yaml
 INFO:project-parser:created usp-data-models project (depth 1)
-INFO:project-parser:find_file WT-181 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-181/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-181/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-181/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-181/PROJECT.yaml
-INFO:project-parser:created WT-181 project (depth 2)
-INFO:project-parser:find_file WT-106 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-106/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-106/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-106/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-106/PROJECT.yaml
+INFO:project-parser:find_file WT-106 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/WT-106/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/WT-106/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-106/PROJECT.yaml
 INFO:project-parser:created WT-106 project (depth 2)
-INFO:project-parser:find_file WT-196 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-196/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-196/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-196/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-196/PROJECT.yaml
+INFO:project-parser:find_file WT-181 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/WT-181/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/WT-181/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-181/PROJECT.yaml
+INFO:project-parser:created WT-181 project (depth 2)
+INFO:project-parser:find_file WT-196 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/WT-196/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/WT-196/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-196/PROJECT.yaml
 INFO:project-parser:created WT-196 project (depth 2)
-INFO:project-parser:find_file WT-104 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-104/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-104/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-104/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-104/PROJECT.yaml
+INFO:project-parser:find_file WT-104 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/WT-104/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/WT-104/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-104/PROJECT.yaml
 INFO:project-parser:created WT-104 project (depth 2)
-INFO:project-parser:find_file WT-135 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-135/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-135/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-135/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-135/PROJECT.yaml
+INFO:project-parser:find_file WT-135 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/WT-135/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/WT-135/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-135/PROJECT.yaml
 INFO:project-parser:created WT-135 project (depth 2)
-INFO:project-parser:find_file WT-140 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-140/PROJECT.yaml
-INFO:project-parser:  (2/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-140/bbf/PROJECT.yaml
-INFO:project-parser:  (3/7) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-140/PROJECT.yaml
-INFO:project-parser:  (4/7) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-140/PROJECT.yaml
+INFO:project-parser:find_file WT-140 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/7) not found in /opt/atlassian/pipelines/agent/build/WT-140/PROJECT.yaml
+INFO:project-parser:  (2/7) not found in /opt/atlassian/pipelines/agent/WT-140/WT-369/PROJECT.yaml
+INFO:project-parser:  (3/7) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-140/PROJECT.yaml
 INFO:project-parser:created WT-140 project (depth 2)
-INFO:project-parser:find_file WT-157 /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/PROJECT.yaml
-INFO:project-parser:  (1/8) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/components/PROJECT.yaml
-INFO:project-parser:  (2/8) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/WT-181/components/PROJECT.yaml
-INFO:project-parser:  (3/8) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/WT-181/bbf/components/PROJECT.yaml
-INFO:project-parser:  (4/8) not found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/install/projectyaml/WT-157/PROJECT.yaml
-INFO:project-parser:  (5/8) found in /mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/install/projectyaml/WT-157/PROJECT.yaml
+INFO:project-parser:find_file WT-157 /opt/atlassian/pipelines/agent/build/WT-369/PROJECT.yaml
+INFO:project-parser:  (1/8) not found in /opt/atlassian/pipelines/agent/build/WT-369/components/PROJECT.yaml
+INFO:project-parser:  (2/8) not found in /opt/atlassian/pipelines/agent/build/WT-181/components/PROJECT.yaml
+INFO:project-parser:  (3/8) not found in /opt/atlassian/pipelines/agent/WT-181/WT-369/components/PROJECT.yaml
+INFO:project-parser:  (4/8) found in /opt/atlassian/pipelines/agent/build/install/projectyaml/WT-157/PROJECT.yaml
 INFO:project-parser:created WT-157 project (depth 3)
 INFO:project-parser:validated projects
 INFO:project-parser:wrote ./docs/README.md
@@ -59,59 +51,105 @@ INFO:project-parser:wrote ./docs/METADATA-1.md
 INFO:project-parser:wrote ./docs/METADATA.md
 INFO:project-parser:wrote ./docs/METADATA-1.mk
 INFO:project-parser:wrote ./docs/METADATA.mk
-yq eval ./../../install/cwmp/dm-units.yaml
-yq eval ./../../install/projectyaml/WT-232/PROJECT.yaml
-yq eval ./../../install/projectyaml/DTP-069/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-140/PROJECT.yaml
-yq eval ./../../install/projectyaml/DTP-469/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-181/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-369/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-104/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-124/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-135/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-157/PROJECT.yaml
-yq eval ./../../install/projectyaml/usp-data-models/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-098/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-262/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-106/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-143/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-069/PROJECT.yaml
-yq eval ./../../install/projectyaml/WT-196/PROJECT.yaml
-yq eval ./../../install/projectyaml/cwmp-data-models/PROJECT.yaml
-yq eval ./../../install/pandoc/metadata/bbf-metadata.yaml
-yq eval ./../../install/pandoc/metadata/no-title-metadata.yaml
-yq eval ./../../install/pandoc/defaults/common-defaults.yaml
-yq eval ./../../install/pandoc/defaults/html-defaults.yaml
-yq eval ./../../install/pandoc/defaults/pdf-defaults.yaml
-yq eval ./../../install/pandoc/defaults/typst-defaults.yaml
-yq eval ./../../install/pandoc/defaults/json-defaults.yaml
-yq eval ./../../install/pandoc/defaults/docx-defaults.yaml
-yq eval ./../../install/pandoc/defaults/_codebraid_preview.yaml
-yq eval ./../../install/pandoc/defaults/htm-defaults.yaml
-yq eval ./../../install/pandoc/defaults/codebraid-defaults.yaml
-yq eval ./../../install/pandoc/csl/ieee-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/bbf-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/iso-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/iana-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/etsi-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/grpc-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/mef-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/misc-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/ietf-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/3gpp-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/ansi-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/itu-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/w3c-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/gsma-extra-csl.yaml
-yq eval ./../../install/pandoc/csl/sff-extra-csl.yaml
+yq eval ./../install/projectyaml/WT-135/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-196/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-069/PROJECT.yaml
+yq eval ./../install/projectyaml/DTP-469/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-104/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-140/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-098/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-181/PROJECT.yaml
+yq eval ./../install/projectyaml/DTP-069/PROJECT.yaml
+yq eval ./../install/projectyaml/usp-data-models/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-232/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-106/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-124/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-143/PROJECT.yaml
+yq eval ./../install/projectyaml/cwmp-data-models/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-369/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-262/PROJECT.yaml
+yq eval ./../install/projectyaml/WT-157/PROJECT.yaml
+yq eval ./../install/cwmp/dm-units.yaml
+yq eval ./../install/pandoc/csl/3gpp-extra-csl.yaml
+yq eval ./../install/pandoc/csl/iso-extra-csl.yaml
+yq eval ./../install/pandoc/csl/misc-extra-csl.yaml
+yq eval ./../install/pandoc/csl/bbf-extra-csl.yaml
+yq eval ./../install/pandoc/csl/gsma-extra-csl.yaml
+yq eval ./../install/pandoc/csl/ieee-extra-csl.yaml
+yq eval ./../install/pandoc/csl/itu-extra-csl.yaml
+yq eval ./../install/pandoc/csl/sff-extra-csl.yaml
+yq eval ./../install/pandoc/csl/iana-extra-csl.yaml
+yq eval ./../install/pandoc/csl/ietf-extra-csl.yaml
+yq eval ./../install/pandoc/csl/ansi-extra-csl.yaml
+yq eval ./../install/pandoc/csl/mef-extra-csl.yaml
+yq eval ./../install/pandoc/csl/grpc-extra-csl.yaml
+yq eval ./../install/pandoc/csl/w3c-extra-csl.yaml
+yq eval ./../install/pandoc/csl/etsi-extra-csl.yaml
+yq eval ./../install/pandoc/metadata/bbf-metadata.yaml
+yq eval ./../install/pandoc/metadata/no-title-metadata.yaml
+yq eval ./../install/pandoc/defaults/_codebraid_preview.yaml
+yq eval ./../install/pandoc/defaults/html-defaults.yaml
+yq eval ./../install/pandoc/defaults/json-defaults.yaml
+yq eval ./../install/pandoc/defaults/common-defaults.yaml
+yq eval ./../install/pandoc/defaults/htm-defaults.yaml
+yq eval ./../install/pandoc/defaults/docx-defaults.yaml
+yq eval ./../install/pandoc/defaults/codebraid-defaults.yaml
+yq eval ./../install/pandoc/defaults/pdf-defaults.yaml
+yq eval ./../install/pandoc/defaults/typst-defaults.yaml
 yq eval ./api/swagger-usp-controller-v1.yaml
 yq eval ./PROJECT.yaml
 yq eval ./common.yaml
-make[1]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf'
-make[1]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf'
+yq eval ./bitbucket-pipelines.yml
+yq eval ./install/projectyaml/WT-135/PROJECT.yaml
+yq eval ./install/projectyaml/WT-196/PROJECT.yaml
+yq eval ./install/projectyaml/WT-069/PROJECT.yaml
+yq eval ./install/projectyaml/DTP-469/PROJECT.yaml
+yq eval ./install/projectyaml/WT-104/PROJECT.yaml
+yq eval ./install/projectyaml/WT-098/PROJECT.yaml
+yq eval ./install/projectyaml/WT-140/PROJECT.yaml
+yq eval ./install/projectyaml/WT-181/PROJECT.yaml
+yq eval ./install/projectyaml/DTP-069/PROJECT.yaml
+yq eval ./install/projectyaml/usp-data-models/PROJECT.yaml
+yq eval ./install/projectyaml/WT-232/PROJECT.yaml
+yq eval ./install/projectyaml/WT-106/PROJECT.yaml
+yq eval ./install/projectyaml/WT-143/PROJECT.yaml
+yq eval ./install/projectyaml/WT-124/PROJECT.yaml
+yq eval ./install/projectyaml/cwmp-data-models/PROJECT.yaml
+yq eval ./install/projectyaml/WT-369/PROJECT.yaml
+yq eval ./install/projectyaml/WT-262/PROJECT.yaml
+yq eval ./install/projectyaml/WT-157/PROJECT.yaml
+yq eval ./install/cwmp/dm-units.yaml
+yq eval ./install/pandoc/csl/3gpp-extra-csl.yaml
+yq eval ./install/pandoc/csl/iso-extra-csl.yaml
+yq eval ./install/pandoc/csl/bbf-extra-csl.yaml
+yq eval ./install/pandoc/csl/misc-extra-csl.yaml
+yq eval ./install/pandoc/csl/ieee-extra-csl.yaml
+yq eval ./install/pandoc/csl/itu-extra-csl.yaml
+yq eval ./install/pandoc/csl/gsma-extra-csl.yaml
+yq eval ./install/pandoc/csl/sff-extra-csl.yaml
+yq eval ./install/pandoc/csl/iana-extra-csl.yaml
+yq eval ./install/pandoc/csl/ietf-extra-csl.yaml
+yq eval ./install/pandoc/csl/ansi-extra-csl.yaml
+yq eval ./install/pandoc/csl/mef-extra-csl.yaml
+yq eval ./install/pandoc/csl/grpc-extra-csl.yaml
+yq eval ./install/pandoc/csl/w3c-extra-csl.yaml
+yq eval ./install/pandoc/csl/etsi-extra-csl.yaml
+yq eval ./install/pandoc/metadata/bbf-metadata.yaml
+yq eval ./install/pandoc/metadata/no-title-metadata.yaml
+yq eval ./install/pandoc/defaults/_codebraid_preview.yaml
+yq eval ./install/pandoc/defaults/html-defaults.yaml
+yq eval ./install/pandoc/defaults/json-defaults.yaml
+yq eval ./install/pandoc/defaults/common-defaults.yaml
+yq eval ./install/pandoc/defaults/htm-defaults.yaml
+yq eval ./install/pandoc/defaults/pdf-defaults.yaml
+yq eval ./install/pandoc/defaults/docx-defaults.yaml
+yq eval ./install/pandoc/defaults/codebraid-defaults.yaml
+yq eval ./install/pandoc/defaults/typst-defaults.yaml
+make[1]: Leaving directory '/opt/atlassian/pipelines/agent/build/WT-369'
+make[1]: Entering directory '/opt/atlassian/pipelines/agent/build/WT-369'
 [ -f docs/PROJECT ] && echo docs/PROJECT exists and is not a directory && exit 1; \
 rm -f -r docs/PROJECT && mkdir -p docs/PROJECT && touch docs/PROJECT/index.html; \
-cp -p ./../../install/pandoc/css/bbf.css docs/PROJECT; \
+cp -p ./../install/pandoc/css/bbf.css docs/PROJECT; \
 echo "<p>WT-369 PROJECT.yaml and its products:</p>" >>docs/PROJECT/index.html; \
 echo "<ul>" >>docs/PROJECT/index.html; \
 flags=""; \
@@ -131,83 +169,136 @@ for file in PROJECT.yaml ./docs/README.md ./docs/CHANGELOG.md ./docs/METADATA-1.
     if [ ${file##*.} = "md" ]; then \
 	[ $bas = "index.md" ] && \
                     out="_index.html" || out=${out/.md.txt/.html}; \
-	echo pandoc --data-dir=./../../install/pandoc/ $flags $file --output=docs/PROJECT/$out; \
-	pandoc --data-dir=./../../install/pandoc/ $flags $file --output=docs/PROJECT/$out; \
+	echo pandoc --data-dir=./../install/pandoc/ $flags $file --output=docs/PROJECT/$out; \
+	pandoc --data-dir=./../install/pandoc/ $flags $file --output=docs/PROJECT/$out; \
 	echo "<li>$file -> <a href='$out'>$out</a></li>" \
 		>>docs/PROJECT/index.html; \
     fi; \
         done; \
 echo "</ul>" >>docs/PROJECT/index.html
+make -C specification all
+make -C resources all
+make[2]: Entering directory '/opt/atlassian/pipelines/agent/build/WT-369/specification'
+make -C faq all
+make[2]: Entering directory '/opt/atlassian/pipelines/agent/build/WT-369/resources'
+make[2]: Entering directory '/opt/atlassian/pipelines/agent/build/WT-369/faq'
 cp -p PROJECT.yaml docs/PROJECT/PROJECT.yaml.txt
 cp -p ./docs/README.md docs/PROJECT/README.md.txt
-pandoc --data-dir=./../../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/README.md --output=docs/PROJECT/README.html
+pandoc --data-dir=./../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/README.md --output=docs/PROJECT/README.html
 cp -p ./docs/CHANGELOG.md docs/PROJECT/CHANGELOG.md.txt
-pandoc --data-dir=./../../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/CHANGELOG.md --output=docs/PROJECT/CHANGELOG.html
-cp -p ./docs/METADATA-1.yaml docs/PROJECT/METADATA-1.yaml.txt
-cp -p ./docs/METADATA.yaml docs/PROJECT/METADATA.yaml.txt
-cp -p ./docs/METADATA-1.md docs/PROJECT/METADATA-1.md.txt
-pandoc --data-dir=./../../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/METADATA-1.md --output=docs/PROJECT/METADATA-1.html
-cp -p ./docs/METADATA.md docs/PROJECT/METADATA.md.txt
-pandoc --data-dir=./../../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/METADATA.md --output=docs/PROJECT/METADATA.html
-cp -p ./docs/METADATA-1.mk docs/PROJECT/METADATA-1.mk.txt
-cp -p ./docs/METADATA.mk docs/PROJECT/METADATA.mk.txt
-make -C specification all
-make[2]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/specification'
+pandoc --data-dir=./../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/CHANGELOG.md --output=docs/PROJECT/CHANGELOG.html
+mkdir -p ../docs/faq/
 mkdir -p ../docs/specification/
+mkdir -p ../docs/resources/
+rm -f ../docs/faq/index.md
+rm -f ../docs/resources/index.md
+sed -e'<relocate-image-links>' index.md >>../docs/faq/index.md
+sed -e'<relocate-image-links>' index.md >>../docs/resources/index.md
 rm -f ../docs/specification/index.md
 sed -e'<relocate-image-links>' index.md >>../docs/specification/index.md
 sed -e'<relocate-image-links>' architecture/index.md >>../docs/specification/index.md
 sed -e'<relocate-image-links>' discovery/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/css/release.css >../docs/faq/release.css
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/css/release.css >../docs/resources/release.css
 sed -e'<relocate-image-links>' mtp/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/defaults/json-defaults.yaml >../docs/faq/json-defaults.yaml
 sed -e'<relocate-image-links>' mtp/coap/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/defaults/json-defaults.yaml >../docs/resources/json-defaults.yaml
 sed -e'<relocate-image-links>' mtp/websocket/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/defaults/docx-defaults.yaml >../docs/faq/docx-defaults.yaml
 sed -e'<relocate-image-links>' mtp/stomp/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/defaults/docx-defaults.yaml >../docs/resources/docx-defaults.yaml
 sed -e'<relocate-image-links>' mtp/mqtt/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/defaults/pdf-defaults.yaml >../docs/faq/pdf-defaults.yaml
 sed -e'<relocate-image-links>' mtp/unix-domain-socket/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/defaults/pdf-defaults.yaml >../docs/resources/pdf-defaults.yaml
 sed -e'<relocate-image-links>' encoding/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/defaults/typst-defaults.yaml >../docs/faq/typst-defaults.yaml
 sed -e'<relocate-image-links>' e2e-message-exchange/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/defaults/typst-defaults.yaml >../docs/resources/typst-defaults.yaml
 sed -e'<relocate-image-links>' messages/index.md >>../docs/specification/index.md
 sed -e'<relocate-image-links>' security/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/custom/typst-template.typ >../docs/faq/typst-template.typ
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/custom/typst-template.typ >../docs/resources/typst-template.typ
 sed -e'<relocate-image-links>' extensions/http-bulk-data-collection/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../install/pandoc/custom/typst-stringify.typ >../docs/faq/typst-stringify.typ
 sed -e'<relocate-image-links>' extensions/software-module-management/index.md >>../docs/specification/index.md
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../install/pandoc/custom/typst-stringify.typ >../docs/resources/typst-stringify.typ
 sed -e'<relocate-image-links>' extensions/firmware-management/index.md >>../docs/specification/index.md
+'../../install/pandoc/css/bbf.css' -> '../docs/faq/bbf.css'
 sed -e'<relocate-image-links>' extensions/device-proxy/index.md >>../docs/specification/index.md
 sed -e'<relocate-image-links>' extensions/proxying/index.md >>../docs/specification/index.md
+'../../install/pandoc/css/bbflogo-bw.png' -> '../docs/faq/bbflogo-bw.png'
+'../../install/pandoc/css/bbf.css' -> '../docs/resources/bbf.css'
+'../../install/pandoc/css/bbflogo-reverse-dark.png' -> '../docs/faq/bbflogo-reverse-dark.png'
+'../../install/pandoc/css/bbflogo-bw.png' -> '../docs/resources/bbflogo-bw.png'
 sed -e'<relocate-image-links>' extensions/iot/index.md >>../docs/specification/index.md
 sed -e'<relocate-image-links>' extensions/device-modularization/index.md >>../docs/specification/index.md
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/css/release.css >../docs/specification/release.css
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/defaults/json-defaults.yaml >../docs/specification/json-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/defaults/docx-defaults.yaml >../docs/specification/docx-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/defaults/pdf-defaults.yaml >../docs/specification/pdf-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/defaults/typst-defaults.yaml >../docs/specification/typst-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/custom/typst-template.typ >../docs/specification/typst-template.typ
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../../install/pandoc/custom/typst-stringify.typ >../docs/specification/typst-stringify.typ
-'../../../install/pandoc/css/bbf.css' -> '../docs/specification/bbf.css'
-'../../../install/pandoc/css/bbflogo-bw.png' -> '../docs/specification/bbflogo-bw.png'
-'../../../install/pandoc/css/bbflogo-reverse-dark.png' -> '../docs/specification/bbflogo-reverse-dark.png'
-'../../../install/pandoc/css/bee.png' -> '../docs/specification/bee.png'
-'../../../install/pandoc/css/broadband-forum-logo.png' -> '../docs/specification/broadband-forum-logo.png'
-'../../../install/pandoc/css/extra.css' -> '../docs/specification/extra.css'
-'../../../install/pandoc/css/github.css' -> '../docs/specification/github.css'
-'../../../install/pandoc/css/missing.png' -> '../docs/specification/missing.png'
-'../../../install/pandoc/css/pencil.png' -> '../docs/specification/pencil.png'
-'../../../install/pandoc/css/permalink.png' -> '../docs/specification/permalink.png'
-'../../../install/pandoc/css/right.png' -> '../docs/specification/right.png'
-'../../../install/pandoc/css/tick.png' -> '../docs/specification/tick.png'
-'../../../install/pandoc/css/toc.css' -> '../docs/specification/toc.css'
-'../../../install/pandoc/css/watermark-pdf.css' -> '../docs/specification/watermark-pdf.css'
-'../../../install/pandoc/css/watermark.css' -> '../docs/specification/watermark.css'
+'../../install/pandoc/css/bee.png' -> '../docs/faq/bee.png'
+'../../install/pandoc/css/bbflogo-reverse-dark.png' -> '../docs/resources/bbflogo-reverse-dark.png'
+'../../install/pandoc/css/broadband-forum-logo.png' -> '../docs/faq/broadband-forum-logo.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/css/release.css >../docs/specification/release.css
+'../../install/pandoc/css/bee.png' -> '../docs/resources/bee.png'
+'../../install/pandoc/css/broadband-forum-logo.png' -> '../docs/resources/broadband-forum-logo.png'
+'../../install/pandoc/css/extra.css' -> '../docs/faq/extra.css'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/defaults/json-defaults.yaml >../docs/specification/json-defaults.yaml
+'../../install/pandoc/css/github.css' -> '../docs/faq/github.css'
+'../../install/pandoc/css/extra.css' -> '../docs/resources/extra.css'
+'../../install/pandoc/css/missing.png' -> '../docs/faq/missing.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/defaults/docx-defaults.yaml >../docs/specification/docx-defaults.yaml
+'../../install/pandoc/css/github.css' -> '../docs/resources/github.css'
+'../../install/pandoc/css/pencil.png' -> '../docs/faq/pencil.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/defaults/pdf-defaults.yaml >../docs/specification/pdf-defaults.yaml
+'../../install/pandoc/css/missing.png' -> '../docs/resources/missing.png'
+'../../install/pandoc/css/pencil.png' -> '../docs/resources/pencil.png'
+'../../install/pandoc/css/permalink.png' -> '../docs/faq/permalink.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/defaults/typst-defaults.yaml >../docs/specification/typst-defaults.yaml
+'../../install/pandoc/css/permalink.png' -> '../docs/resources/permalink.png'
+'../../install/pandoc/css/right.png' -> '../docs/faq/right.png'
+'../../install/pandoc/css/right.png' -> '../docs/resources/right.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/custom/typst-template.typ >../docs/specification/typst-template.typ
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/specification|g' <../../install/pandoc/custom/typst-stringify.typ >../docs/specification/typst-stringify.typ
+'../../install/pandoc/css/tick.png' -> '../docs/resources/tick.png'
+'../../install/pandoc/css/tick.png' -> '../docs/faq/tick.png'
+'../../install/pandoc/css/toc.css' -> '../docs/resources/toc.css'
+'../../install/pandoc/css/toc.css' -> '../docs/faq/toc.css'
+'../../install/pandoc/css/bbf.css' -> '../docs/specification/bbf.css'
+'../../install/pandoc/css/watermark-pdf.css' -> '../docs/faq/watermark-pdf.css'
+'../../install/pandoc/css/watermark-pdf.css' -> '../docs/resources/watermark-pdf.css'
+pandoc --data-dir=../../install/pandoc/ --defaults=../docs/faq/json-defaults.yaml --metadata-file=../common.yaml --metadata-file=../docs/METADATA-1.yaml --metadata=ROOTDIR:.. ../docs/faq/index.md --output=../docs/faq/index.json
+pandoc --data-dir=../../install/pandoc/ --defaults=../docs/resources/json-defaults.yaml --metadata-file=../common.yaml --metadata-file=../docs/METADATA-1.yaml --metadata=ROOTDIR:.. ../docs/resources/index.md --output=../docs/resources/index.json
+'../../install/pandoc/css/bbflogo-bw.png' -> '../docs/specification/bbflogo-bw.png'
+cp -p ./docs/METADATA-1.yaml docs/PROJECT/METADATA-1.yaml.txt
+'../../install/pandoc/css/bbflogo-reverse-dark.png' -> '../docs/specification/bbflogo-reverse-dark.png'
+cp -p ./docs/METADATA.yaml docs/PROJECT/METADATA.yaml.txt
+'../../install/pandoc/css/bee.png' -> '../docs/specification/bee.png'
+cp -p ./docs/METADATA-1.md docs/PROJECT/METADATA-1.md.txt
+'../../install/pandoc/css/broadband-forum-logo.png' -> '../docs/specification/broadband-forum-logo.png'
+pandoc --data-dir=./../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/METADATA-1.md --output=docs/PROJECT/METADATA-1.html
+'../../install/pandoc/css/extra.css' -> '../docs/specification/extra.css'
+'../../install/pandoc/css/github.css' -> '../docs/specification/github.css'
+'../../install/pandoc/css/missing.png' -> '../docs/specification/missing.png'
+'../../install/pandoc/css/pencil.png' -> '../docs/specification/pencil.png'
+'../../install/pandoc/css/permalink.png' -> '../docs/specification/permalink.png'
+'../../install/pandoc/css/right.png' -> '../docs/specification/right.png'
+'../../install/pandoc/css/tick.png' -> '../docs/specification/tick.png'
+'../../install/pandoc/css/toc.css' -> '../docs/specification/toc.css'
+'../../install/pandoc/css/watermark-pdf.css' -> '../docs/specification/watermark-pdf.css'
 'usp-msg-1-0.proto' -> '../docs/specification/usp-msg-1-0.proto'
 'usp-msg-1-1.proto' -> '../docs/specification/usp-msg-1-1.proto'
 'usp-msg-1-2.proto' -> '../docs/specification/usp-msg-1-2.proto'
 'usp-msg-1-3.proto' -> '../docs/specification/usp-msg-1-3.proto'
 'usp-msg-1-4.proto' -> '../docs/specification/usp-msg-1-4.proto'
+'usp-msg-1-5.proto' -> '../docs/specification/usp-msg-1-5.proto'
 'usp-record-1-0.proto' -> '../docs/specification/usp-record-1-0.proto'
 'usp-record-1-1.proto' -> '../docs/specification/usp-record-1-1.proto'
 'usp-record-1-2.proto' -> '../docs/specification/usp-record-1-2.proto'
 'usp-record-1-3.proto' -> '../docs/specification/usp-record-1-3.proto'
 'usp-record-1-4.proto' -> '../docs/specification/usp-record-1-4.proto'
+'usp-record-1-5.proto' -> '../docs/specification/usp-record-1-5.proto'
+cp -p ./docs/METADATA.md docs/PROJECT/METADATA.md.txt
 './architecture/usp_architecture.png' -> '../docs/specification/./architecture/usp_architecture.png'
+pandoc --data-dir=./../install/pandoc/ --standalone --metadata-file=bbf-metadata.yaml --metadata-file=no-title-metadata.yaml --lua-filter=expand-macros.lua --lua-filter=list-table.lua --css=bbf.css ./docs/METADATA.md --output=docs/PROJECT/METADATA.html
 './e2e-message-exchange/processing-received-records.png' -> '../docs/specification/./e2e-message-exchange/processing-received-records.png'
 './e2e-message-exchange/segmentation-and-reassembly.png' -> '../docs/specification/./e2e-message-exchange/segmentation-and-reassembly.png'
 './e2e-message-exchange/segmentation-case-1.png' -> '../docs/specification/./e2e-message-exchange/segmentation-case-1.png'
@@ -231,6 +322,7 @@ sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"
 './security/no-secure-message-exchange.png' -> '../docs/specification/./security/no-secure-message-exchange.png'
 './security/receive-record.png' -> '../docs/specification/./security/receive-record.png'
 './security/send-record.png' -> '../docs/specification/./security/send-record.png'
+'architecture/diagram/andexpr.png' -> '../docs/specification/architecture/diagram/andexpr.png'
 'architecture/diagram/cmdpath.png' -> '../docs/specification/architecture/diagram/cmdpath.png'
 'architecture/diagram/evntpath.png' -> '../docs/specification/architecture/diagram/evntpath.png'
 'architecture/diagram/expr.png' -> '../docs/specification/architecture/diagram/expr.png'
@@ -241,37 +333,72 @@ sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"
 'architecture/diagram/name.png' -> '../docs/specification/architecture/diagram/name.png'
 'architecture/diagram/number.png' -> '../docs/specification/architecture/diagram/number.png'
 'architecture/diagram/objpath.png' -> '../docs/specification/architecture/diagram/objpath.png'
+cp -p ./docs/METADATA-1.mk docs/PROJECT/METADATA-1.mk.txt
 'architecture/diagram/oper.png' -> '../docs/specification/architecture/diagram/oper.png'
+cp -p ./docs/METADATA.mk docs/PROJECT/METADATA.mk.txt
+'architecture/diagram/orexpr.png' -> '../docs/specification/architecture/diagram/orexpr.png'
+'CNAME' -> 'docs/CNAME'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/css/release.css >docs/release.css
 'architecture/diagram/parampath.png' -> '../docs/specification/architecture/diagram/parampath.png'
 'architecture/diagram/posnum.png' -> '../docs/specification/architecture/diagram/posnum.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/defaults/json-defaults.yaml >docs/json-defaults.yaml
 'architecture/diagram/reffollow.png' -> '../docs/specification/architecture/diagram/reffollow.png'
 'architecture/diagram/relpath.png' -> '../docs/specification/architecture/diagram/relpath.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/defaults/docx-defaults.yaml >docs/docx-defaults.yaml
 'architecture/diagram/sdmpath.png' -> '../docs/specification/architecture/diagram/sdmpath.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/defaults/pdf-defaults.yaml >docs/pdf-defaults.yaml
 'architecture/diagram/value.png' -> '../docs/specification/architecture/diagram/value.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/defaults/typst-defaults.yaml >docs/typst-defaults.yaml
 'extensions/device-modularization/use-cases.png' -> '../docs/specification/extensions/device-modularization/use-cases.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/custom/typst-template.typ >docs/typst-template.typ
 'extensions/iot/figure-73.png' -> '../docs/specification/extensions/iot/figure-73.png'
+sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.5)"; }|' -e 's|${USERDATA}|./../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../install/pandoc/custom/typst-stringify.typ >docs/typst-stringify.typ
 'extensions/iot/figure-74.png' -> '../docs/specification/extensions/iot/figure-74.png'
+'./../install/pandoc/css/bbf.css' -> 'docs/bbf.css'
 'extensions/iot/figure-75.png' -> '../docs/specification/extensions/iot/figure-75.png'
+'./../install/pandoc/css/bbflogo-bw.png' -> 'docs/bbflogo-bw.png'
 'extensions/iot/figure-76.png' -> '../docs/specification/extensions/iot/figure-76.png'
+'./../install/pandoc/css/bbflogo-reverse-dark.png' -> 'docs/bbflogo-reverse-dark.png'
 'extensions/iot/figure-77.png' -> '../docs/specification/extensions/iot/figure-77.png'
+'./../install/pandoc/css/bee.png' -> 'docs/bee.png'
 'extensions/iot/figure-78.png' -> '../docs/specification/extensions/iot/figure-78.png'
+'./../install/pandoc/css/broadband-forum-logo.png' -> 'docs/broadband-forum-logo.png'
 'extensions/iot/figure-79.png' -> '../docs/specification/extensions/iot/figure-79.png'
+'./../install/pandoc/css/extra.css' -> 'docs/extra.css'
 'extensions/proxying/CoAP-STOMP-MTP-proxy-example.png' -> '../docs/specification/extensions/proxying/CoAP-STOMP-MTP-proxy-example.png'
 'extensions/proxying/MTP-proxy-example.png' -> '../docs/specification/extensions/proxying/MTP-proxy-example.png'
+'./../install/pandoc/css/github.css' -> 'docs/github.css'
+'./../install/pandoc/css/missing.png' -> 'docs/missing.png'
 'extensions/software-module-management/du_state.png' -> '../docs/specification/extensions/software-module-management/du_state.png'
+'./../install/pandoc/css/pencil.png' -> 'docs/pencil.png'
 'extensions/software-module-management/ee_state.png' -> '../docs/specification/extensions/software-module-management/ee_state.png'
+'./../install/pandoc/css/permalink.png' -> 'docs/permalink.png'
 'extensions/software-module-management/eu_state.png' -> '../docs/specification/extensions/software-module-management/eu_state.png'
+'./../install/pandoc/css/right.png' -> 'docs/right.png'
 'extensions/software-module-management/smm_concepts.png' -> '../docs/specification/extensions/software-module-management/smm_concepts.png'
 'mtp/coap/usp-request-response-over-coap.png' -> '../docs/specification/mtp/coap/usp-request-response-over-coap.png'
+'./../install/pandoc/css/tick.png' -> 'docs/tick.png'
 'mtp/mqtt/mqtt-architecture.png' -> '../docs/specification/mtp/mqtt/mqtt-architecture.png'
+'./../install/pandoc/css/toc.css' -> 'docs/toc.css'
 'mtp/mqtt/mqtt-packets.png' -> '../docs/specification/mtp/mqtt/mqtt-packets.png'
+'./../install/pandoc/css/watermark-pdf.css' -> 'docs/watermark-pdf.css'
+pandoc --data-dir=./../install/pandoc/ --defaults=./docs/json-defaults.yaml --metadata-file=./common.yaml --metadata-file=./docs/METADATA-1.yaml --metadata=ROOTDIR:. index.md --output=docs/index.json
 'mtp/stomp/STOMP-architecture.jpg' -> '../docs/specification/mtp/stomp/STOMP-architecture.jpg'
 'mtp/unix-domain-socket/USP-UDS-Handshake.png' -> '../docs/specification/mtp/unix-domain-socket/USP-UDS-Handshake.png'
+'mtp/unix-domain-socket/USP-UDS-Password.png' -> '../docs/specification/mtp/unix-domain-socket/USP-UDS-Password.png'
 'mtp/unix-domain-socket/USP-UDS-Record.png' -> '../docs/specification/mtp/unix-domain-socket/USP-UDS-Record.png'
 'mtp/unix-domain-socket/unix-domain-socket-binding.png' -> '../docs/specification/mtp/unix-domain-socket/unix-domain-socket-binding.png'
 'mtp/websocket/USP-request-over-websocket.png' -> '../docs/specification/mtp/websocket/USP-request-over-websocket.png'
 'mtp/websocket/websocket-session-handshake.png' -> '../docs/specification/mtp/websocket/websocket-session-handshake.png'
-pandoc --data-dir=../../../install/pandoc/ --defaults=../docs/specification/json-defaults.yaml --metadata-file=../common.yaml --metadata-file=../docs/METADATA-1.yaml --metadata=ROOTDIR:.. ../docs/specification/index.md --output=../docs/specification/index.json
+pandoc --data-dir=../../install/pandoc/ --defaults=../docs/specification/json-defaults.yaml --metadata-file=../common.yaml --metadata-file=../docs/METADATA-1.yaml --metadata=ROOTDIR:.. ../docs/specification/index.md --output=../docs/specification/index.json
+pandoc --data-dir=../../install/pandoc/ --defaults=htm-defaults.yaml     --toc ../docs/faq/index.json --output=../docs/faq/index.htm
+pandoc --data-dir=../../install/pandoc/ --defaults=html-defaults.yaml     --toc ../docs/faq/index.json --output=../docs/faq/index.html
+pandoc --data-dir=../../install/pandoc/ --defaults=htm-defaults.yaml     --toc ../docs/resources/index.json --output=../docs/resources/index.htm
+make[2]: Leaving directory '/opt/atlassian/pipelines/agent/build/WT-369/faq'
+pandoc --data-dir=../../install/pandoc/ --defaults=html-defaults.yaml     --toc ../docs/resources/index.json --output=../docs/resources/index.html
+pandoc --data-dir=./../install/pandoc/ --defaults=htm-defaults.yaml     --toc docs/index.json --output=docs/index.htm
+pandoc --data-dir=./../install/pandoc/ --defaults=html-defaults.yaml     --toc docs/index.json --output=docs/index.html
+make[2]: Leaving directory '/opt/atlassian/pipelines/agent/build/WT-369/resources'
 code-block-filters (I) code-block filter pbv succeeded (1/1)
 code-block-filters (I) code-block filter pbv succeeded (2/2)
 code-block-filters (I) code-block filter pbv succeeded (3/3)
@@ -312,10 +439,10 @@ code-block-filters (I) code-block filter pbv succeeded (37/37)
 code-block-filters (I) code-block filter pbv succeeded (38/38)
 code-block-filters (I) code-block filter pbv succeeded (39/39)
 code-block-filters (I) code-block filter pbv succeeded (40/40)
-pandoc --data-dir=../../../install/pandoc/ --defaults=htm-defaults.yaml   --css=toc.css --css=local.css --toc --toc-depth=2 ../docs/specification/index.json --output=../docs/specification/index.htm
-pandoc --data-dir=../../../install/pandoc/ --defaults=html-defaults.yaml   --css=local.css --css=toc.css --toc --toc-depth=2 ../docs/specification/index.json --output=../docs/specification/index.html
-pandoc --data-dir=../../../install/pandoc/ --defaults=../docs/specification/docx-defaults.yaml --toc --toc-depth=2 ../docs/specification/index.json --output=../docs/specification/index.docx
-pandoc --data-dir=../../../install/pandoc/ --defaults=../docs/specification/typst-defaults.yaml ../docs/specification/index.json --output=../docs/specification/index.typ
+pandoc --data-dir=../../install/pandoc/ --defaults=htm-defaults.yaml   --css=toc.css --css=local.css --toc --toc-depth=2 ../docs/specification/index.json --output=../docs/specification/index.htm
+pandoc --data-dir=../../install/pandoc/ --defaults=html-defaults.yaml   --css=local.css --css=toc.css --toc --toc-depth=2 ../docs/specification/index.json --output=../docs/specification/index.html
+pandoc --data-dir=../../install/pandoc/ --defaults=../docs/specification/docx-defaults.yaml --toc --toc-depth=2 ../docs/specification/index.json --output=../docs/specification/index.docx
+pandoc --data-dir=../../install/pandoc/ --defaults=../docs/specification/typst-defaults.yaml ../docs/specification/index.json --output=../docs/specification/index.typ
 typst compile ../docs/specification/index.typ ../docs/specification/index.pdf
 warning: unknown font family: arial
     ┌─ ../docs/specification/typst-template.typ:379:17
@@ -323,94 +450,5 @@ warning: unknown font family: arial
 379 │            font: font,
     │                  ^^^^
 
-'../docs/specification/index.pdf' -> '../docs/specification/WT-369-release-1.4-17.pdf'
-make[2]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/specification'
-make -C resources all
-make[2]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/resources'
-mkdir -p ../docs/resources/
-rm -f ../docs/resources/index.md
-sed -e'<relocate-image-links>' index.md >>../docs/resources/index.md
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/css/release.css >../docs/resources/release.css
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/defaults/json-defaults.yaml >../docs/resources/json-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/defaults/docx-defaults.yaml >../docs/resources/docx-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/defaults/pdf-defaults.yaml >../docs/resources/pdf-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/defaults/typst-defaults.yaml >../docs/resources/typst-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/custom/typst-template.typ >../docs/resources/typst-template.typ
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/resources|g' <../../../install/pandoc/custom/typst-stringify.typ >../docs/resources/typst-stringify.typ
-'../../../install/pandoc/css/bbf.css' -> '../docs/resources/bbf.css'
-'../../../install/pandoc/css/bbflogo-bw.png' -> '../docs/resources/bbflogo-bw.png'
-'../../../install/pandoc/css/bbflogo-reverse-dark.png' -> '../docs/resources/bbflogo-reverse-dark.png'
-'../../../install/pandoc/css/bee.png' -> '../docs/resources/bee.png'
-'../../../install/pandoc/css/broadband-forum-logo.png' -> '../docs/resources/broadband-forum-logo.png'
-'../../../install/pandoc/css/extra.css' -> '../docs/resources/extra.css'
-'../../../install/pandoc/css/github.css' -> '../docs/resources/github.css'
-'../../../install/pandoc/css/missing.png' -> '../docs/resources/missing.png'
-'../../../install/pandoc/css/pencil.png' -> '../docs/resources/pencil.png'
-'../../../install/pandoc/css/permalink.png' -> '../docs/resources/permalink.png'
-'../../../install/pandoc/css/right.png' -> '../docs/resources/right.png'
-'../../../install/pandoc/css/tick.png' -> '../docs/resources/tick.png'
-'../../../install/pandoc/css/toc.css' -> '../docs/resources/toc.css'
-'../../../install/pandoc/css/watermark-pdf.css' -> '../docs/resources/watermark-pdf.css'
-'../../../install/pandoc/css/watermark.css' -> '../docs/resources/watermark.css'
-pandoc --data-dir=../../../install/pandoc/ --defaults=../docs/resources/json-defaults.yaml --metadata-file=../common.yaml --metadata-file=../docs/METADATA-1.yaml --metadata=ROOTDIR:.. ../docs/resources/index.md --output=../docs/resources/index.json
-pandoc --data-dir=../../../install/pandoc/ --defaults=htm-defaults.yaml     --toc ../docs/resources/index.json --output=../docs/resources/index.htm
-pandoc --data-dir=../../../install/pandoc/ --defaults=html-defaults.yaml     --toc ../docs/resources/index.json --output=../docs/resources/index.html
-make[2]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/resources'
-make -C faq all
-make[2]: Entering directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/faq'
-mkdir -p ../docs/faq/
-rm -f ../docs/faq/index.md
-sed -e'<relocate-image-links>' index.md >>../docs/faq/index.md
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/css/release.css >../docs/faq/release.css
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/defaults/json-defaults.yaml >../docs/faq/json-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/defaults/docx-defaults.yaml >../docs/faq/docx-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/defaults/pdf-defaults.yaml >../docs/faq/pdf-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/defaults/typst-defaults.yaml >../docs/faq/typst-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/custom/typst-template.typ >../docs/faq/typst-template.typ
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|../../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|../docs|g' -e 's|${TARGETDIR}|../docs/faq|g' <../../../install/pandoc/custom/typst-stringify.typ >../docs/faq/typst-stringify.typ
-'../../../install/pandoc/css/bbf.css' -> '../docs/faq/bbf.css'
-'../../../install/pandoc/css/bbflogo-bw.png' -> '../docs/faq/bbflogo-bw.png'
-'../../../install/pandoc/css/bbflogo-reverse-dark.png' -> '../docs/faq/bbflogo-reverse-dark.png'
-'../../../install/pandoc/css/bee.png' -> '../docs/faq/bee.png'
-'../../../install/pandoc/css/broadband-forum-logo.png' -> '../docs/faq/broadband-forum-logo.png'
-'../../../install/pandoc/css/extra.css' -> '../docs/faq/extra.css'
-'../../../install/pandoc/css/github.css' -> '../docs/faq/github.css'
-'../../../install/pandoc/css/missing.png' -> '../docs/faq/missing.png'
-'../../../install/pandoc/css/pencil.png' -> '../docs/faq/pencil.png'
-'../../../install/pandoc/css/permalink.png' -> '../docs/faq/permalink.png'
-'../../../install/pandoc/css/right.png' -> '../docs/faq/right.png'
-'../../../install/pandoc/css/tick.png' -> '../docs/faq/tick.png'
-'../../../install/pandoc/css/toc.css' -> '../docs/faq/toc.css'
-'../../../install/pandoc/css/watermark-pdf.css' -> '../docs/faq/watermark-pdf.css'
-'../../../install/pandoc/css/watermark.css' -> '../docs/faq/watermark.css'
-pandoc --data-dir=../../../install/pandoc/ --defaults=../docs/faq/json-defaults.yaml --metadata-file=../common.yaml --metadata-file=../docs/METADATA-1.yaml --metadata=ROOTDIR:.. ../docs/faq/index.md --output=../docs/faq/index.json
-pandoc --data-dir=../../../install/pandoc/ --defaults=htm-defaults.yaml     --toc ../docs/faq/index.json --output=../docs/faq/index.htm
-pandoc --data-dir=../../../install/pandoc/ --defaults=html-defaults.yaml     --toc ../docs/faq/index.json --output=../docs/faq/index.html
-make[2]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf/faq'
-'CNAME' -> 'docs/CNAME'
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/css/release.css >docs/release.css
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/defaults/json-defaults.yaml >docs/json-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/defaults/docx-defaults.yaml >docs/docx-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/defaults/pdf-defaults.yaml >docs/pdf-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/defaults/typst-defaults.yaml >docs/typst-defaults.yaml
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/custom/typst-template.typ >docs/typst-template.typ
-sed -e '/span\.release::before/s|{ *content:.*; *}|{ content: "(release-1.4-17)"; }|' -e 's|${USERDATA}|./../../install/pandoc/|g' -e 's|${PROJECTYAMLTARGETDIR}|./docs|g' -e 's|${TARGETDIR}|./docs|g' <./../../install/pandoc/custom/typst-stringify.typ >docs/typst-stringify.typ
-'./../../install/pandoc/css/bbf.css' -> 'docs/bbf.css'
-'./../../install/pandoc/css/bbflogo-bw.png' -> 'docs/bbflogo-bw.png'
-'./../../install/pandoc/css/bbflogo-reverse-dark.png' -> 'docs/bbflogo-reverse-dark.png'
-'./../../install/pandoc/css/bee.png' -> 'docs/bee.png'
-'./../../install/pandoc/css/broadband-forum-logo.png' -> 'docs/broadband-forum-logo.png'
-'./../../install/pandoc/css/extra.css' -> 'docs/extra.css'
-'./../../install/pandoc/css/github.css' -> 'docs/github.css'
-'./../../install/pandoc/css/missing.png' -> 'docs/missing.png'
-'./../../install/pandoc/css/pencil.png' -> 'docs/pencil.png'
-'./../../install/pandoc/css/permalink.png' -> 'docs/permalink.png'
-'./../../install/pandoc/css/right.png' -> 'docs/right.png'
-'./../../install/pandoc/css/tick.png' -> 'docs/tick.png'
-'./../../install/pandoc/css/toc.css' -> 'docs/toc.css'
-'./../../install/pandoc/css/watermark-pdf.css' -> 'docs/watermark-pdf.css'
-'./../../install/pandoc/css/watermark.css' -> 'docs/watermark.css'
-pandoc --data-dir=./../../install/pandoc/ --defaults=./docs/json-defaults.yaml --metadata-file=./common.yaml --metadata-file=./docs/METADATA-1.yaml --metadata=ROOTDIR:. index.md --output=docs/index.json
-pandoc --data-dir=./../../install/pandoc/ --defaults=htm-defaults.yaml     --toc docs/index.json --output=docs/index.htm
-pandoc --data-dir=./../../install/pandoc/ --defaults=html-defaults.yaml     --toc docs/index.json --output=docs/index.html
-make[1]: Leaving directory '/mnt/ebs/bamboo-agent-home-bravo/xml-data/build-dir/USP-USPREL-JOB1/project/bbf'
+make[2]: Leaving directory '/opt/atlassian/pipelines/agent/build/WT-369/specification'
+make[1]: Leaving directory '/opt/atlassian/pipelines/agent/build/WT-369'

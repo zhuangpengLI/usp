@@ -112,6 +112,10 @@ A list of currently valid Broadband Forum %bbfType%s is published at
 
 The following terminology is used throughout this specification.
 
+**Absolute Time**
+
+ Time maintained by the Device that is synchronized with a trusted external time source, such as an NTP server or a real-time clock.
+
 **Agent**
 
 An Agent is an Endpoint that exposes Service Elements to one or more Controllers.
